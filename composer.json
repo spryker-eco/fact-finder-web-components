@@ -1,0 +1,27 @@
+{
+  "name": "spryker-eco/fact-finder-web-components",
+  "description": "Fact Finder Web Components Module",
+  "require": {
+    "php": ">=7.1",
+    "spryker/kernel": "^3.0.0",
+    "spryker/locale": "^3.0.0"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "git@github.com:spryker-eco/fact-finder-web-components.git"
+    }
+  ],
+  "autoload": {
+    "psr-0": {
+      "SprykerEco": "src/",
+      "Function": "tests/"
+    }
+  },
+  "autoload-dev": {
+    "psr-0": {
+      "Functional": "tests/",
+      "Unit": "tests/"
+    }
+  }
+}
