@@ -1,0 +1,15 @@
+{% extends template('widget') %}
+
+{% block body %}
+    <input is="ff-searchbox"
+           placeholder="Search..."
+           select-onclick="{{ _widget.selectOnclick }}"
+           use-sugest="{{ _widget.useSuggest }}"
+           suggest-onfocus="{{ _widget.suggestOnfocus }}"
+           hidesuggest-onblur="{{ _widget.hideSuggestOnblur }}"
+           suggest-delay="{{ _widget.suggestDelay }}"
+    />
+    {% if _widget.searchbutton %}
+        <button is="ff-searchbutton" align="{{ _widget.searchbuttonAlign }}">Search</button>
+    {% endif %}
+{% endblock %}
