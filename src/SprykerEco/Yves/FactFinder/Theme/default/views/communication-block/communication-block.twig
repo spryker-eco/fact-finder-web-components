@@ -1,0 +1,10 @@
+{% extends template('widget') %}
+
+{% block body %}
+    <ff-communication url="{{ _widget.url }}"
+                      version="{{ _widget.version }}"
+                      default-query="{{ _widget.query }}"
+                      channel="{{ _widget.channel }}"
+                      search-immediate="{{ _widget.searchImmediate }}">
+    </ff-communication>
+{% endblock %}
