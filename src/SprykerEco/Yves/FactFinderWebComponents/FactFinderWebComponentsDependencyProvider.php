@@ -5,13 +5,13 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace SprykerEco\Yves\FactFinder;
+namespace SprykerEco\Yves\FactFinderWebComponents;
 
 use Spryker\Yves\Kernel\AbstractBundleDependencyProvider;
 use Spryker\Yves\Kernel\Container;
 use Spryker\Yves\Kernel\Plugin\Pimple;
 
-class FactFinderDependencyProvider extends AbstractBundleDependencyProvider
+class FactFinderWebComponentsDependencyProvider extends AbstractBundleDependencyProvider
 {
 
 }

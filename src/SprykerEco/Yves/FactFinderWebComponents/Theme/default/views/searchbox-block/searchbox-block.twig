@@ -1,0 +1,6 @@
+{% extends template('widget') %}
+
+{% block body %}
+    <input is="ff-searchbox" placeholder="{{ 'factfinder.web-components.searchbox.search' | trans }}" {{ _widget.searchBoxParams }} />
+    <button is="ff-searchbutton" {{ _widget.searchButtonParams }}>{{ 'factfinder.web-components.searchbox.search.button' | trans }}</button>
+{% endblock %}
