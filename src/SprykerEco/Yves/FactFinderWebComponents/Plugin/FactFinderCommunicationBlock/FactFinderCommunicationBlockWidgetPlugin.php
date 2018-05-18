@@ -31,7 +31,7 @@ class FactFinderCommunicationBlockWidgetPlugin extends AbstractWidgetPlugin impl
         $communicationWidgetConfig = $this->getConfig()->getCommunicationConfig();
         $options = '';
         foreach ($communicationWidgetConfig as $key => $value) {
-            if (in_array($key, FactFinderWebComponentsConfig::COMMUNICATION_WIDGET_ALLOWED_ATTRIBUTES)) {
+            if (in_array($key, FactFinderWebComponentsConfig::COMMUNICATION_WIDGET_ALLOWED_ATTRIBUTES) && $value) {
                 $options .= sprintf(' %s="%s"', $key, $value);
             }
         }

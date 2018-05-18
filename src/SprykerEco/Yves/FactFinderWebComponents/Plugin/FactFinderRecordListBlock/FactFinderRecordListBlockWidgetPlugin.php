@@ -5,26 +5,26 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderSearchboxBlock;
+namespace SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderRecordListBlock;
 
 use Spryker\Yves\Kernel\Widget\AbstractWidgetPlugin;
-use SprykerShop\Yves\CatalogPage\Dependency\Plugin\FactFinderSearchboxWidget\FactFinderSearchboxWidgetInterface;
+use SprykerShop\Yves\CatalogPage\Dependency\Plugin\FactFinderRecordListWidget\FactFinderRecordListWidgetInterface;
 use SprykerEco\Shared\FactFinderWebComponents\FactFinderWebComponentsConfig;
 
-class FactFinderSearchboxBlockWidgetPlugin extends AbstractWidgetPlugin implements FactFinderSearchboxWidgetInterface
+class FactFinderRecordListBlockWidgetPlugin extends AbstractWidgetPlugin implements FactFinderRecordListWidgetInterface
 {
     /**
      * @return void
      */
     public function initialize(): void
     {
-        $this->addParameter('searchBoxParams', $this->_getOptions(
-            FactFinderWebComponentsConfig::SEARCH_BOX_WIDGET_ALLOWED_ATTRIBUTES,
-            $this->getConfig()->getSearchBoxConfig()
+        $this->addParameter('recordListParams', $this->_getOptions(
+            FactFinderWebComponentsConfig::RECORD_LIST_WIDGET_ALLOWED_ATTRIBUTES,
+            $this->getConfig()->getRecordListConfig()
         ));
-        $this->addParameter('searchButtonParams', $this->_getOptions(
-            FactFinderWebComponentsConfig::SEARCH_BOX_BUTTON_WIDGET_ALLOWED_ATTRIBUTES,
-            $this->getConfig()->getSearchButtonConfig()
+        $this->addParameter('recordParams', $this->_getOptions(
+            FactFinderWebComponentsConfig::RECORD_WIDGET_ALLOWED_ATTRIBUTES,
+            $this->getConfig()->getRecordConfig()
         ));
     }
 
@@ -61,6 +61,6 @@ class FactFinderSearchboxBlockWidgetPlugin extends AbstractWidgetPlugin implemen
      */
     public static function getTemplate(): string
     {
-        return '@FactFinderWebComponents/views/searchbox-block/searchbox-block.twig';
+        return '@FactFinderWebComponents/views/record-list-block/record-list-block.twig';
     }
 }

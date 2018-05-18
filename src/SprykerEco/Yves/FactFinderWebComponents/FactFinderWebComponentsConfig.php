@@ -35,4 +35,24 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     {
         return $this->get(FactFinderWebComponentsConstants::SEARCH_BUTTON_WIDGET_CONFIG);
     }
+
+    /**
+     * Return record list config
+     *
+     * @return array
+     */
+    public function getRecordListConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::RECORD_LIST_WIDGET_CONFIG);
+    }
+
+    /**
+     * Return record config
+     *
+     * @return array
+     */
+    public function getRecordConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::RECORD_WIDGET_CONFIG);
+    }
 }

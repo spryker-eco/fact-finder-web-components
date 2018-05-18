@@ -32,4 +32,20 @@ interface FactFinderWebComponentsConstants
      * @api
      */
     const SEARCH_BUTTON_WIDGET_CONFIG = 'SEARCH_BUTTON_WIDGET_CONFIG';
+
+    /**
+     * Specification:
+     * - Record list widget config
+     *
+     * @api
+     */
+    const RECORD_LIST_WIDGET_CONFIG = 'RECORD_LIST_WIDGET_CONFIG';
+
+    /**
+     * Specification:
+     * - Record widget config
+     *
+     * @api
+     */
+    const RECORD_WIDGET_CONFIG = 'RECORD_WIDGET_CONFIG';
 }

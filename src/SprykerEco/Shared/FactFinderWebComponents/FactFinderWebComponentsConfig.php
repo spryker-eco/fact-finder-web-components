@@ -27,10 +27,14 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     ];
 
     const RECORD_LIST_WIDGET_ALLOWED_ATTRIBUTES = [
-        'suggest-onfocus',
-        'hidesuggest-onblur',
-        'select-onclick',
-        'use-suggest',
-        'suggest-delay'
+        'subscribe',
+        'is-recommendation',
+        'infinite-scrolling',
+        'infinite-debounce-delay',
+        'infinite-scroll-margin'
+    ];
+
+    const RECORD_WIDGET_ALLOWED_ATTRIBUTES = [
+        'is-recommendation'
     ];
 }

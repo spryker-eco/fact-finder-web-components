@@ -1,0 +1,15 @@
+{% extends template('widget') %}
+
+{% block body %}
+    <ff-record-list {{ _widget.recordListParams }}>
+        <ff-record {{ _widget.recordParams }}>
+            {% verbatim %}
+                <div data-redirect="{{record.Deeplink}}"
+                     data-redirect-target="_blank">
+                    <img data-image="{{record.ImageName}}">
+                    <span>{{record.Title}}</span>
+                </div>
+            {% endverbatim %}
+        </ff-record>
+    </ff-record-list>
+{% endblock %}
