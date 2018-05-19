@@ -1,0 +1,34 @@
+{% extends template('widget') %}
+
+{% block body %}
+    <ff-breadcrumb-trail>
+        <!-- The search item is the content of the search query-->
+        <ff-breadcrumb-trail-item type="search">
+            <span class="searchItem">
+                {% verbatim %}
+                    {{text}}
+                {% endverbatim %}
+            </span>
+        </ff-breadcrumb-trail-item>
+
+        <!-- Filter items are set by the URL or over the ASN-->
+        <ff-breadcrumb-trail-item type="filter">
+            <span class="filterItem">
+                <strong>
+                    {% verbatim %}
+                        {{text}}
+                    {% endverbatim %}
+                </strong>
+            </span>
+        </ff-breadcrumb-trail-item>
+
+        <!-- Advisor items are included in the breadcrumb when an advisor-campaign is selected-->
+        <ff-breadcrumb-trail-item type="advisor">
+            <div class="advisorItem">
+                {% verbatim %}
+                    {{text}}
+                {% endverbatim %}
+            </div>
+        </ff-breadcrumb-trail-item>
+    </ff-breadcrumb-trail>
+{% endblock %}
