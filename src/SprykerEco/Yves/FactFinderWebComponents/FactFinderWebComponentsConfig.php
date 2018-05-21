@@ -55,4 +55,58 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     {
         return $this->get(FactFinderWebComponentsConstants::RECORD_WIDGET_CONFIG);
     }
+
+    /**
+     * Return ASN group widget config
+     *
+     * @return array
+     */
+    public function getAsnGroupWidgetConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::ASN_GROUP_WIDGET_CONFIG);
+    }
+
+    /**
+     * Return ASN group element config
+     *
+     * @return array
+     */
+    public function getAsnGroupElementConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::ASN_GROUP_ELEMENT_CONFIG);
+    }
+
+    /**
+     * Return ASN remove all filter config
+     *
+     * @return array
+     */
+    public function getAsnRemoveAllFilterConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::ASN_REMOVE_ALL_FILTER_CONFIG);
+    }
+
+    /**
+     * Return ASN slider config
+     *
+     * @return array
+     */
+    public function getAsnSliderConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::ASN_SLIDER_CONFIG);
+    }
+
+    /**
+     * Return record config
+     *
+     * @return array
+     */
+    public function getAsnSliderControlConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::RECORD_WIDGET_CONFIG);
+    }
+
+
+
+
 }

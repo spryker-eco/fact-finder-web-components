@@ -1,8 +1,8 @@
 {% extends template('widget') %}
 
 {% block body %}
-    <ff-record-list {{ _widget.recordListParams }}>
-        <ff-record {{ _widget.recordParams }}>
+    <ff-record-list {{ _widget.recordListParams|raw }}>
+        <ff-record {{ _widget.recordParams|raw }}>
             {% verbatim %}
                 <div data-redirect="{{record.Deeplink}}"
                      data-redirect-target="_blank">

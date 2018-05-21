@@ -1,8 +1,8 @@
 {% extends template('widget') %}
 
 {% block body %}
-    <input is="ff-searchbox" placeholder="{{ 'factfinder.web-components.searchbox.search' | trans }}" {{ _widget.searchBoxParams }} />
-    <button is="ff-searchbutton" {{ _widget.searchButtonParams }}>{{ 'factfinder.web-components.searchbox.search.button' | trans }}</button>
+    <input is="ff-searchbox" placeholder="{{ 'factfinder.web-components.searchbox.search' | trans }}" {{ _widget.searchBoxParams|raw }} />
+    <button is="ff-searchbutton" {{ _widget.searchButtonParams|raw }}>{{ 'factfinder.web-components.searchbox.search.button' | trans }}</button>
 
     <ff-suggest>
         <section>

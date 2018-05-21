@@ -1,0 +1,67 @@
+{% extends template('widget') %}
+
+{% block body %}
+    <ff-asn align="vertical" unresolved>
+        <!--use this as a default template for all groups-->
+        <ff-asn-group {{ _widget.asnGroupWidgetConfig|raw }} class="cursor">
+            <ff-asn-group-element {{ _widget.asnGroupElementConfig|raw }}>
+                <div data-selected>
+                    <span class="filterCheckboxUnselected"><span class="filterCheckboxSelected"></span></span>
+                    <span class="filterName">{% verbatim %}{{element.name}}{% endverbatim %}</span>
+                </div>
+                <div data-unselected>
+                    <span class="filterCheckboxUnselected"></span>
+                    <span class="filterName">{% verbatim %}{{element.name}}{% endverbatim %}</span>
+                </div>
+            </ff-asn-group-element>
+            <div data-container="groupCaption" class="groupCaption">
+                {% verbatim %}{{group.name}}{% endverbatim %}<span class="filterArrowDown">&nbsp;</span>
+            </div>
+
+
+            <div opened data-container="detailedLinks">
+                <!--we'll show all links which should be displayed immediately aside this element-->
+                <div data-content="detailedLinks"></div>
+
+                <!--use this container for automatically showing the hiddenLinks container on tap-->
+                <div data-container="showMore">
+
+                    <!-- set the padding on an inner element so we don't suffer from height 0 + padding issues-->
+                    <span class="text">{{ 'factfinder.web-components.asn.show.more' | trans }}</span>
+                </div>
+
+                <div class="marginBottom"></div>
+            </div>
+
+            <div data-container="hiddenLinks">
+                <!--we'll hide all links which should NOT be displayed immediately aside this element-->
+                <div data-content="hiddenLinks"></div>
+
+                <!--use this container for automatically hiding the hiddenLinks container on tap-->
+                <div data-container="showLess">
+
+                    <!-- set the padding on an inner element so we don't suffer from height 0 + padding issues-->
+                    <span class="text">{{ 'factfinder.web-components.asn.show.less' | trans }}</span>
+                </div>
+                <div class="marginBottom"></div>
+            </div>
+        </ff-asn-group>
+
+        <!--style slider groups-->
+        <ff-asn-group-slider>
+            <div data-container="groupCaption" class="groupCaption">
+                {% verbatim %}{{group.name}}{% endverbatim %}<span class="filterArrowDown">&nbsp</span>
+            </div>
+            <div data-container="removeFilter">{{ 'factfinder.web-components.asn.remove.filter' | trans }}</div>
+            <ff-slider-control {{ _widget.asnSliderControlConfig|raw }}>
+                <input data-control='1' style="position: absolute; width: 60px;left: 15px;">
+                <input data-control='2' style="position: absolute; width: 60px;right: 15px;">
+
+                <ff-slider {{ _widget.asnSliderConfig|raw }} style="width: 150px;">
+                    <div id="slider1" class="sliderBtn"></div>
+                    <div id="slider2" class="sliderBtn"></div>
+                </ff-slider>
+            </ff-slider-control>
+        </ff-asn-group-slider>
+    </ff-asn>
+{% endblock %}

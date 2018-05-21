@@ -1,6 +1,6 @@
 {% extends template('widget') %}
 
 {% block body %}
-    <ff-communication {{ _widget.params }} >
+    <ff-communication {{ _widget.params|raw }} >
     </ff-communication>
 {% endblock %}

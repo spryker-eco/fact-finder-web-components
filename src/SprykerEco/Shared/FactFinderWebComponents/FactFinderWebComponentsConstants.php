@@ -48,4 +48,44 @@ interface FactFinderWebComponentsConstants
      * @api
      */
     const RECORD_WIDGET_CONFIG = 'RECORD_WIDGET_CONFIG';
+
+    /**
+     * Specification:
+     * - ASN group widget config
+     *
+     * @api
+     */
+    const ASN_GROUP_WIDGET_CONFIG = 'ASN_GROUP_WIDGET_CONFIG';
+
+    /**
+     * Specification:
+     * - ASN group element config
+     *
+     * @api
+     */
+    const ASN_GROUP_ELEMENT_CONFIG = 'ASN_GROUP_ELEMENT_CONFIG';
+
+    /**
+     * Specification:
+     * - ASN remove all filter config
+     *
+     * @api
+     */
+    const ASN_REMOVE_ALL_FILTER_CONFIG = 'ASN_REMOVE_ALL_FILTER_CONFIG';
+
+    /**
+     * Specification:
+     * - ASN slider config
+     *
+     * @api
+     */
+    const ASN_SLIDER_CONFIG = 'ASN_SLIDER_CONFIG';
+
+    /**
+     * Specification:
+     * - ASN slider control config
+     *
+     * @api
+     */
+    const ASN_SLIDER_CONTROL_CONFIG = 'ASN_SLIDER_CONTROL_CONFIG';
 }
