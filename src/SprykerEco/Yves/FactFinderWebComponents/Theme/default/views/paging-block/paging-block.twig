@@ -1,0 +1,13 @@
+{% extends template('widget') %}
+
+{% block body %}
+    <ff-paging id="paging" {{ _widget.pagingWidgetConfig|raw }}>
+        {% verbatim %}
+            <ff-paging-item type="currentLink -2">{{caption}}</ff-paging-item>
+            <ff-paging-item type="currentLink -1">{{caption}}</ff-paging-item>
+            <ff-paging-item type="currentLink" style="font-weight: bold;">{{caption}}</ff-paging-item>
+            <ff-paging-item type="currentLink +1">{{caption}}</ff-paging-item>
+            <ff-paging-item type="currentLink +2">{{caption}}</ff-paging-item>
+        {% endverbatim %}
+    </ff-paging>
+{% endblock %}

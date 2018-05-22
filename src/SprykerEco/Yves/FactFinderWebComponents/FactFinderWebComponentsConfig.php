@@ -97,7 +97,7 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return record config
+     * Return ASN slider control config
      *
      * @return array
      */
@@ -106,7 +106,13 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
         return $this->get(FactFinderWebComponentsConstants::RECORD_WIDGET_CONFIG);
     }
 
-
-
-
+    /**
+     * Return record config
+     *
+     * @return array
+     */
+    public function getPagingWidgetConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::PAGING_WIDGET_CONFIG);
+    }
 }

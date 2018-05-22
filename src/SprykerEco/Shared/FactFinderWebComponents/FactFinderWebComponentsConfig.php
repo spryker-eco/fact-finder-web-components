@@ -97,4 +97,11 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     const ASN_SLIDER_CONTROL_ALLOWED_ATTRIBUTES = [
         'submit-on-input'
     ];
+
+    /**
+     * paging allowed attributes
+     */
+    const PAGING_WIDGET_ALLOWED_ATTRIBUTES = [
+        'show-only'
+    ];
 }

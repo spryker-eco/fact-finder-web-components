@@ -88,4 +88,12 @@ interface FactFinderWebComponentsConstants
      * @api
      */
     const ASN_SLIDER_CONTROL_CONFIG = 'ASN_SLIDER_CONTROL_CONFIG';
+
+    /**
+     * Specification:
+     * - Paging widget config
+     *
+     * @api
+     */
+    const PAGING_WIDGET_CONFIG = 'PAGING_WIDGET_CONFIG';
 }
