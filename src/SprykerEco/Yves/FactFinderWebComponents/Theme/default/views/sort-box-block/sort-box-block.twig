@@ -1,0 +1,27 @@
+{% extends template('widget') %}
+
+{% block body %}
+    <ff-sortbox {{ _widget.sortBoxConfig|raw }}>
+
+            <!--
+            key "default.template" is a pseudo key used to specify a default template for all sortbox items
+            -->
+            <ff-sortbox-item key="default.template">
+                <span style="font-size: 15px">{{ 'factfinder.web-components.sort.box.default.style' | trans }}: {% verbatim %}{{description}}{% endverbatim %}</span>
+            </ff-sortbox-item>
+
+            <!--
+            this key is related to data returned by FACT-Finder its always FIELDNAME.ORDER
+            except for relevance its "null.desc"
+            -->
+            <ff-sortbox-item key="Price.asc">
+                <span style="font-size: 18px">{{ 'factfinder.web-components.sort.box.overriden.for' | trans }}: {% verbatim %}{{description}}{% endverbatim %}</span>
+            </ff-sortbox-item>
+
+            <!--override relevance layout -->
+            <ff-sortbox-item key="null.desc">
+                {{ 'factfinder.web-components.sort.box.relevance' | trans }}
+            </ff-sortbox-item>
+
+    </ff-sortbox>
+{% endblock %}
