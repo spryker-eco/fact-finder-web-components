@@ -1,6 +1,12 @@
 {% extends template('widget') %}
-
 {% block body %}
+    <script>
+        var Polymer = Polymer || {};
+        Polymer.dom = 'shady';
+    </script>
+    <script src="/assets/js/webcomponents-lite.min.js"></script>
+    <link rel="import" href="/assets/elements.build_with_dependencies.htm">
+
     <ff-communication {{ _widget.params|raw }} >
     </ff-communication>
 {% endblock %}

@@ -115,4 +115,44 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     {
         return $this->get(FactFinderWebComponentsConstants::PAGING_WIDGET_CONFIG);
     }
+
+    /**
+     * Return products per page config
+     *
+     * @return array
+     */
+    public function getProductsPerPageWidgetConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::PRODUCTS_PER_PAGE_WIDGET_CONFIG);
+    }
+
+    /**
+     * Return sort box config
+     *
+     * @return array
+     */
+    public function getSortBoxWidgetConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::SORT_BOX_WIDGET_CONFIG);
+    }
+
+    /**
+     * Return similar products config
+     *
+     * @return array
+     */
+    public function getSimilarProductsConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::SIMILAR_PRODUCTS_WIDGET_CONFIG);
+    }
+
+    /**
+     * Return similar product ID config
+     *
+     * @return array
+     */
+    public function getSimilarProductIdConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::SIMILAR_PRODUCT_ID_CONFIG);
+    }
 }

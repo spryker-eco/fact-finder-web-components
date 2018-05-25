@@ -104,4 +104,36 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     const PAGING_WIDGET_ALLOWED_ATTRIBUTES = [
         'show-only'
     ];
+
+    /**
+     * Products per page widget allowed attributes
+     */
+    const PRODUCTS_PER_PAGE_WIDGET_ALLOWED_ATTRIBUTES = [
+        'show-only'
+    ];
+
+    /**
+     * Sort box widget allowed attributes
+     */
+    const SORT_BOX_WIDGET_ALLOWED_ATTRIBUTES = [
+        'opened',
+        'selected',
+        'show-selected',
+        'show-selected-first',
+        'collapse-onblur'
+    ];
+
+    /**
+     * Similar products widget allowed attributes
+     */
+    const SIMILAR_PRODUCTS_WIDGET_ALLOWED_ATTRIBUTES = [
+        'max-results'
+    ];
+
+    /**
+     * Similar product config allowed attributes
+     */
+    const SIMILAR_PRODUCT_CONFIG_ALLOWED_ATTRIBUTES = [
+        'record-id'
+    ];
 }

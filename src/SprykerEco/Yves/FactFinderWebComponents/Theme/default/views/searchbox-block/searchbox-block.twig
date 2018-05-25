@@ -19,4 +19,19 @@
             </div>
         </section>
     </ff-suggest>
+
+    <ff-record-list unresolved>
+        <ff-record>
+            {% verbatim %}
+                <img data-image="{{record.ImageName}}">
+                <a href="https://www.bergfreunde.de/{{record.Deeplink}}" onclick="return false;"
+                   data-redirect="https://www.bergfreunde.de/{{record.Deeplink}}" data-redirect-target="_blank">
+                    {{record.Title}}
+                </a>
+
+                <div class="priceContainer"><span class="brand">{{record.Manufacturer}}</span> <span class="price">{{record.Price}} €</span>
+                </div>
+            {% endverbatim %}
+        </ff-record>
+    </ff-record-list>
 {% endblock %}

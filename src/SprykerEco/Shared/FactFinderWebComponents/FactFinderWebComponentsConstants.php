@@ -96,4 +96,36 @@ interface FactFinderWebComponentsConstants
      * @api
      */
     const PAGING_WIDGET_CONFIG = 'PAGING_WIDGET_CONFIG';
+
+    /**
+     * Specification:
+     * - Products per page widget config
+     *
+     * @api
+     */
+    const PRODUCTS_PER_PAGE_WIDGET_CONFIG = 'PRODUCTS_PER_PAGE_WIDGET_CONFIG';
+
+    /**
+     * Specification:
+     * - Sort box widget config
+     *
+     * @api
+     */
+    const SORT_BOX_WIDGET_CONFIG = 'SORT_BOX_WIDGET_CONFIG';
+
+    /**
+     * Specification:
+     * - Similar products widget config
+     *
+     * @api
+     */
+    const SIMILAR_PRODUCTS_WIDGET_CONFIG = 'SIMILAR_PRODUCTS_WIDGET_CONFIG';
+
+    /**
+     * Specification:
+     * - Similar product ID config
+     *
+     * @api
+     */
+    const SIMILAR_PRODUCT_ID_CONFIG = 'SIMILAR_PRODUCT_ID_CONFIG';
 }
