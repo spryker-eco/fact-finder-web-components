@@ -1,0 +1,29 @@
+{% extends template('widget') %}
+
+{% block body %}
+    <ff-similar-products {{ _widget.similarProductsConfig|raw }}>
+        <div class="similarProductsHeader">
+            {{ 'factfinder.web-components.similar.products.title' | trans }}
+        </div>
+        {% if  _widget.similarProductId %}
+            <script>
+                var similarProductsElement = document.querySelector("ff-similar-products");
+                //Triggers thesimilarProducts service
+                similarProductsElement.recordId = "{{ _widget.similarProductId|raw }}";
+            </script>
+        {%  endif %}
+        <ff-record-list>
+            <ff-record>
+                <img data-image>
+                <div>
+                    {% verbatim %}
+                        <a href="{{record.Deeplink}}" data-action="redirect">
+                            {{record.Title}}
+                        </a>
+                        <div>{{ 'factfinder.web-components.similar.products.price' | trans }}: <strong>{{record.Price}} €</strong></div>
+                    {% endverbatim %}
+                </div>
+            </ff-record>
+        </ff-record-list>
+    </ff-similar-products>
+{% endblock %}
