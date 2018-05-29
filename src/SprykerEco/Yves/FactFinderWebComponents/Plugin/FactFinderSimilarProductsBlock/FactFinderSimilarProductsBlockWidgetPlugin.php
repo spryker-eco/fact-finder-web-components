@@ -10,48 +10,24 @@ namespace SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderSimilarProduc
 use Spryker\Yves\Kernel\Widget\AbstractWidgetPlugin;
 use SprykerShop\Yves\CatalogPage\Dependency\Plugin\FactFinderSimilarProductsWidget\FactFinderSimilarProductsWidgetInterface;
 use SprykerEco\Shared\FactFinderWebComponents\FactFinderWebComponentsConfig;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderWidgetPlugin;
 
-class FactFinderSimilarProductsBlockWidgetPlugin extends AbstractWidgetPlugin implements FactFinderSimilarProductsWidgetInterface
+class FactFinderSimilarProductsBlockWidgetPlugin extends FactFinderWidgetPlugin implements FactFinderSimilarProductsWidgetInterface
 {
     /**
-     * @return void
+     * @param array  $similarProductsConfig
+     * @param string $similarProductId
      */
-    public function initialize(): void
+    public function initialize(array $similarProductsConfig = array(), string $similarProductId = ''): void
     {
         $this->addParameter('similarProductsConfig', $this->_getOptions(
             FactFinderWebComponentsConfig::SIMILAR_PRODUCTS_WIDGET_ALLOWED_ATTRIBUTES,
-            $this->getConfig()->getSimilarProductsConfig()
+            $this->getConfig()->getSimilarProductsConfig(),
+            $similarProductsConfig
         ));
 
-        $this->addParameter('similarProductId', $this->getConfig()->getSimilarProductIdConfig());
-    }
-
-    /**
-     * Get widget options
-     *
-     * @param array $allowedAttributes
-     * @param array $widgetConfig
-     *
-     * @return string
-     */
-    protected function _getOptions($allowedAttributes, $widgetConfig): string
-    {
-        $options = '';
-        foreach ($widgetConfig as $key => $value) {
-            if (in_array($key, $allowedAttributes) && $value) {
-                $options .= sprintf(' %s="%s"', $key, $value);
-            }
-        }
-
-        return $options;
-    }
-
-    /**
-     * @return string
-     */
-    public static function getName(): string
-    {
-        return static::NAME;
+        $similarProductId = ($similarProductId) ? $similarProductId : $this->getConfig()->getSimilarProductIdConfig();
+        $this->addParameter('similarProductId', $similarProductId);
     }
 
     /**

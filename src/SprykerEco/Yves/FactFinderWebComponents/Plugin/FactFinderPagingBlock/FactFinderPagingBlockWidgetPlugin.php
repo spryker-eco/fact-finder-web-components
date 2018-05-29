@@ -10,46 +10,20 @@ namespace SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderPagingBlock;
 use Spryker\Yves\Kernel\Widget\AbstractWidgetPlugin;
 use SprykerShop\Yves\CatalogPage\Dependency\Plugin\FactFinderPagingWidget\FactFinderPagingWidgetInterface;
 use SprykerEco\Shared\FactFinderWebComponents\FactFinderWebComponentsConfig;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderWidgetPlugin;
 
-class FactFinderPagingBlockWidgetPlugin extends AbstractWidgetPlugin implements FactFinderPagingWidgetInterface
+class FactFinderPagingBlockWidgetPlugin extends FactFinderWidgetPlugin implements FactFinderPagingWidgetInterface
 {
     /**
-     * @return void
+     * @param array $config
      */
-    public function initialize(): void
+    public function initialize(array $config = array()): void
     {
-        $this->addParameter('pagingWidgetConfig', $this->_getOptions(
+        $this->addParameter('config', $this->_getOptions(
             FactFinderWebComponentsConfig::PAGING_WIDGET_ALLOWED_ATTRIBUTES,
-            $this->getConfig()->getPagingWidgetConfig()
+            $this->getConfig()->getPagingWidgetConfig(),
+            $config
         ));
-    }
-
-    /**
-     * Get widget options
-     *
-     * @param array $allowedAttributes
-     * @param array $widgetConfig
-     *
-     * @return string
-     */
-    protected function _getOptions($allowedAttributes, $widgetConfig): string
-    {
-        $options = '';
-        foreach ($widgetConfig as $key => $value) {
-            if (in_array($key, $allowedAttributes) && $value) {
-                $options .= sprintf(' %s="%s"', $key, $value);
-            }
-        }
-
-        return $options;
-    }
-
-    /**
-     * @return string
-     */
-    public static function getName(): string
-    {
-        return static::NAME;
     }
 
     /**

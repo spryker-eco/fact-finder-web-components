@@ -10,50 +10,27 @@ namespace SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderRecordListBlo
 use Spryker\Yves\Kernel\Widget\AbstractWidgetPlugin;
 use SprykerShop\Yves\CatalogPage\Dependency\Plugin\FactFinderRecordListWidget\FactFinderRecordListWidgetInterface;
 use SprykerEco\Shared\FactFinderWebComponents\FactFinderWebComponentsConfig;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderWidgetPlugin;
 
-class FactFinderRecordListBlockWidgetPlugin extends AbstractWidgetPlugin implements FactFinderRecordListWidgetInterface
+class FactFinderRecordListBlockWidgetPlugin extends FactFinderWidgetPlugin implements FactFinderRecordListWidgetInterface
 {
     /**
-     * @return void
+     * @param array $recordListConfig
+     * @param array $recordConfig
      */
-    public function initialize(): void
+    public function initialize(array $recordListConfig = array(), array $recordConfig = array()): void
     {
-        $this->addParameter('recordListParams', $this->_getOptions(
+        $this->addParameter('recordListConfig', $this->_getOptions(
             FactFinderWebComponentsConfig::RECORD_LIST_WIDGET_ALLOWED_ATTRIBUTES,
-            $this->getConfig()->getRecordListConfig()
+            $this->getConfig()->getRecordListConfig(),
+            $recordListConfig
         ));
-        $this->addParameter('recordParams', $this->_getOptions(
+
+        $this->addParameter('recordConfig', $this->_getOptions(
             FactFinderWebComponentsConfig::RECORD_WIDGET_ALLOWED_ATTRIBUTES,
-            $this->getConfig()->getRecordConfig()
+            $this->getConfig()->getRecordConfig(),
+            $recordConfig
         ));
-    }
-
-    /**
-     * Get widget options
-     *
-     * @param array $allowedAttributes
-     * @param array $widgetConfig
-     *
-     * @return string
-     */
-    protected function _getOptions($allowedAttributes, $widgetConfig): string
-    {
-        $options = '';
-        foreach ($widgetConfig as $key => $value) {
-            if (in_array($key, $allowedAttributes) && $value) {
-                $options .= sprintf(' %s="%s"', $key, $value);
-            }
-        }
-
-        return $options;
-    }
-
-    /**
-     * @return string
-     */
-    public static function getName(): string
-    {
-        return static::NAME;
     }
 
     /**

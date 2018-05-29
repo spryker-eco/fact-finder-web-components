@@ -128,4 +128,21 @@ interface FactFinderWebComponentsConstants
      * @api
      */
     const SIMILAR_PRODUCT_ID_CONFIG = 'SIMILAR_PRODUCT_ID_CONFIG';
+
+    /**
+     * Specification:
+     * - Recommendation config
+     *
+     * @api
+     */
+    const RECOMMENDATION_CONFIG = 'RECOMMENDATION_CONFIG';
+
+    /**
+     * Specification:
+     * - Recommendation record ID config
+     *
+     * @api
+     */
+    const RECOMMENDATION_RECORD_ID_CONFIG = 'RECOMMENDATION_RECORD_ID_CONFIG';
+
 }

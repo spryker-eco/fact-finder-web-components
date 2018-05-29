@@ -155,4 +155,24 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     {
         return $this->get(FactFinderWebComponentsConstants::SIMILAR_PRODUCT_ID_CONFIG);
     }
+
+    /**
+     * Return recommendation config
+     *
+     * @return array
+     */
+    public function getRecommendationConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::RECOMMENDATION_CONFIG);
+    }
+
+    /**
+     * Return recommendation record ID config
+     *
+     * @return array
+     */
+    public function getRecommendationRecordIdConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::RECOMMENDATION_RECORD_ID_CONFIG);
+    }
 }

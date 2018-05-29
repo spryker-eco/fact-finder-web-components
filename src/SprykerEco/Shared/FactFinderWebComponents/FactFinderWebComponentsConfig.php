@@ -136,4 +136,20 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     const SIMILAR_PRODUCT_CONFIG_ALLOWED_ATTRIBUTES = [
         'record-id'
     ];
+
+    /**
+     * Recommendation widget allowed attributes
+     */
+    const RECOMMENDATION_WIDGET_ALLOWED_ATTRIBUTES = [
+        'max-results',
+        'use-perso',
+        'subscribe'
+    ];
+
+    /**
+     * Recommendation record ID config allowed attributes
+     */
+    const RECOMMENDATION_RECORD_ID_ALLOWED_ATTRIBUTES = [
+        'record-id'
+    ];
 }

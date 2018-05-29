@@ -10,46 +10,20 @@ namespace SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderSortBoxBlock;
 use Spryker\Yves\Kernel\Widget\AbstractWidgetPlugin;
 use SprykerShop\Yves\CatalogPage\Dependency\Plugin\FactFinderSortBoxWidget\FactFinderSortBoxWidgetInterface;
 use SprykerEco\Shared\FactFinderWebComponents\FactFinderWebComponentsConfig;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderWidgetPlugin;
 
-class FactFinderSortBoxBlockWidgetPlugin extends AbstractWidgetPlugin implements FactFinderSortBoxWidgetInterface
+class FactFinderSortBoxBlockWidgetPlugin extends FactFinderWidgetPlugin implements FactFinderSortBoxWidgetInterface
 {
     /**
-     * @return void
+     * @param array $config
      */
-    public function initialize(): void
+    public function initialize(array $config = array()): void
     {
-        $this->addParameter('sortBoxConfig', $this->_getOptions(
+        $this->addParameter('config', $this->_getOptions(
             FactFinderWebComponentsConfig::SORT_BOX_WIDGET_ALLOWED_ATTRIBUTES,
-            $this->getConfig()->getSortBoxWidgetConfig()
+            $this->getConfig()->getSortBoxWidgetConfig(),
+            $config
         ));
-    }
-
-    /**
-     * Get widget options
-     *
-     * @param array $allowedAttributes
-     * @param array $widgetConfig
-     *
-     * @return string
-     */
-    protected function _getOptions($allowedAttributes, $widgetConfig): string
-    {
-        $options = '';
-        foreach ($widgetConfig as $key => $value) {
-            if (in_array($key, $allowedAttributes) && $value) {
-                $options .= sprintf(' %s="%s"', $key, $value);
-            }
-        }
-
-        return $options;
-    }
-
-    /**
-     * @return string
-     */
-    public static function getName(): string
-    {
-        return static::NAME;
     }
 
     /**

@@ -10,22 +10,10 @@ namespace SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderBreadcrumbBlo
 use Spryker\Yves\Kernel\Widget\AbstractWidgetPlugin;
 use SprykerShop\Yves\CatalogPage\Dependency\Plugin\FactFinderBreadcrumbWidget\FactFinderBreadcrumbWidgetInterface;
 use SprykerEco\Shared\FactFinderWebComponents\FactFinderWebComponentsConfig;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderWidgetPlugin;
 
-class FactFinderBreadcrumbBlockWidgetPlugin extends AbstractWidgetPlugin implements FactFinderBreadcrumbWidgetInterface
+class FactFinderBreadcrumbBlockWidgetPlugin extends FactFinderWidgetPlugin implements FactFinderBreadcrumbWidgetInterface
 {
-    /**
-     * @return void
-     */
-    public function initialize(): void {}
-
-    /**
-     * @return string
-     */
-    public static function getName(): string
-    {
-        return static::NAME;
-    }
-
     /**
      * @return string
      */

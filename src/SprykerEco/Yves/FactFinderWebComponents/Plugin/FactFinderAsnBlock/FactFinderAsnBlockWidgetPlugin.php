@@ -10,66 +10,48 @@ namespace SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderAsnBlock;
 use Spryker\Yves\Kernel\Widget\AbstractWidgetPlugin;
 use SprykerShop\Yves\CatalogPage\Dependency\Plugin\FactFinderAsnWidget\FactFinderAsnWidgetInterface;
 use SprykerEco\Shared\FactFinderWebComponents\FactFinderWebComponentsConfig;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderWidgetPlugin;
 
-class FactFinderAsnBlockWidgetPlugin extends AbstractWidgetPlugin implements FactFinderAsnWidgetInterface
+class FactFinderAsnBlockWidgetPlugin extends FactFinderWidgetPlugin implements FactFinderAsnWidgetInterface
 {
     /**
-     * @return void
+     * @param array $asnGroupWidgetConfig
+     * @param array $asnGroupElementConfig
+     * @param array $asnRemoveAllFilterConfig
+     * @param array $asnSliderConfig
+     * @param array $asnSliderControlConfig
      */
-    public function initialize(): void
+    public function initialize(array $asnGroupWidgetConfig = array(), array $asnGroupElementConfig = array(), array $asnRemoveAllFilterConfig = array(), array $asnSliderConfig = array(), array $asnSliderControlConfig = array()): void
     {
         $this->addParameter('asnGroupWidgetConfig', $this->_getOptions(
             FactFinderWebComponentsConfig::ASN_GROUP_WIDGET_ALLOWED_ATTRIBUTES,
-            $this->getConfig()->getAsnGroupWidgetConfig()
+            $this->getConfig()->getAsnGroupWidgetConfig(),
+            $asnGroupWidgetConfig
         ));
 
         $this->addParameter('asnGroupElementConfig', $this->_getOptions(
             FactFinderWebComponentsConfig::ASN_GROUP_ELEMENT_ALLOWED_ATTRIBUTES,
-            $this->getConfig()->getAsnGroupElementConfig()
+            $this->getConfig()->getAsnGroupElementConfig(),
+            $asnGroupElementConfig
         ));
 
         $this->addParameter('asnRemoveAllFilterConfig', $this->_getOptions(
             FactFinderWebComponentsConfig::ASN_REMOVE_ALL_FILTER_ALLOWED_ATTRIBUTES,
-            $this->getConfig()->getAsnRemoveAllFilterConfig()
+            $this->getConfig()->getAsnRemoveAllFilterConfig(),
+            $asnRemoveAllFilterConfig
         ));
 
         $this->addParameter('asnSliderConfig', $this->_getOptions(
             FactFinderWebComponentsConfig::ASN_SLIDER_ALLOWED_ATTRIBUTES,
-            $this->getConfig()->getAsnSliderConfig()
+            $this->getConfig()->getAsnSliderConfig(),
+            $asnSliderConfig
         ));
 
         $this->addParameter('asnSliderControlConfig', $this->_getOptions(
             FactFinderWebComponentsConfig::ASN_SLIDER_CONTROL_ALLOWED_ATTRIBUTES,
-            $this->getConfig()->getAsnSliderControlConfig()
+            $this->getConfig()->getAsnSliderControlConfig(),
+            $asnSliderControlConfig
         ));
-    }
-
-    /**
-     * Get widget options
-     *
-     * @param array $allowedAttributes
-     * @param array $widgetConfig
-     *
-     * @return string
-     */
-    protected function _getOptions($allowedAttributes, $widgetConfig): string
-    {
-        $options = '';
-        foreach ($widgetConfig as $key => $value) {
-            if (in_array($key, $allowedAttributes) && $value) {
-                $options .= sprintf(' %s="%s"', $key, $value);
-            }
-        }
-
-        return $options;
-    }
-
-    /**
-     * @return string
-     */
-    public static function getName(): string
-    {
-        return static::NAME;
     }
 
     /**

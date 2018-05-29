@@ -10,41 +10,20 @@ namespace SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCommunication
 use Spryker\Yves\Kernel\Widget\AbstractWidgetPlugin;
 use SprykerShop\Yves\CatalogPage\Dependency\Plugin\FactFinderCommunicationWidget\FactFinderCommunicationWidgetInterface;
 use SprykerEco\Shared\FactFinderWebComponents\FactFinderWebComponentsConfig;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderWidgetPlugin;
 
-class FactFinderCommunicationBlockWidgetPlugin extends AbstractWidgetPlugin implements FactFinderCommunicationWidgetInterface
+class FactFinderCommunicationBlockWidgetPlugin extends FactFinderWidgetPlugin implements FactFinderCommunicationWidgetInterface
 {
     /**
-     * @return void
+     * @param array $config
      */
-    public function initialize(): void
+    public function initialize(array $config = array()): void
     {
-        $this->addParameter('params', $this->_getOptions());
-    }
-
-    /**
-     * Get widget options
-     *
-     * @return string
-     */
-    protected function _getOptions(): string
-    {
-        $communicationWidgetConfig = $this->getConfig()->getCommunicationConfig();
-        $options = '';
-        foreach ($communicationWidgetConfig as $key => $value) {
-            if (in_array($key, FactFinderWebComponentsConfig::COMMUNICATION_WIDGET_ALLOWED_ATTRIBUTES) && $value) {
-                $options .= sprintf(' %s="%s"', $key, $value);
-            }
-        }
-
-        return $options;
-    }
-
-    /**
-     * @return string
-     */
-    public static function getName(): string
-    {
-        return static::NAME;
+        $this->addParameter('config', $this->_getOptions(
+            FactFinderWebComponentsConfig::COMMUNICATION_WIDGET_ALLOWED_ATTRIBUTES,
+            $this->getConfig()->getCommunicationConfig(),
+            $config
+        ));
     }
 
     /**

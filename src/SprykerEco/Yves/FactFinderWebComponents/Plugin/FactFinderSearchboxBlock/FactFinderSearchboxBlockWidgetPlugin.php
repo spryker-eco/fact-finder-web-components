@@ -10,50 +10,26 @@ namespace SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderSearchboxBloc
 use Spryker\Yves\Kernel\Widget\AbstractWidgetPlugin;
 use SprykerShop\Yves\CatalogPage\Dependency\Plugin\FactFinderSearchboxWidget\FactFinderSearchboxWidgetInterface;
 use SprykerEco\Shared\FactFinderWebComponents\FactFinderWebComponentsConfig;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderWidgetPlugin;
 
-class FactFinderSearchboxBlockWidgetPlugin extends AbstractWidgetPlugin implements FactFinderSearchboxWidgetInterface
+class FactFinderSearchboxBlockWidgetPlugin extends FactFinderWidgetPlugin implements FactFinderSearchboxWidgetInterface
 {
     /**
-     * @return void
+     * @param array $searchBoxConfig
+     * @param array $searchButtonConfig
      */
-    public function initialize(): void
+    public function initialize(array $searchBoxConfig = array(), array $searchButtonConfig = array()): void
     {
-        $this->addParameter('searchBoxParams', $this->_getOptions(
+        $this->addParameter('searchBoxConfig', $this->_getOptions(
             FactFinderWebComponentsConfig::SEARCH_BOX_WIDGET_ALLOWED_ATTRIBUTES,
-            $this->getConfig()->getSearchBoxConfig()
+            $this->getConfig()->getSearchBoxConfig(),
+            $searchBoxConfig
         ));
-        $this->addParameter('searchButtonParams', $this->_getOptions(
+        $this->addParameter('searchButtonConfig', $this->_getOptions(
             FactFinderWebComponentsConfig::SEARCH_BOX_BUTTON_WIDGET_ALLOWED_ATTRIBUTES,
-            $this->getConfig()->getSearchButtonConfig()
+            $this->getConfig()->getSearchButtonConfig(),
+            $searchButtonConfig
         ));
-    }
-
-    /**
-     * Get widget options
-     *
-     * @param array $allowedAttributes
-     * @param array $widgetConfig
-     *
-     * @return string
-     */
-    protected function _getOptions($allowedAttributes, $widgetConfig): string
-    {
-        $options = '';
-        foreach ($widgetConfig as $key => $value) {
-            if (in_array($key, $allowedAttributes) && $value) {
-                $options .= sprintf(' %s="%s"', $key, $value);
-            }
-        }
-
-        return $options;
-    }
-
-    /**
-     * @return string
-     */
-    public static function getName(): string
-    {
-        return static::NAME;
     }
 
     /**
