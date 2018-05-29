@@ -8,7 +8,6 @@
 namespace SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderAsnBlock;
 
 use Spryker\Yves\Kernel\Widget\AbstractWidgetPlugin;
-use SprykerShop\Yves\CatalogPage\Dependency\Plugin\FactFinderAsnWidget\FactFinderAsnWidgetInterface;
 use SprykerEco\Shared\FactFinderWebComponents\FactFinderWebComponentsConfig;
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderWidgetPlugin;
 
