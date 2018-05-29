@@ -10,8 +10,63 @@ namespace SprykerEco\Yves\FactFinderWebComponents;
 use Spryker\Yves\Kernel\AbstractBundleDependencyProvider;
 use Spryker\Yves\Kernel\Container;
 use Spryker\Yves\Kernel\Plugin\Pimple;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderAsnBlock\FactFinderAsnBlockWidgetPlugin;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderPagingBlock\FactFinderPagingBlockWidgetPlugin;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCommunicationBlock\FactFinderCommunicationBlockWidgetPlugin;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderBreadcrumbBlock\FactFinderBreadcrumbBlockWidgetPlugin;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderRecordListBlock\FactFinderRecordListBlockWidgetPlugin;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderSearchboxBlock\FactFinderSearchboxBlockWidgetPlugin;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderProductsPerPageBlock\FactFinderProductsPerPageBlockWidgetPlugin;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderSortBoxBlock\FactFinderSortBoxBlockWidgetPlugin;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderSimilarProductsBlock\FactFinderSimilarProductsBlockWidgetPlugin;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderRecommendationBlock\FactFinderRecommendationBlockWidgetPlugin;
 
 class FactFinderWebComponentsDependencyProvider extends AbstractBundleDependencyProvider
 {
+    const FACT_FINDER_WIDGETS = 'FACT_FINDER_WIDGETS';
 
+    /**
+     * @param \Spryker\Yves\Kernel\Container $container
+     *
+     * @return \Spryker\Yves\Kernel\Container
+     */
+    public function provideDependencies(Container $container)
+    {
+        $container = $this->addPageWidgetPlugins($container);
+
+        return $container;
+    }
+
+    /**
+     * @param \Spryker\Yves\Kernel\Container $container
+     *
+     * @return \Spryker\Yves\Kernel\Container
+     */
+    protected function addPageWidgetPlugins(Container $container)
+    {
+        $container[static::FACT_FINDER_WIDGETS] = function () {
+            return $this->getFactFinderWidgetsPlugins();
+        };
+
+        return $container;
+    }
+
+    /**
+     * @return string[]
+     */
+    protected function getFactFinderWidgetsPlugins(): array
+    {
+        return [
+            FactFinderBreadcrumbBlockWidgetPlugin::class,
+            FactFinderCommunicationBlockWidgetPlugin::class,
+            FactFinderSearchboxBlockWidgetPlugin::class,
+            FactFinderRecordListBlockWidgetPlugin::class,
+            FactFinderAsnBlockWidgetPlugin::class,
+            FactFinderPagingBlockWidgetPlugin::class,
+            FactFinderProductsPerPageBlockWidgetPlugin::class,
+            FactFinderSortBoxBlockWidgetPlugin::class,
+            FactFinderSimilarProductsBlockWidgetPlugin::class,
+            FactFinderRecommendationBlockWidgetPlugin::class
+        ];
+    }
 }

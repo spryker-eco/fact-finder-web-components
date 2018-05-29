@@ -1,0 +1,16 @@
+{% extends template('page-layout-main') %}
+
+{% block content %}
+    {{ widget('FactFinderCommunicationWidgetPlugin', {
+        'url': 'http://google.com'
+    }) }}
+    {{ widget('FactFinderSearchboxWidgetPlugin') }}
+    {{ widget('FactFinderRecordListWidgetPlugin') }}
+    {{ widget('FactFinderBreadcrumbWidgetPlugin') }}
+    {{ widget('FactFinderAsnWidgetPlugin') }}
+    {{ widget('FactFinderPagingWidgetPlugin') }}
+    {{ widget('FactFinderProductsPerPageWidgetPlugin') }}
+    {{ widget('FactFinderSortBoxWidgetPlugin') }}
+    {{ widget('FactFinderSimilarProductsWidgetPlugin') }}
+    {{ widget('FactFinderRecommendationWidgetPlugin') }}
+{% endblock %}
