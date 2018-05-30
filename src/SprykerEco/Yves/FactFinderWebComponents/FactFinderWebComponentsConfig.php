@@ -185,4 +185,14 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     {
         return $this->get(FactFinderWebComponentsConstants::HEADER_NAVIGATION_WIDGET_CONFIG);
     }
+
+    /**
+     * Return tag cloud config
+     *
+     * @return array
+     */
+    public function getTagCloudWidgetConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::TAG_CLOUD_WIDGET_CONFIG);
+    }
 }

@@ -21,6 +21,7 @@ use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderProductsPerPageBloc
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderSortBoxBlock\FactFinderSortBoxBlockWidgetPlugin;
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderSimilarProductsBlock\FactFinderSimilarProductsBlockWidgetPlugin;
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderRecommendationBlock\FactFinderRecommendationBlockWidgetPlugin;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderTagCloudBlock\FactFinderTagCloudBlockWidgetPlugin;
 
 class FactFinderWebComponentsDependencyProvider extends AbstractBundleDependencyProvider
 {
@@ -68,7 +69,8 @@ class FactFinderWebComponentsDependencyProvider extends AbstractBundleDependency
             FactFinderSortBoxBlockWidgetPlugin::class,
             FactFinderSimilarProductsBlockWidgetPlugin::class,
             FactFinderRecommendationBlockWidgetPlugin::class,
-            FactFinderHeaderNavigationBlockWidgetPlugin::class
+            FactFinderHeaderNavigationBlockWidgetPlugin::class,
+            FactFinderTagCloudBlockWidgetPlugin::class,
         ];
     }
 }

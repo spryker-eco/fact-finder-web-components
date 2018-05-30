@@ -159,7 +159,20 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     const HEADER_NAVIGATION_WIDGET_ALLOWED_ATTRIBUTES = [
         'group-count',
         'group-size',
-        'hide-epmty-groups',
+        'hide-empty-groups',
         'fetch-initial',
+    ];
+
+    /**
+     * Tag cloud config allowed attributes
+     */
+    const TAG_CLOUD_WIDGET_ALLOWED_ATTRIBUTES = [
+        'min-font-size',
+        'max-font-size',
+        'unit',
+        'gradient-color-start',
+        'gradient-color-end',
+        'word-count',
+        'disable-auto',
     ];
 }

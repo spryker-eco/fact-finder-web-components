@@ -153,4 +153,11 @@ interface FactFinderWebComponentsConstants
      */
     const HEADER_NAVIGATION_WIDGET_CONFIG = 'HEADER_NAVIGATION_WIDGET_CONFIG';
 
+    /**
+     * Specification:
+     * - Tag cloud widget config
+     *
+     * @api
+     */
+    const TAG_CLOUD_WIDGET_CONFIG = 'TAG_CLOUD_WIDGET_CONFIG';
 }
