@@ -11,6 +11,7 @@ use Spryker\Yves\Kernel\AbstractBundleDependencyProvider;
 use Spryker\Yves\Kernel\Container;
 use Spryker\Yves\Kernel\Plugin\Pimple;
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderAsnBlock\FactFinderAsnBlockWidgetPlugin;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderHeaderNavigationBlock\FactFinderHeaderNavigationBlockWidgetPlugin;
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderPagingBlock\FactFinderPagingBlockWidgetPlugin;
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCommunicationBlock\FactFinderCommunicationBlockWidgetPlugin;
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderBreadcrumbBlock\FactFinderBreadcrumbBlockWidgetPlugin;
@@ -66,7 +67,8 @@ class FactFinderWebComponentsDependencyProvider extends AbstractBundleDependency
             FactFinderProductsPerPageBlockWidgetPlugin::class,
             FactFinderSortBoxBlockWidgetPlugin::class,
             FactFinderSimilarProductsBlockWidgetPlugin::class,
-            FactFinderRecommendationBlockWidgetPlugin::class
+            FactFinderRecommendationBlockWidgetPlugin::class,
+            FactFinderHeaderNavigationBlockWidgetPlugin::class
         ];
     }
 }

@@ -152,4 +152,14 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     const RECOMMENDATION_RECORD_ID_ALLOWED_ATTRIBUTES = [
         'record-id'
     ];
+
+    /**
+     * Header navigation record ID config allowed attributes
+     */
+    const HEADER_NAVIGATION_WIDGET_ALLOWED_ATTRIBUTES = [
+        'group-count',
+        'group-size',
+        'hide-epmty-groups',
+        'fetch-initial',
+    ];
 }

@@ -175,4 +175,14 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     {
         return $this->get(FactFinderWebComponentsConstants::RECOMMENDATION_RECORD_ID_CONFIG);
     }
+
+    /**
+     * Return recommendation record ID config
+     *
+     * @return array
+     */
+    public function getHeaderNavigationWidgetConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::HEADER_NAVIGATION_WIDGET_CONFIG);
+    }
 }

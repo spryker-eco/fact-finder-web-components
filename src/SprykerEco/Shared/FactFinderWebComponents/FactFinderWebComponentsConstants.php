@@ -145,4 +145,12 @@ interface FactFinderWebComponentsConstants
      */
     const RECOMMENDATION_RECORD_ID_CONFIG = 'RECOMMENDATION_RECORD_ID_CONFIG';
 
+    /**
+     * Specification:
+     * - Header navigation widget config
+     *
+     * @api
+     */
+    const HEADER_NAVIGATION_WIDGET_CONFIG = 'HEADER_NAVIGATION_WIDGET_CONFIG';
+
 }
