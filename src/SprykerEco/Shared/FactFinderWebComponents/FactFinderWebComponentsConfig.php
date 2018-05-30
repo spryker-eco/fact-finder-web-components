@@ -175,4 +175,13 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
         'word-count',
         'disable-auto',
     ];
+
+    /**
+     * Pushed products config allowed attributes
+     */
+    const PUSHED_PRODUCTS_WIDGET_ALLOWED_ATTRIBUTES = [
+        'name',
+        'is-product-campaign',
+        'is-shopping-cart-campaign',
+    ];
 }

@@ -1,0 +1,24 @@
+{% extends template('widget') %}
+
+{% block body %}
+    <ff-campaign-pushed-products {{ _widget.config|raw }}>
+        <span id="productCampaignCaption">{{ 'factfinder.web-components.pushed.products.title' | trans }}</span>
+        <ff-record-list>
+            <!-- in this demo a click on the product sets the recommendation product-->
+            <ff-record>
+                {% verbatim %}
+                <img data-image="{{record.ImageName}}">
+                {% endverbatim %}
+                <!--<img data-image>-->
+                <div>
+                    {% verbatim %}
+                    <a href="https://www.bergfreunde.de/{{record.Deeplink}}" data-action="redirect">
+                        {{record.Title}}
+                    </a>
+                    {% endverbatim %}
+                    <div>{{ 'factfinder.web-components.pushed.products.price' | trans }}: <strong>{% verbatim %}{{record.Price}}{% endverbatim %}</strong></div>
+                </div>
+            </ff-record>
+        </ff-record-list>
+    </ff-campaign-pushed-products>
+{% endblock %}

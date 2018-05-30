@@ -195,4 +195,14 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     {
         return $this->get(FactFinderWebComponentsConstants::TAG_CLOUD_WIDGET_CONFIG);
     }
+
+    /**
+     * Return pushed products config
+     *
+     * @return array
+     */
+    public function getPushedProductsWidgetConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::PUSHED_PRODUCTS_WIDGET_CONFIG);
+    }
 }

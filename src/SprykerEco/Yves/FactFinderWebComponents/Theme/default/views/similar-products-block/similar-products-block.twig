@@ -20,8 +20,8 @@
                         <a href="{{record.Deeplink}}" data-action="redirect">
                             {{record.Title}}
                         </a>
-                        <div>{{ 'factfinder.web-components.similar.products.price' | trans }}: <strong>{{record.Price}} €</strong></div>
                     {% endverbatim %}
+                    <div>{{ 'factfinder.web-components.similar.products.price' | trans }}: <strong>{% verbatim %}{{record.Price}}{% endverbatim %}</strong></div>
                 </div>
             </ff-record>
         </ff-record-list>

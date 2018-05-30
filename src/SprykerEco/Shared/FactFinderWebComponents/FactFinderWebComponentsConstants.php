@@ -160,4 +160,12 @@ interface FactFinderWebComponentsConstants
      * @api
      */
     const TAG_CLOUD_WIDGET_CONFIG = 'TAG_CLOUD_WIDGET_CONFIG';
+
+    /**
+     * Specification:
+     * - Pushed products widget config
+     *
+     * @api
+     */
+    const PUSHED_PRODUCTS_WIDGET_CONFIG = 'PUSHED_PRODUCTS_WIDGET_CONFIG';
 }
