@@ -168,4 +168,12 @@ interface FactFinderWebComponentsConstants
      * @api
      */
     const PUSHED_PRODUCTS_WIDGET_CONFIG = 'PUSHED_PRODUCTS_WIDGET_CONFIG';
+
+    /**
+     * Specification:
+     * - Campaign widget config
+     *
+     * @api
+     */
+    const CAMPAIGN_WIDGET_CONFIG = 'CAMPAIGN_WIDGET_CONFIG';
 }

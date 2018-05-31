@@ -205,4 +205,14 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     {
         return $this->get(FactFinderWebComponentsConstants::PUSHED_PRODUCTS_WIDGET_CONFIG);
     }
+
+    /**
+     * Return campaign config
+     *
+     * @return array
+     */
+    public function getCampaignWidgetConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::CAMPAIGN_WIDGET_CONFIG);
+    }
 }

@@ -184,4 +184,13 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
         'is-product-campaign',
         'is-shopping-cart-campaign',
     ];
+
+    /**
+     * Campaign config allowed attributes
+     */
+    const CAMPAIGN_WIDGET_ALLOWED_ATTRIBUTES = [
+        'label',
+        'is-product-campaign',
+        'is-shopping-cart-campaign',
+    ];
 }
