@@ -18,7 +18,7 @@ class FactFinderCommunicationBlockWidgetPlugin extends FactFinderWidgetPlugin im
      */
     public function initialize(array $config = array()): void
     {
-        $this->addParameter('config', $this->_getOptions(
+        $this->addParameter('config', $this->getOptions(
             FactFinderWebComponentsConfig::COMMUNICATION_WIDGET_ALLOWED_ATTRIBUTES,
             $this->getConfig()->getCommunicationConfig(),
             $config

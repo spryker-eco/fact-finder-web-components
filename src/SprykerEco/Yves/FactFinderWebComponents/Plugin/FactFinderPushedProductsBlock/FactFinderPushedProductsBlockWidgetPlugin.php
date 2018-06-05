@@ -18,7 +18,7 @@ class FactFinderPushedProductsBlockWidgetPlugin extends FactFinderWidgetPlugin i
      */
     public function initialize(array $config = array()): void
     {
-        $this->addParameter('config', $this->_getOptions(
+        $this->addParameter('config', $this->getOptions(
             FactFinderWebComponentsConfig::PUSHED_PRODUCTS_WIDGET_ALLOWED_ATTRIBUTES,
             $this->getConfig()->getPushedProductsWidgetConfig(),
             $config

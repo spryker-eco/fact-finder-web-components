@@ -1,9 +1,7 @@
 {% extends template('page-layout-main') %}
 
 {% block content %}
-    {{ widget('FactFinderCommunicationWidgetPlugin', {
-        'url': 'http://google.com'
-    }) }}
+    {{ widget('FactFinderCommunicationWidgetPlugin') }}
     {{ widget('FactFinderSearchboxWidgetPlugin') }}
     {{ widget('FactFinderRecordListWidgetPlugin') }}
     {{ widget('FactFinderBreadcrumbWidgetPlugin') }}

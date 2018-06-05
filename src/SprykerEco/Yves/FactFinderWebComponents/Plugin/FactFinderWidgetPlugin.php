@@ -25,7 +25,7 @@ class FactFinderWidgetPlugin extends AbstractWidgetPlugin
      *
      * @return string
      */
-    protected function _getOptions($allowedAttributes, $widgetGlobalConfig, $widgetLocalConfig): string
+    public function getOptions($allowedAttributes, $widgetGlobalConfig, $widgetLocalConfig): string
     {
         $widgetConfig = array_replace($widgetGlobalConfig, $widgetLocalConfig);
         $options = '';

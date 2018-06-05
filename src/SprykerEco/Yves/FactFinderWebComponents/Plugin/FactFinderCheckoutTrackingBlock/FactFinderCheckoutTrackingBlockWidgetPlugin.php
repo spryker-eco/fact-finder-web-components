@@ -18,13 +18,13 @@ class FactFinderCheckoutTrackingBlockWidgetPlugin extends FactFinderWidgetPlugin
      */
     public function initialize(array $config = array()): void
     {
-        $this->addParameter('items', $this->_getQuoteItems());
+        $this->addParameter('items', $this->getQuoteItems());
     }
 
     /**
      * Return quote items
      */
-    protected function _getQuoteItems()
+    public function getQuoteItems()
     {
         return $this->getFactory()->createQuoteItems()->getQuoteItems();
     }

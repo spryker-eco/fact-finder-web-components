@@ -22,31 +22,31 @@ class FactFinderAsnBlockWidgetPlugin extends FactFinderWidgetPlugin implements F
      */
     public function initialize(array $asnGroupWidgetConfig = array(), array $asnGroupElementConfig = array(), array $asnRemoveAllFilterConfig = array(), array $asnSliderConfig = array(), array $asnSliderControlConfig = array()): void
     {
-        $this->addParameter('asnGroupWidgetConfig', $this->_getOptions(
+        $this->addParameter('asnGroupWidgetConfig', $this->getOptions(
             FactFinderWebComponentsConfig::ASN_GROUP_WIDGET_ALLOWED_ATTRIBUTES,
             $this->getConfig()->getAsnGroupWidgetConfig(),
             $asnGroupWidgetConfig
         ));
 
-        $this->addParameter('asnGroupElementConfig', $this->_getOptions(
+        $this->addParameter('asnGroupElementConfig', $this->getOptions(
             FactFinderWebComponentsConfig::ASN_GROUP_ELEMENT_ALLOWED_ATTRIBUTES,
             $this->getConfig()->getAsnGroupElementConfig(),
             $asnGroupElementConfig
         ));
 
-        $this->addParameter('asnRemoveAllFilterConfig', $this->_getOptions(
+        $this->addParameter('asnRemoveAllFilterConfig', $this->getOptions(
             FactFinderWebComponentsConfig::ASN_REMOVE_ALL_FILTER_ALLOWED_ATTRIBUTES,
             $this->getConfig()->getAsnRemoveAllFilterConfig(),
             $asnRemoveAllFilterConfig
         ));
 
-        $this->addParameter('asnSliderConfig', $this->_getOptions(
+        $this->addParameter('asnSliderConfig', $this->getOptions(
             FactFinderWebComponentsConfig::ASN_SLIDER_ALLOWED_ATTRIBUTES,
             $this->getConfig()->getAsnSliderConfig(),
             $asnSliderConfig
         ));
 
-        $this->addParameter('asnSliderControlConfig', $this->_getOptions(
+        $this->addParameter('asnSliderControlConfig', $this->getOptions(
             FactFinderWebComponentsConfig::ASN_SLIDER_CONTROL_ALLOWED_ATTRIBUTES,
             $this->getConfig()->getAsnSliderControlConfig(),
             $asnSliderControlConfig

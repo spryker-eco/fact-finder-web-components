@@ -18,7 +18,7 @@ class FactFinderSortBoxBlockWidgetPlugin extends FactFinderWidgetPlugin implemen
      */
     public function initialize(array $config = array()): void
     {
-        $this->addParameter('config', $this->_getOptions(
+        $this->addParameter('config', $this->getOptions(
             FactFinderWebComponentsConfig::SORT_BOX_WIDGET_ALLOWED_ATTRIBUTES,
             $this->getConfig()->getSortBoxWidgetConfig(),
             $config

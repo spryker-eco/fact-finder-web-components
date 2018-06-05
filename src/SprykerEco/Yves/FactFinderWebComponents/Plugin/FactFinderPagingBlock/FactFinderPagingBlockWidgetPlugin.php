@@ -18,7 +18,7 @@ class FactFinderPagingBlockWidgetPlugin extends FactFinderWidgetPlugin implement
      */
     public function initialize(array $config = array()): void
     {
-        $this->addParameter('config', $this->_getOptions(
+        $this->addParameter('config', $this->getOptions(
             FactFinderWebComponentsConfig::PAGING_WIDGET_ALLOWED_ATTRIBUTES,
             $this->getConfig()->getPagingWidgetConfig(),
             $config

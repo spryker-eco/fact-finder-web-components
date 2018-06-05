@@ -19,7 +19,7 @@ class FactFinderHeaderNavigationBlockWidgetPlugin extends FactFinderWidgetPlugin
      */
     public function initialize(array $config = array()): void
     {
-        $this->addParameter('config', $this->_getOptions(
+        $this->addParameter('config', $this->getOptions(
             FactFinderWebComponentsConfig::HEADER_NAVIGATION_WIDGET_ALLOWED_ATTRIBUTES,
             $this->getConfig()->getHeaderNavigationWidgetConfig(),
             $config

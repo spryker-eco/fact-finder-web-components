@@ -18,7 +18,7 @@ class FactFinderCampaignBlockWidgetPlugin extends FactFinderWidgetPlugin impleme
      */
     public function initialize(array $config = array()): void
     {
-        $this->addParameter('config', $this->_getOptions(
+        $this->addParameter('config', $this->getOptions(
             FactFinderWebComponentsConfig::CAMPAIGN_WIDGET_ALLOWED_ATTRIBUTES,
             $this->getConfig()->getCampaignWidgetConfig(),
             $config
