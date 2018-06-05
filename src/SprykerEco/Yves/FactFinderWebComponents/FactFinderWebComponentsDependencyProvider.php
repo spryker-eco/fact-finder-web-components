@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * MIT License
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
@@ -24,10 +24,13 @@ use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderRecommendationBlock
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderTagCloudBlock\FactFinderTagCloudBlockWidgetPlugin;
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderPushedProductsBlock\FactFinderPushedProductsBlockWidgetPlugin;
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCampaignBlock\FactFinderCampaignBlockWidgetPlugin;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCheckoutTrackingBlock\FactFinderCheckoutTrackingBlockWidgetPlugin;
 
 class FactFinderWebComponentsDependencyProvider extends AbstractBundleDependencyProvider
 {
     const FACT_FINDER_WIDGETS = 'FACT_FINDER_WIDGETS';
+
+    const CLIENT_QUOTE = 'CLIENT_QUOTE';
 
     /**
      * @param \Spryker\Yves\Kernel\Container $container
@@ -37,13 +40,29 @@ class FactFinderWebComponentsDependencyProvider extends AbstractBundleDependency
     public function provideDependencies(Container $container)
     {
         $container = $this->addPageWidgetPlugins($container);
+        $container = $this->addQuoteClient($container);
 
         return $container;
     }
 
     /**
-     * @param \Spryker\Yves\Kernel\Container $container
+     * @param \Spryker\Client\Kernel\Container $container
      *
+     * @return \Spryker\Client\Kernel\Container
+     */
+    protected function addQuoteClient(Container $container)
+    {
+        $container[static::CLIENT_QUOTE] = function (Container $container) {
+            return $container->getLocator()->quote()->client();
+        };
+
+        return $container;
+    }
+
+
+    /**
+     * @param \Spryker\Yves\Kernel\Container $container
+     * 
      * @return \Spryker\Yves\Kernel\Container
      */
     protected function addPageWidgetPlugins(Container $container)
@@ -56,7 +75,7 @@ class FactFinderWebComponentsDependencyProvider extends AbstractBundleDependency
     }
 
     /**
-     * @return string[]
+     * @return array[]
      */
     protected function getFactFinderWidgetsPlugins(): array
     {
@@ -75,6 +94,7 @@ class FactFinderWebComponentsDependencyProvider extends AbstractBundleDependency
             FactFinderTagCloudBlockWidgetPlugin::class,
             FactFinderPushedProductsBlockWidgetPlugin::class,
             FactFinderCampaignBlockWidgetPlugin::class,
+            FactFinderCheckoutTrackingBlockWidgetPlugin::class,
         ];
     }
 }

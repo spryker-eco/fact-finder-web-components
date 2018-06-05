@@ -5,13 +5,13 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCampaignBlock;
+namespace SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCheckoutTrackingBlock;
 
 use Spryker\Yves\Kernel\Dependency\Plugin\WidgetPluginInterface;
 
-interface FactFinderCampaignWidgetInterface extends WidgetPluginInterface
+interface FactFinderCheckoutTrackingWidgetInterface extends WidgetPluginInterface
 {
-    public const NAME = 'FactFinderCampaignWidgetPlugin';
+    public const NAME = 'FactFinderCheckoutTrackingWidgetPlugin';
 
     /**
      * @param array $config
