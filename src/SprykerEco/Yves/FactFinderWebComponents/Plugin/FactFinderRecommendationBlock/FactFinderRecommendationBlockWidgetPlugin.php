@@ -16,7 +16,7 @@ class FactFinderRecommendationBlockWidgetPlugin extends FactFinderWidgetPlugin i
     /**
      * @param array $config
      */
-    public function initialize(array $widgetLocalConfig = array(), string $recordId = ''): void
+    public function initialize(array $widgetLocalConfig = [], string $recordId = ''): void
     {
         $this->addParameter('recommendationConfig', $this->getOptions(
             FactFinderWebComponentsConfig::RECOMMENDATION_WIDGET_ALLOWED_ATTRIBUTES,

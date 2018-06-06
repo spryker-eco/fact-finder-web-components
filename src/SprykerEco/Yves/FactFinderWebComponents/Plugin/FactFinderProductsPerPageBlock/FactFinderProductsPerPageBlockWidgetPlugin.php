@@ -16,7 +16,7 @@ class FactFinderProductsPerPageBlockWidgetPlugin extends FactFinderWidgetPlugin 
     /**
      * @param array $config
      */
-    public function initialize(array $config = array()): void
+    public function initialize(array $config = []): void
     {
         $this->addParameter('config', $this->getOptions(
             FactFinderWebComponentsConfig::PRODUCTS_PER_PAGE_WIDGET_ALLOWED_ATTRIBUTES,

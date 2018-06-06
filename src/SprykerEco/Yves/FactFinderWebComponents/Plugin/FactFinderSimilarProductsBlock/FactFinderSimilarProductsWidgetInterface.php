@@ -17,5 +17,5 @@ interface FactFinderSimilarProductsWidgetInterface extends WidgetPluginInterface
      * @param array  $similarProductsConfig
      * @param string $similarProductId
      */
-    public function initialize(array $similarProductsConfig = array(), string $similarProductId = ''): void;
+    public function initialize(array $similarProductsConfig = [], string $similarProductId = ''): void;
 }

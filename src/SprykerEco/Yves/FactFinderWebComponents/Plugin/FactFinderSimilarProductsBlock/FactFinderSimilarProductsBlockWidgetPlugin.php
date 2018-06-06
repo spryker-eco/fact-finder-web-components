@@ -17,7 +17,7 @@ class FactFinderSimilarProductsBlockWidgetPlugin extends FactFinderWidgetPlugin 
      * @param array  $similarProductsConfig
      * @param string $similarProductId
      */
-    public function initialize(array $similarProductsConfig = array(), string $similarProductId = ''): void
+    public function initialize(array $similarProductsConfig = [], string $similarProductId = ''): void
     {
         $this->addParameter('similarProductsConfig', $this->getOptions(
             FactFinderWebComponentsConfig::SIMILAR_PRODUCTS_WIDGET_ALLOWED_ATTRIBUTES,

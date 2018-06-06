@@ -16,5 +16,5 @@ interface FactFinderProductsPerPageWidgetInterface extends WidgetPluginInterface
     /**
      * @param array $widgetLocalConfig
      */
-    public function initialize(array $widgetLocalConfig = array()): void;
+    public function initialize(array $widgetLocalConfig = []): void;
 }

@@ -17,5 +17,5 @@ interface FactFinderSearchboxWidgetInterface extends WidgetPluginInterface
      * @param array $searchBoxConfig
      * @param array $searchButtonConfig
      */
-    public function initialize(array $searchBoxConfig = array(), array $searchButtonConfig = array()): void;
+    public function initialize(array $searchBoxConfig = [], array $searchButtonConfig = []): void;
 }

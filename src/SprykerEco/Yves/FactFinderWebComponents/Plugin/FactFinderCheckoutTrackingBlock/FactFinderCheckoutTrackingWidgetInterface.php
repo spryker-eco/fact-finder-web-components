@@ -16,5 +16,5 @@ interface FactFinderCheckoutTrackingWidgetInterface extends WidgetPluginInterfac
     /**
      * @param array $config
      */
-    public function initialize(array $config = array()): void;
+    public function initialize(array $config = []): void;
 }

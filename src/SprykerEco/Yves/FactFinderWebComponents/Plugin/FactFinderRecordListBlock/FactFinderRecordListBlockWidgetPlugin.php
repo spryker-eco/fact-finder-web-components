@@ -17,7 +17,7 @@ class FactFinderRecordListBlockWidgetPlugin extends FactFinderWidgetPlugin imple
      * @param array $recordListConfig
      * @param array $recordConfig
      */
-    public function initialize(array $recordListConfig = array(), array $recordConfig = array()): void
+    public function initialize(array $recordListConfig = [], array $recordConfig = []): void
     {
         $this->addParameter('recordListConfig', $this->getOptions(
             FactFinderWebComponentsConfig::RECORD_LIST_WIDGET_ALLOWED_ATTRIBUTES,

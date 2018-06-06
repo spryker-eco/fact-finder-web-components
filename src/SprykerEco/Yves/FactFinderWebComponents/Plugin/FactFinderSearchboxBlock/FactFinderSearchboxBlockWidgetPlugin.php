@@ -17,7 +17,7 @@ class FactFinderSearchboxBlockWidgetPlugin extends FactFinderWidgetPlugin implem
      * @param array $searchBoxConfig
      * @param array $searchButtonConfig
      */
-    public function initialize(array $searchBoxConfig = array(), array $searchButtonConfig = array()): void
+    public function initialize(array $searchBoxConfig = [], array $searchButtonConfig = []): void
     {
         $this->addParameter('searchBoxConfig', $this->getOptions(
             FactFinderWebComponentsConfig::SEARCH_BOX_WIDGET_ALLOWED_ATTRIBUTES,

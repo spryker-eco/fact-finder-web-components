@@ -14,7 +14,7 @@ class FactFinderWidgetPlugin extends AbstractWidgetPlugin
     /**
      * @param array $widgetConfig
      */
-    public function initialize(array $widgetConfig = array()): void {}
+    public function initialize(array $widgetConfig = []): void {}
 
     /**
      * Get widget options

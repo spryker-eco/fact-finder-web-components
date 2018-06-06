@@ -20,7 +20,7 @@ class IndexController extends AbstractController
     public function indexAction()
     {
         return $this->view(
-            array(),
+            [],
             $this->getFactory()->getFactFinderWidgetPlugins(),
             '@FactFinderWebComponents/views/index/index.twig'
         );
