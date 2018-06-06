@@ -9,23 +9,7 @@ matrix:
   fast_finish: true
   include:
      - php: 7.1
-
-services:
-  - postgresql
-  - redis
-  - rabbitmq
-
-addons:
-  postgresql: 9.4
-
-  apt:
-    packages:
-      - graphviz
-
-  hosts:
-    - zed.de.spryker.test
-    - www.de.spryker.test
-
+     
 env:
   global:
     - APPLICATION_ENV=devtest
