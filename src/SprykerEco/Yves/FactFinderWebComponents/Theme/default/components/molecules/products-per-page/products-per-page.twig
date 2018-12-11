@@ -1,0 +1,28 @@
+{% extends model('component') %}
+
+{% define config = {
+    name: 'products-per-page',
+    tag: 'products-per-page'
+} %}
+
+{% define data = {
+    properties: {
+        dropdown: '',
+        item: ''
+    }
+} %}
+
+{% block body %}
+    <div class="box">
+        <ff-products-per-page-dropdown {{ data.properties.dropdown|raw }}>
+            <ff-products-per-page-item {{ data.properties.item|raw }}>
+                <div>
+                    {% verbatim %}
+                        {{value}}
+                    {% endverbatim %}&nbsp;
+                    {{ 'factfinder.web-components.products.per.page.productsText' | trans }}
+                </div>
+            </ff-products-per-page-item>
+        </ff-products-per-page-dropdown>
+    </div>
+{% endblock %}

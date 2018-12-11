@@ -1,0 +1,18 @@
+{% extends model('component') %}
+
+{% define config = {
+    name: 'tag-cloud',
+    tag: 'tag-cloud'
+} %}
+
+{% define data = {
+    properties: {
+        component: ''
+    }
+} %}
+
+{% block body %}
+    <div class="box">
+        <ff-tag-cloud {{ data.properties.component|raw }}></ff-tag-cloud>
+    </div>
+{% endblock %}

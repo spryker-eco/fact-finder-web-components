@@ -1,0 +1,23 @@
+{% extends model('component') %}
+
+{% define config = {
+    name: 'checkout-tracking',
+    tag: 'checkout-tracking'
+} %}
+
+{% define data = {
+    properties: {
+        component: '',
+        items: []
+    }
+} %}
+
+{% block body %}
+    {#{% if data.properties.items is iterable %}#}
+        {#<ff-checkout-tracking {{ data.properties.component }}>#}
+            {#{% for item in data.properties.items %}#}
+                {#<ff-checkout-tracking-item record-id="{{ item.recordId|raw }}" count="{{ item.count|raw }}"></ff-checkout-tracking-item>#}
+            {#{% endfor %}#}
+        {#</ff-checkout-tracking>#}
+    {#{% endif %}#}
+{% endblock %}

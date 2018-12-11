@@ -1,0 +1,60 @@
+{% extends model('component') %}
+
+{% define config = {
+    name: 'recommendation-products',
+    tag: 'recommendation-products'
+} %}
+
+{% define data = {
+    properties: {
+        component: '',
+        list: '',
+        record: ''
+    }
+} %}
+
+{% define attributes = {
+    'recordId': ''
+} %}
+
+{% block body %}
+    <div class="box">
+        <ff-recommendation class="{{ config.jsName }}__holder" {{data.properties.component|raw }} unresolved>
+            <div class="recommendationHeader">
+                {{ 'factfinder.web-components.recommendations.title' | trans }}
+            </div>
+
+            {% block list %}
+                <ff-record-list {{data.properties.list|raw }} unresolved>
+
+                    {% block record %}
+                        <ff-record {{data.properties.record|raw }}>
+                            {% verbatim %}
+                                <img data-image="{{record.ImageName}}">
+                                <a data-anchor="https://www.alpinetrek.co.uk{{record.Deeplink}}"
+                                   data-redirect="https://www.alpinetrek.co.uk{{record.Deeplink}}" data-redirect-target="_blank">
+                                    {{record.Title}}
+                                </a>
+                            {% endverbatim %}
+
+                            <div class="priceContainer">
+                                <span class="brand">
+                                    {% verbatim %}
+                                        {{record.Manufacturer}}
+                                    {% endverbatim %}
+                                </span>
+                                <span class="price">
+                                    {% verbatim %}
+                                        {{record.Price}} €
+                                    {% endverbatim %}
+                                </span>
+                            </div>
+                        </ff-record>
+                    {% endblock %}
+
+                </ff-record-list>
+            {% endblock %}
+
+        </ff-recommendation>
+    </div>
+{% endblock %}

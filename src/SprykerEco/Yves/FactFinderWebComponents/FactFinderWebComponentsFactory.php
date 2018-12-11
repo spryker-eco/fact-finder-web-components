@@ -9,6 +9,8 @@ namespace SprykerEco\Yves\FactFinderWebComponents;
 
 use Spryker\Client\Quote\QuoteClientInterface;
 use Spryker\Yves\Kernel\AbstractFactory;
+use SprykerEco\Yves\FactFinderWebComponents\Model\WebComponentsConfigProvider\WebComponentsConfigProvider;
+use SprykerEco\Yves\FactFinderWebComponents\Model\WebComponentsConfigProvider\WebComponentsConfigProviderInterface;
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCheckoutTrackingBlock\FactFinderGetQuoteItems;
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCheckoutTrackingBlock\FactFinderGetQuoteItemsInterface;
 
@@ -36,5 +38,13 @@ class FactFinderWebComponentsFactory extends AbstractFactory
     public function createQuoteItems(): FactFinderGetQuoteItemsInterface
     {
         return new FactFinderGetQuoteItems();
+    }
+
+    /**
+     * @return WebComponentsConfigProviderInterface
+     */
+    public function createFactFinderWebComponentsConfigProvider(): WebComponentsConfigProviderInterface
+    {
+        return new WebComponentsConfigProvider($this->getConfig());
     }
 }
