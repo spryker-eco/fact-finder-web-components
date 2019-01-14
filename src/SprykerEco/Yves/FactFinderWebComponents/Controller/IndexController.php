@@ -22,22 +22,60 @@ class IndexController extends AbstractController
      */
     public function indexAction()
     {
+        $configToStringTransformer = $this->getFactory()->createWebComponentConfigToTwigConfigTransformer();
+        $configProvider = $this->getFactory()->createFactFinderWebComponentsConfigProvider();
+
         return $this->view(
-           [
-               'asn' => $this->getFactory()->createFactFinderWebComponentsConfigProvider()->getAsnWidgetConfig(),
-               'campaign' => $this->getFactory()->createFactFinderWebComponentsConfigProvider()->getCampaignWidgetConfig(),
-               'communication' => $this->getFactory()->createFactFinderWebComponentsConfigProvider()->getCommunicationConfig(),
-               'headerNavigation' => $this->getFactory()->createFactFinderWebComponentsConfigProvider()->getHeaderNavigationWidgetConfig(),
-               'paging' => $this->getFactory()->createFactFinderWebComponentsConfigProvider()->getPagingWidgetConfig(),
-               'productsPerPage' => $this->getFactory()->createFactFinderWebComponentsConfigProvider()->getProductsPerPageWidgetConfig(),
-               'pushedProducts' => $this->getFactory()->createFactFinderWebComponentsConfigProvider()->getPushedProductsWidgetConfig(),
-               'recommendation' => $this->getFactory()->createFactFinderWebComponentsConfigProvider()->getRecommendationConfig(),
-               'recordList' => $this->getFactory()->createFactFinderWebComponentsConfigProvider()->getRecordListConfig(),
-               'searchbox' => $this->getFactory()->createFactFinderWebComponentsConfigProvider()->getSearchBoxConfig(),
-               'similarProducts' => $this->getFactory()->createFactFinderWebComponentsConfigProvider()->getSimilarProductsConfig(),
-               'sortBox' => $this->getFactory()->createFactFinderWebComponentsConfigProvider()->getSortBoxWidgetConfig(),
-               'tagCloud' => $this->getFactory()->createFactFinderWebComponentsConfigProvider()->getTagCloudWidgetConfig(),
-           ],
+            [
+                'facetsAsn' => $configToStringTransformer->transform(
+                    $configProvider->getAsnWidgetConfig()
+                ),
+                'breadcrumb' => $configToStringTransformer->transform(
+                    $configProvider->getBreadcrumbConfig()
+                ),
+                'campaign' => $configToStringTransformer->transform(
+                    $configProvider->getCampaignWidgetConfig()
+                ),
+                'communication' => $configToStringTransformer->transform(
+                    $configProvider->getCommunicationConfig()
+                ),
+                'headerNavigation' => $configToStringTransformer->transform(
+                    $configProvider->getHeaderNavigationWidgetConfig()
+                ),
+                'paging' => $configToStringTransformer->transform(
+                    $configProvider->getPagingWidgetConfig()
+                ),
+                'productsPerPage' => $configToStringTransformer->transform(
+                    $configProvider->getProductsPerPageWidgetConfig()
+                ),
+                'pushedProducts' => $configToStringTransformer->transform(
+                    $configProvider->getPushedProductsWidgetConfig()
+                ),
+                'recommendation' => $configToStringTransformer->transform(
+                    $configProvider->getRecommendationConfig()
+                   ),
+                'recordList' => $configToStringTransformer->transform(
+                    $configProvider->getRecordListConfig()
+                ),
+                'suggest' => $configToStringTransformer->transform(
+                    $configProvider->getSuggestConfig()
+                ),
+                'checkoutTracking' => $configToStringTransformer->transform(
+                    $configProvider->getCheckoutTrackingConfig()
+                ),
+                'searchbox' => $configToStringTransformer->transform(
+                    $configProvider->getSearchBoxConfig()
+                ),
+                'similarProducts' => $configToStringTransformer->transform(
+                    $configProvider->getSimilarProductsConfig()
+                ),
+                'sortBox' => $configToStringTransformer->transform(
+                    $configProvider->getSortBoxWidgetConfig()
+                ),
+                'tagCloud' => $configToStringTransformer->transform(
+                        $configProvider->getTagCloudWidgetConfig()
+                ),
+            ],
             $this->getFactory()->getFactFinderWidgetPlugins(),
             '@FactFinderWebComponents/views/index/index.twig'
         );

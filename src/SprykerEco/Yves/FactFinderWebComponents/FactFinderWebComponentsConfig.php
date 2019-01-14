@@ -33,6 +33,16 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
+     * Return search box config
+     *
+     * @return array
+     */
+    public function getBreadcrumbConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::BREADCRUMB_WIDGET_CONFIG);
+    }
+
+    /**
      * Return search button config
      *
      * @return array
@@ -53,6 +63,16 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
+     * Return record list config
+     *
+     * @return array
+     */
+    public function getCheckoutTrackingConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::CHECKOUT_TRACKING_CONFIG);
+    }
+
+    /**
      * Return record config
      *
      * @return array
@@ -60,6 +80,16 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     public function getRecordConfig()
     {
         return $this->get(FactFinderWebComponentsConstants::RECORD_WIDGET_CONFIG);
+    }
+
+    /**
+     * Return record config
+     *
+     * @return array
+     */
+    public function getSuggestConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::SUGGEST_CONFIG);
     }
 
     /**

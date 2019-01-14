@@ -12,6 +12,11 @@ interface WebComponentsConfigProviderInterface
     /**
      * @return array
      */
+    public function getBreadcrumbConfig(): array;
+
+    /**
+     * @return array
+     */
     public function getCampaignWidgetConfig(): array;
 
     /**
@@ -53,6 +58,16 @@ interface WebComponentsConfigProviderInterface
      * @return array
      */
     public function getRecordListConfig(): array;
+
+    /**
+     * @return array
+     */
+    public function getSuggestConfig(): array;
+
+    /**
+     * @return array
+     */
+    public function getCheckoutTrackingConfig(): array;
 
     /**
      * @return array

@@ -27,6 +27,14 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
+     * - Breadcrumb widget configuration options
+     *
+     * @api
+     */
+    const BREADCRUMB_WIDGET_CONFIG = 'BREADCRUMB_WIDGET_CONFIG';
+
+    /**
+     * Specification:
      * - Search button widget configuration options
      *
      * @api
@@ -43,11 +51,27 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
+     * - Checkout tracking config
+     *
+     * @api
+     */
+    const CHECKOUT_TRACKING_CONFIG = 'CHECKOUT_TRACKING_CONFIG';
+
+    /**
+     * Specification:
      * - Record widget config
      *
      * @api
      */
     const RECORD_WIDGET_CONFIG = 'RECORD_WIDGET_CONFIG';
+
+    /**
+     * Specification:
+     * - Suggest config
+     *
+     * @api
+     */
+    const SUGGEST_CONFIG = 'SUGGEST_CONFIG';
 
     /**
      * Specification:

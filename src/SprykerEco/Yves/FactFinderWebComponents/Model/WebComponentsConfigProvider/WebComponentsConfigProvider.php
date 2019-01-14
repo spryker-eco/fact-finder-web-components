@@ -22,12 +22,21 @@ class WebComponentsConfigProvider implements WebComponentsConfigProviderInterfac
     public function getAsnWidgetConfig(): array
     {
         return array_merge(
-            $this->config->getAsnGroupWidgetConfig(),
-            $this->config->getAsnGroupElementConfig(),
-            $this->config->getAsnRemoveAllFilterConfig(),
-            $this->config->getAsnSliderConfig(),
-            $this->config->getAsnSliderControlConfig()
+//            $this->config->getAsnGroupWidgetConfig(),
+//            $this->config->getAsnGroupElementConfig(),
+//            $this->config->getAsnRemoveAllFilterConfig(),
+            [],
+            $this->config->getAsnSliderConfig()
+//            $this->config->getAsnSliderControlConfig()
         );
+    }
+
+    /**
+     * @return array
+     */
+    public function getBreadcrumbConfig(): array
+    {
+        return $this->config->getBreadcrumbConfig();
     }
 
     /**
@@ -91,7 +100,10 @@ class WebComponentsConfigProvider implements WebComponentsConfigProviderInterfac
      */
     public function getRecommendationConfig(): array
     {
-        return $this->config->getRecommendationConfig();
+        return array_merge(
+            $this->config->getRecommendationConfig(),
+            $this->config->getRecommendationRecordIdConfig()
+        );
     }
 
     /**
@@ -101,8 +113,25 @@ class WebComponentsConfigProvider implements WebComponentsConfigProviderInterfac
     {
         return array_merge(
             $this->config->getRecordListConfig(),
-            $this->config->getRecordConfig()
+            []
+//            $this->config->getRecordConfig()
         );
+    }
+
+    /**
+     * @return array
+     */
+    public function getSuggestConfig(): array
+    {
+        return $this->config->getSuggestConfig();
+    }
+
+    /**
+     * @return array
+     */
+    public function getCheckoutTrackingConfig(): array
+    {
+        return $this->config->getCheckoutTrackingConfig();
     }
 
     /**
@@ -110,10 +139,7 @@ class WebComponentsConfigProvider implements WebComponentsConfigProviderInterfac
      */
     public function getSearchBoxConfig(): array
     {
-        return array_merge(
-            $this->config->getSearchBoxConfig(),
-            $this->config->getSearchButtonConfig()
-        );
+        return $this->config->getSearchBoxConfig();
     }
 
     /**
@@ -121,7 +147,10 @@ class WebComponentsConfigProvider implements WebComponentsConfigProviderInterfac
      */
     public function getSimilarProductsConfig(): array
     {
-        return $this->config->getSimilarProductsConfig();
+        return array_merge(
+            $this->config->getSimilarProductIdConfig(),
+            $this->config->getSimilarProductsConfig()
+        );
     }
 
     /**

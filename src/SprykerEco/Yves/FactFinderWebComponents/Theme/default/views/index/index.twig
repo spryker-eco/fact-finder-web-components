@@ -1,210 +1,125 @@
 {% extends template('page-layout-main') %}
 
-{#{% define data = {#}
-    {#communication: _view.communication,#}
-    {#breadcrumb: _view.breadcrumb,#}
-    {#headerNavigation: _view.headerNavigation,#}
-    {#productsPerPage: _view.productsPerPage,#}
-    {#sortBox: _view.sortBox,#}
-    {#searchbox: _view.searchbox,#}
-    {#similarProducts: _view.similarProducts,#}
-    {#recommendation: _view.recommendation,#}
-    {#suggest: _view.suggest,#}
-    {#facetsAsn: _view.facetsAsn,#}
-    {#pushedProducts: _view.pushedProducts,#}
-    {#campaign: _view.campaign,#}
-    {#tagCloud: _view.tagCloud,#}
-    {#recordList: _view.recordList,#}
-    {#paging: _view.paging,#}
-    {#checkoutTracking: _view.checkoutTracking#}
-{#} %}#}
+{% define data = {
+    communication: _view.communication,
+    breadcrumb: _view.breadcrumb,
+    headerNavigation: _view.headerNavigation,
+    productsPerPage: _view.productsPerPage,
+    sortBox: _view.sortBox,
+    searchbox: _view.searchbox,
+    similarProducts: _view.similarProducts,
+    recommendation: _view.recommendation,
+    suggest: _view.suggest,
+    facetsAsn: _view.facetsAsn,
+    pushedProducts: _view.pushedProducts,
+    campaign: _view.campaign,
+    tagCloud: _view.tagCloud,
+    recordList: _view.recordList,
+    paging: _view.paging,
+    checkoutTracking: _view.checkoutTracking
+} %}
 
 {% block content %}
     {% include atom('communication', 'FactFinderWebComponents') with {
         data: {
-           properties: {
-                component: 'url="http://search-web-components.fact-finder.de/FACT-Finder-7.2" version="7.2" default-query="trousers" channel="bergfreunde-co-uk" search-immediate="true"'
-            }
+           properties: data.communication
         }
     } only %}
 
     {% include molecule('breadcrumb', 'FactFinderWebComponents') with {
         data: {
-            properties: {
-                component: '',
-                items: ['search', 'filter', 'advisor']
-            }
+            properties: data.breadcrumb
         }
     } only %}
 
     {% include atom('header-navigation', 'FactFinderWebComponents') with {
         data: {
-            properties: {
-                component: 'group-count="4" group-size="4" hide-empty-groups="1" fetch-initial="1"',
-            }
+            properties: data.headerNavigation
         }
     } only %}
 
     {% include molecule('products-per-page', 'FactFinderWebComponents') with {
         data: {
-            properties: {
-                component: '',
-                dropdown: '',
-                list: '',
-                item: ''
-            }
+            properties: data.productsPerPage
         }
     } only %}
 
     {% include molecule('sortbox', 'FactFinderWebComponents') with {
         data: {
-
-            properties: {
-                component: '',
-                items: [
-                    {
-                        'key': 'default.template',
-                        'title': 'factfinder.web-components.sort.box.default.style'
-                    },
-                    {
-                        'key': 'Price.asc',
-                        'title': 'factfinder.web-components.sort.box.overriden.for'
-                    },
-                    {
-                        'key': 'null.desc',
-                        'title': 'factfinder.web-components.sort.box.relevance'
-                    }
-                ]
-            }
+            properties: data.sortBox
         }
     } only %}
 
     {% include molecule('searchbox', 'FactFinderWebComponents') with {
         data: {
-            properties: {
-                component: 'suggest-onfocus="true" use-suggest="true"'
-            }
+            properties: data.searchbox
         }
     } only %}
 
     {% include molecule('suggest', 'FactFinderWebComponents') with {
         data: {
-            properties: {
-                component: '',
-                searchItems: [
-                    {
-                        'type': 'searchTerm',
-                        'title': 'Search term'
-                    },
-                    {
-                        'type': 'category',
-                        'title': 'Category'
-                    },
-                    {
-                        'type': 'brand',
-                        'title': 'Brand'
-                    }
-                ],
-                productItemType: 'productName'
-            }
+            properties: data.suggest
         }
     } only %}
 
     {% include molecule('similar-products', 'FactFinderWebComponents') with {
         attributes: {
-            'recordId': 'd44c3c7b5e52f7a6b27041c1e789e954'
+            'recordId': data.similarProducts.recordId
         },
         data: {
-            properties: {
-                component: 'max-results="4"',
-                list: '',
-                record: ''
-            }
+            properties: data.similarProducts
         }
     } only %}
 
     {% include molecule('recommendation-products', 'FactFinderWebComponents') with {
         attributes: {
-            'recordId': '19532fa96a8e60a27328f01520cc4'
+            'recordId': data.recommendation.recordId
         },
         data: {
-            properties: {
-                component: 'max-results="4"',
-                list: '',
-                record: ''
-            }
+            properties: data.recommendation
         }
     } only %}
 
     {% include molecule('facets-asn', 'FactFinderWebComponents') with {
         data: {
-            properties: {
-                component: 'align="vertical"'
-            }
+            properties: data.facetsAsn
         }
     } only %}
 
     {% include molecule('pushed-products', 'FactFinderWebComponents') with {
         data: {
-            properties: {
-                component: '',
-                list: '',
-                record: ''
-            }
+            properties: data.pushedProducts
         }
     } only %}
 
     {% include atom('campaign', 'FactFinderWebComponents') with {
         data: {
-            properties: {
-                component: '',
-                answer: '',
-                question: '',
-                feedbacktext: ''
-            }
+            properties: data.campaign
         }
     } only %}
 
     {% include atom('tag-cloud', 'FactFinderWebComponents') with {
         data: {
-            properties: {
-                component: ''
-            }
+            properties: data.tagCloud
         }
     } only %}
 
     {% include molecule('record-list', 'FactFinderWebComponents') with {
         data: {
-            properties: {
-                component: '',
-                record: ''
-            }
+            properties: data.recordList
         }
     } only %}
 
     {% include molecule('paging', 'FactFinderWebComponents') with {
         data: {
-            properties: {
-                component: ''
-            }
+            properties: data.paging
         }
     } only %}
 
     {% include molecule('checkout-tracking', 'FactFinderWebComponents') with {
         data: {
-            properties: {
-                component: 'disable-auto-tracking',
-                items: [
-                    {
-                        'recordId': 'd44c3c7b5e52f7a6b27041c1e789e954',
-                        'count': '2'
-                    },
-                    {
-                        'recordId': '19532fa96a8e60a27328f01520cc4',
-                        'count': '4'
-                    }
-                ]
-            }
+            properties: data.checkoutTracking
         }
     } only %}
 {% endblock %}
+
