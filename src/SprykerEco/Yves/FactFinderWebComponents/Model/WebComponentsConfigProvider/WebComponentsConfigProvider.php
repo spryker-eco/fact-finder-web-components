@@ -16,6 +16,9 @@ class WebComponentsConfigProvider implements WebComponentsConfigProviderInterfac
      */
     protected $config;
 
+    /**
+     * @param \SprykerEco\Yves\FactFinderWebComponents\FactFinderWebComponentsConfig $config
+     */
     public function __construct(FactFinderWebComponentsConfig $config)
     {
         $this->config = $config;

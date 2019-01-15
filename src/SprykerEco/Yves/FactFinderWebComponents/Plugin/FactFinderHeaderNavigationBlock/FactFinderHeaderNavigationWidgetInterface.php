@@ -15,6 +15,8 @@ interface FactFinderHeaderNavigationWidgetInterface extends WidgetPluginInterfac
 
     /**
      * @param array $config
+     *
+     * @return void
      */
     public function initialize(array $config): void;
 }

@@ -10,7 +10,7 @@ namespace SprykerEco\Yves\FactFinderWebComponents\Plugin;
 use Spryker\Yves\Kernel\AbstractPlugin;
 
 /**
- * @method \SprykerEco\Yves\FactFinder\FactFinderCommunicationWidgetFactory getFactory()
+ * @method \SprykerEco\Yves\FactFinderWebComponents\FactFinderWebComponentsFactory getFactory()
  */
 class FactFinderTwigContentRendererPlugin extends AbstractPlugin implements FactFinderTwigContentRendererPluginInterface
 {
@@ -22,7 +22,7 @@ class FactFinderTwigContentRendererPlugin extends AbstractPlugin implements Fact
      *
      * @return array
      */
-    public function render(array $contentList, array $context)
+    public function render(array $contentList, array $context): array
     {
         return $this->getFactory()
             ->createTwigContentRenderer()

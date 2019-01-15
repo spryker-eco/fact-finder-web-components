@@ -7,7 +7,7 @@
 
 namespace SprykerEco\Yves\FactFinderWebComponents;
 
-use Spryker\Zed\Kernel\AbstractBundleConfig;
+use Spryker\Yves\Kernel\AbstractBundleConfig;
 use SprykerEco\Shared\FactFinderWebComponents\FactFinderWebComponentsConstants;
 
 class FactFinderWebComponentsConfig extends AbstractBundleConfig

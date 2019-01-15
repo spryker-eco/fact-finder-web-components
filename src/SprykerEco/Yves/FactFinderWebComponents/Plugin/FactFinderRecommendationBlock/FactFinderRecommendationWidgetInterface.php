@@ -16,6 +16,8 @@ interface FactFinderRecommendationWidgetInterface extends WidgetPluginInterface
     /**
      * @param array $widgetLocalConfig
      * @param string $recordId
+     *
+     * @return void
      */
     public function initialize(array $widgetLocalConfig = [], string $recordId = ''): void;
 }

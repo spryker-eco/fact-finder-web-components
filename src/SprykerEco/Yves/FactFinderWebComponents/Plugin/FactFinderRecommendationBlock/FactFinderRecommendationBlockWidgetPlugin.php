@@ -13,7 +13,7 @@ use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderWidgetPlugin;
 class FactFinderRecommendationBlockWidgetPlugin extends FactFinderWidgetPlugin implements FactFinderRecommendationWidgetInterface
 {
     /**
-     * @param array $config
+     * @inheritdoc
      *
      * @return void
      */

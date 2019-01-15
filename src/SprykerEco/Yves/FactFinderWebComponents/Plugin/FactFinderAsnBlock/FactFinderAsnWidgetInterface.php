@@ -19,6 +19,14 @@ interface FactFinderAsnWidgetInterface extends WidgetPluginInterface
      * @param array $asnRemoveAllFilterConfig
      * @param array $asnSliderConfig
      * @param array $asnSliderControlConfig
+     *
+     * @return void
      */
-    public function initialize(array $asnGroupWidgetConfig = [], array $asnGroupElementConfig = [], array $asnRemoveAllFilterConfig = [], array $asnSliderConfig = [], array $asnSliderControlConfig = []): void;
+    public function initialize(
+        array $asnGroupWidgetConfig = [],
+        array $asnGroupElementConfig = [],
+        array $asnRemoveAllFilterConfig = [],
+        array $asnSliderConfig = [],
+        array $asnSliderControlConfig = []
+    ): void;
 }

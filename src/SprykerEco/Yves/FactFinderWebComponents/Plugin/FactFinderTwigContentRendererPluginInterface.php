@@ -17,5 +17,5 @@ interface FactFinderTwigContentRendererPluginInterface
      *
      * @return array
      */
-    public function render(array $contentList, array $context);
+    public function render(array $contentList, array $context): array;
 }

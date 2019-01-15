@@ -16,6 +16,8 @@ interface FactFinderRecordListWidgetInterface extends WidgetPluginInterface
     /**
      * @param array $recordListConfig
      * @param array $recordConfig
+     *
+     * @return void
      */
     public function initialize(array $recordListConfig = [], array $recordConfig = []): void;
 }

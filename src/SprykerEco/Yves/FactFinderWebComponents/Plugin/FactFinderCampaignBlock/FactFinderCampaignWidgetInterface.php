@@ -15,6 +15,8 @@ interface FactFinderCampaignWidgetInterface extends WidgetPluginInterface
 
     /**
      * @param array $config
+     *
+     * @return void
      */
     public function initialize(array $config = []): void;
 }

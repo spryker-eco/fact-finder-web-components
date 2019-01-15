@@ -19,7 +19,9 @@ use Spryker\Yves\Kernel\AbstractPlugin;
 class FactFinderGetQuoteItems extends AbstractPlugin implements FactFinderGetQuoteItemsInterface
 {
     /**
-     * Get quote items
+     * @inheritdoc
+     *
+     * @return \ArrayObject
      */
     public function getQuoteItems(): ArrayObject
     {

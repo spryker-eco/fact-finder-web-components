@@ -9,6 +9,9 @@ namespace SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCheckoutTrack
 
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderWidgetPlugin;
 
+/**
+ * @method \SprykerEco\Yves\FactFinderWebComponents\FactFinderWebComponentsFactory getFactory()
+ */
 class FactFinderCheckoutTrackingBlockWidgetPlugin extends FactFinderWidgetPlugin implements FactFinderCheckoutTrackingWidgetInterface
 {
     /**
@@ -22,7 +25,9 @@ class FactFinderCheckoutTrackingBlockWidgetPlugin extends FactFinderWidgetPlugin
     }
 
     /**
-     * Return quote items
+     * Get Quote items
+     *
+     * @return \ArrayObject
      */
     public function getQuoteItems()
     {

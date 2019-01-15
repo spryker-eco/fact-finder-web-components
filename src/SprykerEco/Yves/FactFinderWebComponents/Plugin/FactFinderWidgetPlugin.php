@@ -23,13 +23,13 @@ class FactFinderWidgetPlugin extends AbstractWidgetPlugin
     /**
      * Get widget options
      *
-     * @param $allowedAttributes
-     * @param $widgetGlobalConfig
-     * @param $widgetLocalConfig
+     * @param array $allowedAttributes
+     * @param array $widgetGlobalConfig
+     * @param array $widgetLocalConfig
      *
      * @return string
      */
-    public function getOptions($allowedAttributes, $widgetGlobalConfig, $widgetLocalConfig): string
+    public function getOptions(array $allowedAttributes, array $widgetGlobalConfig, array $widgetLocalConfig): string
     {
         $widgetConfig = array_replace($widgetGlobalConfig, $widgetLocalConfig);
         $options = '';
@@ -55,5 +55,6 @@ class FactFinderWidgetPlugin extends AbstractWidgetPlugin
      */
     public static function getTemplate(): string
     {
+        return '';
     }
 }
