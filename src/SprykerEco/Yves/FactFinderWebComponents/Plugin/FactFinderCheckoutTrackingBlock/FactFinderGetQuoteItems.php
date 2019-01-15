@@ -1,15 +1,14 @@
 <?php
 
 /**
- * MIT License
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
 namespace SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCheckoutTrackingBlock;
 
-use Spryker\Yves\Kernel\AbstractPlugin;
 use ArrayObject;
-use Spryker\Yves\Kernel\Dependency\Plugin\WidgetPluginInterface;
+use Spryker\Yves\Kernel\AbstractPlugin;
 
 /**
  * Class FactFinderGetQuoteItems

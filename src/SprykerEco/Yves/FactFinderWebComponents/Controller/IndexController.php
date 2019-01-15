@@ -1,7 +1,7 @@
 <?php
 
 /**
- * MIT License
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
@@ -14,7 +14,6 @@ use Spryker\Yves\Kernel\Controller\AbstractController;
  */
 class IndexController extends AbstractController
 {
-
     /**
      * Index action
      *
@@ -53,7 +52,7 @@ class IndexController extends AbstractController
                 ),
                 'recommendation' => $configToStringTransformer->transform(
                     $configProvider->getRecommendationConfig()
-                   ),
+                ),
                 'recordList' => $configToStringTransformer->transform(
                     $configProvider->getRecordListConfig()
                 ),
@@ -73,7 +72,7 @@ class IndexController extends AbstractController
                     $configProvider->getSortBoxWidgetConfig()
                 ),
                 'tagCloud' => $configToStringTransformer->transform(
-                        $configProvider->getTagCloudWidgetConfig()
+                    $configProvider->getTagCloudWidgetConfig()
                 ),
             ],
             $this->getFactory()->getFactFinderWidgetPlugins(),

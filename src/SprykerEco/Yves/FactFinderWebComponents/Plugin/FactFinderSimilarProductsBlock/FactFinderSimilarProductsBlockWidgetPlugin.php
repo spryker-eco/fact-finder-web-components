@@ -1,21 +1,22 @@
 <?php
 
 /**
- * MIT License
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
 namespace SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderSimilarProductsBlock;
 
-use Spryker\Yves\Kernel\Widget\AbstractWidgetPlugin;
 use SprykerEco\Shared\FactFinderWebComponents\FactFinderWebComponentsConfig;
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderWidgetPlugin;
 
 class FactFinderSimilarProductsBlockWidgetPlugin extends FactFinderWidgetPlugin implements FactFinderSimilarProductsWidgetInterface
 {
     /**
-     * @param array  $similarProductsConfig
+     * @param array $similarProductsConfig
      * @param string $similarProductId
+     *
+     * @return void
      */
     public function initialize(array $similarProductsConfig = [], string $similarProductId = ''): void
     {

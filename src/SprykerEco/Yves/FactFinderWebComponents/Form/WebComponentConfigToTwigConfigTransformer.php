@@ -1,16 +1,23 @@
 <?php
 
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
 namespace SprykerEco\Yves\FactFinderWebComponents\Form;
 
-use \Symfony\Component\Form\DataTransformerInterface;
+use Symfony\Component\Form\DataTransformerInterface;
 
 class WebComponentConfigToTwigConfigTransformer implements DataTransformerInterface
 {
     public const ITEMS_PARAMETER = 'items';
+
     /**
      * @inheritdoc
      *
      * @param mixed $value
+     *
      * @return mixed|void
      */
     public function transform($value)
@@ -22,7 +29,7 @@ class WebComponentConfigToTwigConfigTransformer implements DataTransformerInterf
             $result = $value;
 
             if (isset($value['properties'])) {
-                $result['component'] = $this->transformToHtmlAttributes($result['properties'] ?? []);
+                $result['component'] = $this->transformFromArrayToHtmlAttributes($result['properties'] ?? []);
                 unset($result['properties']);
             }
         }
@@ -32,48 +39,76 @@ class WebComponentConfigToTwigConfigTransformer implements DataTransformerInterf
 
     /**
      * @param array $collection
+     *
      * @return string
      */
-    protected function transformToHtmlAttributes(array $collection): string
+    protected function transformFromArrayToHtmlAttributes(array $collection): string
     {
-        $properties = '';
+        $htmlAttributesString = '';
 
         $iterationCount = 0;
         $maxIterationCount = count($collection);
         foreach ($collection as $itemKey => $itemValue) {
-
-            if ($itemKey == self::ITEMS_PARAMETER) {
-                $items = $itemValue;
-                // don't convert items collection
-                continue;
-            }
-
-            if (is_bool($itemValue) ) {
+            if (is_bool($itemValue)) {
                 if ($itemValue === true) {
-                    $properties .= sprintf('%s', $itemKey);
+                    $htmlAttributesString .= sprintf('%s', $itemKey);
                 }
             } else {
-                $properties .= sprintf('%s="%s"', $itemKey, $itemValue);
+                $htmlAttributesString .= sprintf('%s="%s"', $itemKey, $itemValue);
             }
 
             if ($iterationCount < $maxIterationCount) {
-                $properties .= ' ';
+                $htmlAttributesString .= ' ';
             }
 
             ++$iterationCount;
         }
 
-        return $properties;
+        return $htmlAttributesString;
     }
 
     /**
      * @inheritdoc
      *
      * @param mixed $value
+     *
      * @return mixed|void
      */
     public function reverseTransform($value)
     {
-        // do nothing
+        $result = [];
+
+        if (is_array($value)) {
+            $result = $value;
+
+            if (isset($value['component'])) {
+                $result['properties'] = $this->transformFropmHtmlAttributesToArray($result['component'] ?? []);
+                unset($result['component']);
+            }
+        }
+
+        return $result;
+    }
+
+    /**
+     * @param string $attributes
+     *
+     * @return array
+     */
+    protected function transformFropmHtmlAttributesToArray(string $attributes): array
+    {
+        $properties = [];
+
+        if (is_string($attributes)) {
+            $attributeDataCollection = explode(' ', trim($attributes));
+            foreach ($attributeDataCollection as $attributeDataString) {
+                $varData = explode('=', $attributeDataString);
+                if ($varData) {
+                    $properties[$varData[0]] = trim($varData[1], '"\'');
+                }
+            }
+        }
+
+        return $properties;
     }
 }

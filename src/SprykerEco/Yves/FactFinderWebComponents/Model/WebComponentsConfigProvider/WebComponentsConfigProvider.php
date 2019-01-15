@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
 namespace SprykerEco\Yves\FactFinderWebComponents\Model\WebComponentsConfigProvider;
 
 use SprykerEco\Yves\FactFinderWebComponents\FactFinderWebComponentsConfig;
@@ -7,7 +12,7 @@ use SprykerEco\Yves\FactFinderWebComponents\FactFinderWebComponentsConfig;
 class WebComponentsConfigProvider implements WebComponentsConfigProviderInterface
 {
     /**
-     * @var FactFinderWebComponentsConfig
+     * @var \SprykerEco\Yves\FactFinderWebComponents\FactFinderWebComponentsConfig
      */
     protected $config;
 
@@ -21,14 +26,7 @@ class WebComponentsConfigProvider implements WebComponentsConfigProviderInterfac
      */
     public function getAsnWidgetConfig(): array
     {
-        return array_merge(
-//            $this->config->getAsnGroupWidgetConfig(),
-//            $this->config->getAsnGroupElementConfig(),
-//            $this->config->getAsnRemoveAllFilterConfig(),
-            [],
-            $this->config->getAsnSliderConfig()
-//            $this->config->getAsnSliderControlConfig()
-        );
+        return $this->config->getAsnSliderConfig();
     }
 
     /**
@@ -111,11 +109,7 @@ class WebComponentsConfigProvider implements WebComponentsConfigProviderInterfac
      */
     public function getRecordListConfig(): array
     {
-        return array_merge(
-            $this->config->getRecordListConfig(),
-            []
-//            $this->config->getRecordConfig()
-        );
+        return $this->config->getRecordListConfig();
     }
 
     /**
@@ -168,5 +162,4 @@ class WebComponentsConfigProvider implements WebComponentsConfigProviderInterfac
     {
         return $this->config->getTagCloudWidgetConfig();
     }
-
 }

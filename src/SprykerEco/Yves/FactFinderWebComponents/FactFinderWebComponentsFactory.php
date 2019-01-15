@@ -1,7 +1,7 @@
 <?php
 
 /**
- * MIT License
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
@@ -9,7 +9,6 @@ namespace SprykerEco\Yves\FactFinderWebComponents;
 
 use Spryker\Client\Quote\QuoteClientInterface;
 use Spryker\Yves\Kernel\AbstractFactory;
-use SprykerEco\Yves\FactFinderWebComponents\Form\WebComponentConfigToStringTransformer;
 use SprykerEco\Yves\FactFinderWebComponents\Form\WebComponentConfigToTwigConfigTransformer;
 use SprykerEco\Yves\FactFinderWebComponents\Model\WebComponentsConfigProvider\WebComponentsConfigProvider;
 use SprykerEco\Yves\FactFinderWebComponents\Model\WebComponentsConfigProvider\WebComponentsConfigProviderInterface;
@@ -44,7 +43,7 @@ class FactFinderWebComponentsFactory extends AbstractFactory
     }
 
     /**
-     * @return WebComponentsConfigProviderInterface
+     * @return \SprykerEco\Yves\FactFinderWebComponents\Model\WebComponentsConfigProvider\WebComponentsConfigProviderInterface
      */
     public function createFactFinderWebComponentsConfigProvider(): WebComponentsConfigProviderInterface
     {

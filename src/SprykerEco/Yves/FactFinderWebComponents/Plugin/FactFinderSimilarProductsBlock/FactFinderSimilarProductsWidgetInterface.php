@@ -1,7 +1,7 @@
 <?php
 
 /**
- * MIT License
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
@@ -14,7 +14,7 @@ interface FactFinderSimilarProductsWidgetInterface extends WidgetPluginInterface
     public const NAME = 'FactFinderSimilarProductsWidgetPlugin';
 
     /**
-     * @param array  $similarProductsConfig
+     * @param array $similarProductsConfig
      * @param string $similarProductId
      */
     public function initialize(array $similarProductsConfig = [], string $similarProductId = ''): void;

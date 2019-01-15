@@ -1,7 +1,7 @@
 <?php
 
 /**
- * MIT License
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
@@ -13,8 +13,12 @@ class FactFinderWidgetPlugin extends AbstractWidgetPlugin
 {
     /**
      * @param array $widgetConfig
+     *
+     * @return void
      */
-    public function initialize(array $widgetConfig = []): void {}
+    public function initialize(array $widgetConfig = []): void
+    {
+    }
 
     /**
      * Get widget options
@@ -49,5 +53,7 @@ class FactFinderWidgetPlugin extends AbstractWidgetPlugin
     /**
      * @return string
      */
-    public static function getTemplate(): string {}
+    public static function getTemplate(): string
+    {
+    }
 }
