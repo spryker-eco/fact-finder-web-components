@@ -16,7 +16,7 @@ use Spryker\Yves\Kernel\AbstractPlugin;
  * @package SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCheckoutTrackingBlock
  * @method \SprykerEco\Yves\FactFinderWebComponents\FactFinderWebComponentsFactory getFactory()
  */
-class FactFinderGetQuoteItems extends AbstractPlugin implements FactFinderGetQuoteItemsInterface
+class FactFinderGetQuoteItemsPlugin extends AbstractPlugin implements FactFinderGetQuoteItemsInterface
 {
     /**
      * @inheritdoc

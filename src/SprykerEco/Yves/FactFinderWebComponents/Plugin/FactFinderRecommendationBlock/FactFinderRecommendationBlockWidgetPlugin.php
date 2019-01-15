@@ -10,6 +10,9 @@ namespace SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderRecommendatio
 use SprykerEco\Shared\FactFinderWebComponents\FactFinderWebComponentsConfig;
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderWidgetPlugin;
 
+/**
+ * @method \SprykerEco\Yves\FactFinderWebComponents\FactFinderWebComponentsConfig getConfig()
+ */
 class FactFinderRecommendationBlockWidgetPlugin extends FactFinderWidgetPlugin implements FactFinderRecommendationWidgetInterface
 {
     /**

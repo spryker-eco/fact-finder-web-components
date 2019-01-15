@@ -9,6 +9,7 @@ namespace SprykerEco\Yves\FactFinderWebComponents;
 
 use Spryker\Yves\Kernel\AbstractBundleDependencyProvider;
 use Spryker\Yves\Kernel\Container;
+use Spryker\Yves\Kernel\Dependency\Plugin\WidgetPluginInterface;
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderAsnBlock\FactFinderAsnBlockWidgetPlugin;
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderBreadcrumbBlock\FactFinderBreadcrumbBlockWidgetPlugin;
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCampaignBlock\FactFinderCampaignBlockWidgetPlugin;
@@ -45,9 +46,9 @@ class FactFinderWebComponentsDependencyProvider extends AbstractBundleDependency
     }
 
     /**
-     * @param \Spryker\Client\Kernel\Container $container
+     * @param \Spryker\Yves\Kernel\Container $container
      *
-     * @return \Spryker\Client\Kernel\Container
+     * @return \Spryker\Yves\Kernel\Container
      */
     protected function addQuoteClient(Container $container)
     {
@@ -73,7 +74,7 @@ class FactFinderWebComponentsDependencyProvider extends AbstractBundleDependency
     }
 
     /**
-     * @return array[]
+     * @return \Spryker\Yves\Kernel\Dependency\Widget\WidgetInterface[]
      */
     protected function getFactFinderWidgetsPlugins(): array
     {

@@ -47,7 +47,7 @@ class FactFinderWidgetPlugin extends AbstractWidgetPlugin
      */
     public static function getName(): string
     {
-        return static::NAME;
+        return self::NAME;
     }
 
     /**

@@ -18,7 +18,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const COMMUNICATION_WIDGET_CONFIG = 'FACTFINDERWEBCOMPONENTS:COMMUNICATION_WIDGET_CONFIG';
+    public const COMMUNICATION_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:COMMUNICATION_WIDGET_CONFIG';
 
     /**
      * Specification:
@@ -26,7 +26,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const SEARCH_BOX_WIDGET_CONFIG = 'FACTFINDERWEBCOMPONENTS:SEARCH_BOX_WIDGET_CONFIG';
+    public const SEARCH_BOX_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:SEARCH_BOX_WIDGET_CONFIG';
 
     /**
      * Specification:
@@ -34,7 +34,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const BREADCRUMB_WIDGET_CONFIG = 'FACTFINDERWEBCOMPONENTS:BREADCRUMB_WIDGET_CONFIG';
+    public const BREADCRUMB_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:BREADCRUMB_WIDGET_CONFIG';
 
     /**
      * Specification:
@@ -42,7 +42,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const SEARCH_BUTTON_WIDGET_CONFIG = 'FACTFINDERWEBCOMPONENTS:SEARCH_BUTTON_WIDGET_CONFIG';
+    public const SEARCH_BUTTON_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:SEARCH_BUTTON_WIDGET_CONFIG';
 
     /**
      * Specification:
@@ -50,7 +50,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const RECORD_LIST_WIDGET_CONFIG = 'FACTFINDERWEBCOMPONENTS:RECORD_LIST_WIDGET_CONFIG';
+    public const RECORD_LIST_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:RECORD_LIST_WIDGET_CONFIG';
 
     /**
      * Specification:
@@ -58,7 +58,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const CHECKOUT_TRACKING_CONFIG = 'FACTFINDERWEBCOMPONENTS:CHECKOUT_TRACKING_CONFIG';
+    public const CHECKOUT_TRACKING_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:CHECKOUT_TRACKING_CONFIG';
 
     /**
      * Specification:
@@ -66,7 +66,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const RECORD_WIDGET_CONFIG = 'FACTFINDERWEBCOMPONENTS:RECORD_WIDGET_CONFIG';
+    public const RECORD_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:RECORD_WIDGET_CONFIG';
 
     /**
      * Specification:
@@ -74,7 +74,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const SUGGEST_CONFIG = 'FACTFINDERWEBCOMPONENTS:SUGGEST_CONFIG';
+    public const SUGGEST_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:SUGGEST_CONFIG';
 
     /**
      * Specification:
@@ -82,7 +82,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const ASN_GROUP_WIDGET_CONFIG = 'FACTFINDERWEBCOMPONENTS:ASN_GROUP_WIDGET_CONFIG';
+    public const ASN_GROUP_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:ASN_GROUP_WIDGET_CONFIG';
 
     /**
      * Specification:
@@ -90,7 +90,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const ASN_GROUP_ELEMENT_CONFIG = 'FACTFINDERWEBCOMPONENTS:ASN_GROUP_ELEMENT_CONFIG';
+    public const ASN_GROUP_ELEMENT_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:ASN_GROUP_ELEMENT_CONFIG';
 
     /**
      * Specification:
@@ -98,7 +98,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const ASN_REMOVE_ALL_FILTER_CONFIG = 'FACTFINDERWEBCOMPONENTS:ASN_REMOVE_ALL_FILTER_CONFIG';
+    public const ASN_REMOVE_ALL_FILTER_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:ASN_REMOVE_ALL_FILTER_CONFIG';
 
     /**
      * Specification:
@@ -106,7 +106,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const ASN_SLIDER_CONFIG = 'FACTFINDERWEBCOMPONENTS:ASN_SLIDER_CONFIG';
+    public const ASN_SLIDER_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:ASN_SLIDER_CONFIG';
 
     /**
      * Specification:
@@ -114,7 +114,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const ASN_SLIDER_CONTROL_CONFIG = 'FACTFINDERWEBCOMPONENTS:ASN_SLIDER_CONTROL_CONFIG';
+    public const ASN_SLIDER_CONTROL_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:ASN_SLIDER_CONTROL_CONFIG';
 
     /**
      * Specification:
@@ -122,7 +122,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const PAGING_WIDGET_CONFIG = 'FACTFINDERWEBCOMPONENTS:PAGING_WIDGET_CONFIG';
+    public const PAGING_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:PAGING_WIDGET_CONFIG';
 
     /**
      * Specification:
@@ -130,7 +130,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const PRODUCTS_PER_PAGE_WIDGET_CONFIG = 'FACTFINDERWEBCOMPONENTS:PRODUCTS_PER_PAGE_WIDGET_CONFIG';
+    public const PRODUCTS_PER_PAGE_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:PRODUCTS_PER_PAGE_WIDGET_CONFIG';
 
     /**
      * Specification:
@@ -138,7 +138,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const SORT_BOX_WIDGET_CONFIG = 'FACTFINDERWEBCOMPONENTS:SORT_BOX_WIDGET_CONFIG';
+    public const SORT_BOX_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:SORT_BOX_WIDGET_CONFIG';
 
     /**
      * Specification:
@@ -146,7 +146,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const SIMILAR_PRODUCTS_WIDGET_CONFIG = 'FACTFINDERWEBCOMPONENTS:SIMILAR_PRODUCTS_WIDGET_CONFIG';
+    public const SIMILAR_PRODUCTS_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:SIMILAR_PRODUCTS_WIDGET_CONFIG';
 
     /**
      * Specification:
@@ -154,7 +154,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const SIMILAR_PRODUCT_ID_CONFIG = 'FACTFINDERWEBCOMPONENTS:SIMILAR_PRODUCT_ID_CONFIG';
+    public const SIMILAR_PRODUCT_ID_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:SIMILAR_PRODUCT_ID_CONFIG';
 
     /**
      * Specification:
@@ -162,7 +162,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const RECOMMENDATION_CONFIG = 'FACTFINDERWEBCOMPONENTS:RECOMMENDATION_CONFIG';
+    public const RECOMMENDATION_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:RECOMMENDATION_CONFIG';
 
     /**
      * Specification:
@@ -170,7 +170,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const RECOMMENDATION_RECORD_ID_CONFIG = 'FACTFINDERWEBCOMPONENTS:RECOMMENDATION_RECORD_ID_CONFIG';
+    public const RECOMMENDATION_RECORD_ID_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:RECOMMENDATION_RECORD_ID_CONFIG';
 
     /**
      * Specification:
@@ -178,7 +178,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const HEADER_NAVIGATION_WIDGET_CONFIG = 'FACTFINDERWEBCOMPONENTS:HEADER_NAVIGATION_WIDGET_CONFIG';
+    public const HEADER_NAVIGATION_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:HEADER_NAVIGATION_WIDGET_CONFIG';
 
     /**
      * Specification:
@@ -186,7 +186,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const TAG_CLOUD_WIDGET_CONFIG = 'FACTFINDERWEBCOMPONENTS:TAG_CLOUD_WIDGET_CONFIG';
+    public const TAG_CLOUD_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:TAG_CLOUD_WIDGET_CONFIG';
 
     /**
      * Specification:
@@ -194,7 +194,7 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const PUSHED_PRODUCTS_WIDGET_CONFIG = 'FACTFINDERWEBCOMPONENTS:PUSHED_PRODUCTS_WIDGET_CONFIG';
+    public const PUSHED_PRODUCTS_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:PUSHED_PRODUCTS_WIDGET_CONFIG';
 
     /**
      * Specification:
@@ -202,5 +202,5 @@ interface FactFinderWebComponentsConstants
      *
      * @api
      */
-    public const CAMPAIGN_WIDGET_CONFIG = 'FACTFINDERWEBCOMPONENTS:CAMPAIGN_WIDGET_CONFIG';
+    public const CAMPAIGN_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:CAMPAIGN_WIDGET_CONFIG';
 }

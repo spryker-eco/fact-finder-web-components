@@ -7,7 +7,6 @@
     "spryker/locale": "^3.0.0",
     "spryker/propel-orm": "^1.6.0",
     "propel/propel": "2.0.0-alpha8"
-
   },
   "repositories": [
     {

@@ -9,6 +9,9 @@ namespace SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderBreadcrumbBlo
 
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderWidgetPlugin;
 
+/**
+ * @method \SprykerEco\Yves\FactFinderWebComponents\FactFinderWebComponentsConfig getConfig()
+ */
 class FactFinderBreadcrumbBlockWidgetPlugin extends FactFinderWidgetPlugin implements FactFinderBreadcrumbWidgetInterface
 {
     /**

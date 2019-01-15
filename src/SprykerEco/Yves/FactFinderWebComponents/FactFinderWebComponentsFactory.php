@@ -14,12 +14,17 @@ use SprykerEco\Yves\FactFinderWebComponents\Model\WebComponentsConfigProvider\We
 use SprykerEco\Yves\FactFinderWebComponents\Model\WebComponentsConfigProvider\WebComponentsConfigProviderInterface;
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCheckoutTrackingBlock\FactFinderGetQuoteItems;
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCheckoutTrackingBlock\FactFinderGetQuoteItemsInterface;
+use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCheckoutTrackingBlock\FactFinderGetQuoteItemsPlugin;
 use Symfony\Component\Form\DataTransformerInterface;
+use \Spryker\Yves\Kernel\Dependency\Widget\WidgetInterface;
 
+/**
+ * @method \SprykerEco\Shared\FactFinderWebComponents\FactFinderWebComponentsConfig getConfig()
+ */
 class FactFinderWebComponentsFactory extends AbstractFactory
 {
     /**
-     * @return string[]
+     * @return \Spryker\Yves\Kernel\Dependency\Widget\WidgetInterface[]
      */
     public function getFactFinderWidgetPlugins(): array
     {
@@ -39,7 +44,7 @@ class FactFinderWebComponentsFactory extends AbstractFactory
      */
     public function createQuoteItems(): FactFinderGetQuoteItemsInterface
     {
-        return new FactFinderGetQuoteItems();
+        return new FactFinderGetQuoteItemsPlugin();
     }
 
     /**

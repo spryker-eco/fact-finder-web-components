@@ -10,6 +10,9 @@ namespace SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderAsnBlock;
 use SprykerEco\Shared\FactFinderWebComponents\FactFinderWebComponentsConfig;
 use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderWidgetPlugin;
 
+/**
+ * @method \SprykerEco\Yves\FactFinderWebComponents\FactFinderWebComponentsConfig getConfig()
+ */
 class FactFinderAsnBlockWidgetPlugin extends FactFinderWidgetPlugin implements FactFinderAsnWidgetInterface
 {
     /**

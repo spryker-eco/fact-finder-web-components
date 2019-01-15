@@ -19,6 +19,11 @@ class FactFinderWebComponentsControllerProvider extends YvesControllerProvider
      */
     protected function defineControllers(Application $app)
     {
-        $this->createController('/fact-finder-web-components', 'fact-finder-web-components', 'fact-finder-web-components', 'index');
+        $this->createController(
+            '/fact-finder-web-components',
+            'fact-finder-web-components',
+            'fact-finder-web-components',
+            'index'
+        );
     }
 }
