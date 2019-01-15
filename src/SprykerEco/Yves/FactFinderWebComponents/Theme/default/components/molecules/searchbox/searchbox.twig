@@ -1,8 +1,7 @@
 {% extends model('component') %}
 
 {% define config = {
-    name: 'searchbox',
-    tag: 'searchbox'
+    name: 'searchbox'
 } %}
 
 {% define data = {
@@ -12,17 +11,15 @@
 } %}
 
 {% block body %}
-    <div class="box">
-        {% block searchField %}
-            <ff-searchbox {{ data.properties.component|raw }}>
-                <input placeholder="Search..." />
-            </ff-searchbox>
-        {% endblock %}
+    {% block searchField %}
+        <ff-searchbox {{ data.properties.component|raw }}>
+            <input placeholder="Search..." />
+        </ff-searchbox>
+    {% endblock %}
 
-        {% block searchButton %}
-            <ff-searchbutton>
-                <button>Search</button>
-            </ff-searchbutton>
-        {% endblock %}
-    </div>
+    {% block searchButton %}
+        <ff-searchbutton>
+            <button>Search</button>
+        </ff-searchbutton>
+    {% endblock %}
 {% endblock %}

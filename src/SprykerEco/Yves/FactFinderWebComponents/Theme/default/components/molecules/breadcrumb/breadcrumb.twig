@@ -1,8 +1,7 @@
 {% extends model('component') %}
 
 {% define config = {
-    name: 'breadcrumb',
-    tag: 'breadcrumb'
+    name: 'breadcrumb'
 } %}
 
 {% define data = {
@@ -13,20 +12,18 @@
 } %}
 
 {% block body %}
-    <div class="box">
-        <span>You are searching for: </span>
-        <ff-breadcrumb-trail {{ data.properties.component|raw }}>
+    <span>You are searching for: </span>
+    <ff-breadcrumb-trail {{ data.properties.component|raw }}>
 
-            {% for item in data.properties.items %}
-                <ff-breadcrumb-trail-item type="{{ item }}">
-                    <span class="{{ item ~ '__item' }}">
-                        {% verbatim %}
-                            {{text}}
-                        {% endverbatim %}
-                    </span>
-                </ff-breadcrumb-trail-item>
-            {% endfor %}
+        {% for item in data.properties.items %}
+            <ff-breadcrumb-trail-item type="{{ item }}">
+                <span class="{{ item ~ '__item' }}">
+                    {% verbatim %}
+                        {{text}}
+                    {% endverbatim %}
+                </span>
+            </ff-breadcrumb-trail-item>
+        {% endfor %}
 
-        </ff-breadcrumb-trail>
-    </div>
+    </ff-breadcrumb-trail>
 {% endblock %}

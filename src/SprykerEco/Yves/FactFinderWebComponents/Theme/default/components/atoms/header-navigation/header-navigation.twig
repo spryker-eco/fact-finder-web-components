@@ -1,8 +1,7 @@
 {% extends model('component') %}
 
 {% define config = {
-    name: 'header-navigation',
-    tag: 'header-navigation'
+    name: 'header-navigation'
 } %}
 
 {% define data = {
@@ -12,7 +11,5 @@
 } %}
 
 {% block body %}
-    <div class="box">
-        <ff-header-navigation {{ data.properties.component|raw }}></ff-header-navigation>
-    </div>
+    <ff-header-navigation {{ data.properties.component|raw }}></ff-header-navigation>
 {% endblock %}

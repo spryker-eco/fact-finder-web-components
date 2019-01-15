@@ -1,25 +1,19 @@
 {% extends model('component') %}
 
 {% define config = {
-    name: 'campaign',
-    tag: 'campaign'
+    name: 'campaign'
 } %}
 
 {% define data = {
     properties: {
-        component: '',
-        answer: '',
-        question: '',
         feedbacktext: ''
     }
 } %}
 
 {% block body %}
-    <div class="box">
-        <ff-campaign-feedbacktext {{ data.properties.feedbacktext|raw }}>
-            {% verbatim %}
-                {{text}}
-            {% endverbatim %}
-        </ff-campaign-feedbacktext>
-    </div>
+    <ff-campaign-feedbacktext {{ data.properties.feedbacktext|raw }}>
+        {% verbatim %}
+            {{text}}
+        {% endverbatim %}
+    </ff-campaign-feedbacktext>
 {% endblock %}

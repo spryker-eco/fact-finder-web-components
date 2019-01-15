@@ -1,8 +1,7 @@
 {% extends model('component') %}
 
 {% define config = {
-    name: 'record-list',
-    tag: 'record-list'
+    name: 'record-list'
 } %}
 
 {% define data = {
@@ -13,21 +12,19 @@
 } %}
 
 {% block body %}
-    <div class="box">
-        <ff-record-list {{ data.properties.component|raw }}>
+    <ff-record-list {{ data.properties.component|raw }}>
 
-            {% block record %}
-                <ff-record {{ data.properties.record|raw }}>
-                    {% verbatim %}
-                        <div data-redirect="{{record.Deeplink}}"
-                             data-redirect-target="_blank">
-                            <img data-image="{{record.ImageName}}">
-                            <span>{{record.Title}}</span>
-                        </div>
-                    {% endverbatim %}
-                </ff-record>
-            {% endblock %}
+        {% block record %}
+            <ff-record {{ data.properties.record|raw }}>
+                {% verbatim %}
+                    <div data-redirect="{{record.Deeplink}}"
+                         data-redirect-target="_blank">
+                        <img data-image="{{record.ImageName}}">
+                        <span>{{record.Title}}</span>
+                    </div>
+                {% endverbatim %}
+            </ff-record>
+        {% endblock %}
 
-        </ff-record-list>
-    </div>
+    </ff-record-list>
 {% endblock %}

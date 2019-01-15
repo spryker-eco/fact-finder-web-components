@@ -1,8 +1,7 @@
 {% extends model('component') %}
 
 {% define config = {
-    name: 'tag-cloud',
-    tag: 'tag-cloud'
+    name: 'tag-cloud'
 } %}
 
 {% define data = {
@@ -12,7 +11,5 @@
 } %}
 
 {% block body %}
-    <div class="box">
-        <ff-tag-cloud {{ data.properties.component|raw }}></ff-tag-cloud>
-    </div>
+    <ff-tag-cloud {{ data.properties.component|raw }}></ff-tag-cloud>
 {% endblock %}

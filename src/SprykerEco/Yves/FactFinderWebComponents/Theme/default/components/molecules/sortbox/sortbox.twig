@@ -1,8 +1,7 @@
 {% extends model('component') %}
 
 {% define config = {
-    name: 'sortbox',
-    tag: 'sortbox'
+    name: 'sortbox'
 } %}
 
 {% define data = {
@@ -13,19 +12,17 @@
 } %}
 
 {% block body %}
-    <div class="box">
-        <ff-sortbox {{ data.properties.component|raw }}>
+    <ff-sortbox {{ data.properties.component|raw }}>
 
-            {% for item in data.properties.items %}
-                <ff-sortbox-item key="{{ item.key }}">
-                    <span>{{ item.title | trans }}:
-                        {% verbatim %}
-                            {{description}}
-                        {% endverbatim %}
-                    </span>
-                </ff-sortbox-item>
-            {% endfor %}
+        {% for item in data.properties.items %}
+            <ff-sortbox-item key="{{ item.key }}">
+                <span>{{ item.title | trans }}:
+                    {% verbatim %}
+                        {{description}}
+                    {% endverbatim %}
+                </span>
+            </ff-sortbox-item>
+        {% endfor %}
 
-        </ff-sortbox>
-    </div>
+    </ff-sortbox>
 {% endblock %}
