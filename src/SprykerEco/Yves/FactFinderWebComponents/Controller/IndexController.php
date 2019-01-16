@@ -75,7 +75,7 @@ class IndexController extends AbstractController
                     $configProvider->getTagCloudWidgetConfig()
                 ),
             ],
-            $this->getFactory()->getFactFinderWidgetPlugins(),
+            [],
             '@FactFinderWebComponents/views/index/index.twig'
         );
     }

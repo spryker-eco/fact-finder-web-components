@@ -59,14 +59,6 @@ class WebComponentsConfigProvider implements WebComponentsConfigProviderInterfac
     /**
      * @return array
      */
-    public function getQuoteItems(): array
-    {
-        return $this->config->getQuoteItems();
-    }
-
-    /**
-     * @return array
-     */
     public function getHeaderNavigationWidgetConfig(): array
     {
         return $this->config->getHeaderNavigationWidgetConfig();

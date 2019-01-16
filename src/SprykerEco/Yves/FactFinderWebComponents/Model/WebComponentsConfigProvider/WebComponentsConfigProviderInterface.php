@@ -27,11 +27,6 @@ interface WebComponentsConfigProviderInterface
     /**
      * @return array
      */
-    public function getQuoteItems(): array;
-
-    /**
-     * @return array
-     */
     public function getCommunicationConfig(): array;
 
     /**
