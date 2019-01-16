@@ -21,57 +21,57 @@ class IndexController extends AbstractController
      */
     public function indexAction()
     {
-        $configToStringTransformer = $this->getFactory()->createWebComponentConfigToTwigConfigTransformer();
+        $twigConfigTransformer = $this->getFactory()->createWebComponentConfigToTwigConfigTransformer();
         $configProvider = $this->getFactory()->createFactFinderWebComponentsConfigProvider();
 
         return $this->view(
             [
-                'facetsAsn' => $configToStringTransformer->transform(
+                'facetsAsn' => $twigConfigTransformer->transform(
                     $configProvider->getAsnWidgetConfig()
                 ),
-                'breadcrumb' => $configToStringTransformer->transform(
+                'breadcrumb' => $twigConfigTransformer->transform(
                     $configProvider->getBreadcrumbConfig()
                 ),
-                'campaign' => $configToStringTransformer->transform(
+                'campaign' => $twigConfigTransformer->transform(
                     $configProvider->getCampaignWidgetConfig()
                 ),
-                'communication' => $configToStringTransformer->transform(
+                'communication' => $twigConfigTransformer->transform(
                     $configProvider->getCommunicationConfig()
                 ),
-                'headerNavigation' => $configToStringTransformer->transform(
+                'headerNavigation' => $twigConfigTransformer->transform(
                     $configProvider->getHeaderNavigationWidgetConfig()
                 ),
-                'paging' => $configToStringTransformer->transform(
+                'paging' => $twigConfigTransformer->transform(
                     $configProvider->getPagingWidgetConfig()
                 ),
-                'productsPerPage' => $configToStringTransformer->transform(
+                'productsPerPage' => $twigConfigTransformer->transform(
                     $configProvider->getProductsPerPageWidgetConfig()
                 ),
-                'pushedProducts' => $configToStringTransformer->transform(
+                'pushedProducts' => $twigConfigTransformer->transform(
                     $configProvider->getPushedProductsWidgetConfig()
                 ),
-                'recommendation' => $configToStringTransformer->transform(
+                'recommendation' => $twigConfigTransformer->transform(
                     $configProvider->getRecommendationConfig()
                 ),
-                'recordList' => $configToStringTransformer->transform(
+                'recordList' => $twigConfigTransformer->transform(
                     $configProvider->getRecordListConfig()
                 ),
-                'suggest' => $configToStringTransformer->transform(
+                'suggest' => $twigConfigTransformer->transform(
                     $configProvider->getSuggestConfig()
                 ),
-                'checkoutTracking' => $configToStringTransformer->transform(
+                'checkoutTracking' => $twigConfigTransformer->transform(
                     $configProvider->getCheckoutTrackingConfig()
                 ),
-                'searchbox' => $configToStringTransformer->transform(
+                'searchbox' => $twigConfigTransformer->transform(
                     $configProvider->getSearchBoxConfig()
                 ),
-                'similarProducts' => $configToStringTransformer->transform(
+                'similarProducts' => $twigConfigTransformer->transform(
                     $configProvider->getSimilarProductsConfig()
                 ),
-                'sortBox' => $configToStringTransformer->transform(
+                'sortBox' => $twigConfigTransformer->transform(
                     $configProvider->getSortBoxWidgetConfig()
                 ),
-                'tagCloud' => $configToStringTransformer->transform(
+                'tagCloud' => $twigConfigTransformer->transform(
                     $configProvider->getTagCloudWidgetConfig()
                 ),
             ],
