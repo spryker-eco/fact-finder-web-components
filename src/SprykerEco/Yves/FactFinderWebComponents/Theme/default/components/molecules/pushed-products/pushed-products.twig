@@ -1,0 +1,52 @@
+{% extends model('component') %}
+
+{% define config = {
+    name: 'pushed-products'
+} %}
+
+{% define data = {
+    properties: {
+        component: '',
+        list: '',
+        record: ''
+    }
+} %}
+
+{% block body %}
+    <ff-campaign-pushed-products {{ data.properties.component|raw }} unresolved>
+        <span id="productCampaignCaption">
+            {{ 'factfinder.web-components.pushed.products.title' | trans }}
+        </span>
+
+        {% block list %}
+            <ff-record-list {{ data.properties.list|raw }} unresolved>
+
+                {% block record %}
+                    <ff-record {{ data.properties.record|raw }}>
+                        {% verbatim %}
+                            <img data-image="{{record.ImageName}}">
+                            <a data-anchor="https://www.alpinetrek.co.uk{{record.Deeplink}}"
+                               data-redirect="https://www.alpinetrek.co.uk{{record.Deeplink}}" data-redirect-target="_blank">
+                                {{record.Title}}
+                            </a>
+                        {% endverbatim %}
+
+                        <div class="priceContainer">
+                            <span class="brand">
+                                {% verbatim %}
+                                    {{record.Manufacturer}}
+                                {% endverbatim %}
+                            </span>
+                            <span class="price">
+                                {% verbatim %}
+                                    {{record.Price}} €
+                                {% endverbatim %}
+                            </span>
+                        </div>
+                    </ff-record>
+                {% endblock %}
+
+            </ff-record-list>
+        {% endblock %}
+    </ff-campaign-pushed-products>
+{% endblock %}

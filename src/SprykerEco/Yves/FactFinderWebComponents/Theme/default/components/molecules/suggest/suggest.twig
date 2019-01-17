@@ -1,0 +1,71 @@
+{% extends model('component') %}
+
+{% define config = {
+    name: 'suggest'
+} %}
+
+{% define data = {
+    properties: {
+        component: '',
+        searchItems: [],
+        productItemType: ''
+    }
+} %}
+
+{% block body %}
+    <ff-suggest {{ data.properties.component|raw }}>
+        {% block searchContainer %}
+            <section id="searchContainer" class="searchTermContainer">
+
+                {% for item in data.properties.searchItems %}
+                    <div data-container="{{ item.type }}">
+                        <p class="containerCaption">{{ item.title }}</p>
+                        <ff-suggest-item type="{{ item.type }}">
+                            <span>
+                                {% verbatim %}
+                                    {{{name}}}
+                                {% endverbatim %}
+                            </span>
+                        </ff-suggest-item>
+                    </div>
+                {% endfor %}
+
+            </section>
+        {% endblock %}
+
+        {% block productContainer %}
+            <section id="productContainer" class="productsContainer">
+                <div data-container="productName">
+                    <p class="containerCaption">Find products</p>
+                    <div>
+                        <ff-suggest-item {{ data.properties.productItemType|raw }} onclick="changeSearchTerm(this)">
+                            <img data-image>
+                            <div class="product-center">
+                                <div class="product-name">
+                                    {% verbatim %}
+                                        {{{name}}}
+                                    {% endverbatim %}
+                                </div>
+                                <div>Shipping</div>
+                                <div>Rating</div>
+                            </div>
+
+                            <div class="product-right">
+                                <div class="product-price">
+                                    {% verbatim %}
+                                        {{attributes.Price}} €
+                                    {% endverbatim %}
+                                </div>
+                                <div class="product-availabilitytext">
+                                    {% verbatim %}
+                                        {{attributes.availabilitytext}}
+                                    {% endverbatim %}
+                                </div>
+                            </div>
+                        </ff-suggest-item>
+                    </div>
+                </div>
+            </section>
+        {% endblock %}
+    </ff-suggest>
+{% endblock %}

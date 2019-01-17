@@ -1,0 +1,15 @@
+{% extends model('component') %}
+
+{% define config = {
+    name: 'header-navigation'
+} %}
+
+{% define data = {
+    properties: {
+        component: '',
+    }
+} %}
+
+{% block body %}
+    <ff-header-navigation {{ data.properties.component|raw }}></ff-header-navigation>
+{% endblock %}

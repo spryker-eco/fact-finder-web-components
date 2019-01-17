@@ -1,9 +1,0 @@
-{% extends template('widget') %}
-
-{% block body %}
-    <ff-campaign-feedbacktext {{ _widget.config|raw }}>
-        {% verbatim %}
-            {{text}}
-        {% endverbatim %}
-    </ff-campaign-feedbacktext>
-{% endblock %}

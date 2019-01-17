@@ -2,39 +2,35 @@
 
 /**
  * MIT License
- * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
 namespace SprykerEco\Yves\FactFinderWebComponents;
 
-use Spryker\Client\Quote\QuoteClientInterface;
 use Spryker\Yves\Kernel\AbstractFactory;
-use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCheckoutTrackingBlock\FactFinderGetQuoteItems;
-use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCheckoutTrackingBlock\FactFinderGetQuoteItemsInterface;
+use SprykerEco\Yves\FactFinderWebComponents\Form\WebComponentConfigToTwigConfigTransformer;
+use SprykerEco\Yves\FactFinderWebComponents\Model\WebComponentsConfigProvider\WebComponentsConfigProvider;
+use SprykerEco\Yves\FactFinderWebComponents\Model\WebComponentsConfigProvider\WebComponentsConfigProviderInterface;
+use Symfony\Component\Form\DataTransformerInterface;
 
+/**
+ * @method \SprykerEco\Yves\FactFinderWebComponents\FactFinderWebComponentsConfig getConfig()
+ */
 class FactFinderWebComponentsFactory extends AbstractFactory
 {
     /**
-     * @return string[]
+     * @return \SprykerEco\Yves\FactFinderWebComponents\Model\WebComponentsConfigProvider\WebComponentsConfigProviderInterface
      */
-    public function getFactFinderWidgetPlugins(): array
+    public function createFactFinderWebComponentsConfigProvider(): WebComponentsConfigProviderInterface
     {
-        return $this->getProvidedDependency(FactFinderWebComponentsDependencyProvider::FACT_FINDER_WIDGETS);
+        return new WebComponentsConfigProvider($this->getConfig());
     }
 
     /**
-     * @return \Spryker\Client\Quote\QuoteClientInterface
+     * @return \Symfony\Component\Form\DataTransformerInterface
      */
-    public function getQuoteClient(): QuoteClientInterface
+    public function createWebComponentConfigToTwigConfigTransformer(): DataTransformerInterface
     {
-        return $this->getProvidedDependency(FactFinderWebComponentsDependencyProvider::CLIENT_QUOTE);
-    }
-
-    /**
-     * @return \SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCheckoutTrackingBlock\FactFinderGetQuoteItemsInterface
-     */
-    public function createQuoteItems(): FactFinderGetQuoteItemsInterface
-    {
-        return new FactFinderGetQuoteItems();
+        return new WebComponentConfigToTwigConfigTransformer();
     }
 }

@@ -2,36 +2,16 @@
 
 /**
  * MIT License
- * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
 namespace SprykerEco\Yves\FactFinderWebComponents;
 
 use Spryker\Yves\Kernel\AbstractBundleDependencyProvider;
 use Spryker\Yves\Kernel\Container;
-use Spryker\Yves\Kernel\Plugin\Pimple;
-use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderAsnBlock\FactFinderAsnBlockWidgetPlugin;
-use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderHeaderNavigationBlock\FactFinderHeaderNavigationBlockWidgetPlugin;
-use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderPagingBlock\FactFinderPagingBlockWidgetPlugin;
-use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCommunicationBlock\FactFinderCommunicationBlockWidgetPlugin;
-use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderBreadcrumbBlock\FactFinderBreadcrumbBlockWidgetPlugin;
-use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderRecordListBlock\FactFinderRecordListBlockWidgetPlugin;
-use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderSearchboxBlock\FactFinderSearchboxBlockWidgetPlugin;
-use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderProductsPerPageBlock\FactFinderProductsPerPageBlockWidgetPlugin;
-use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderSortBoxBlock\FactFinderSortBoxBlockWidgetPlugin;
-use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderSimilarProductsBlock\FactFinderSimilarProductsBlockWidgetPlugin;
-use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderRecommendationBlock\FactFinderRecommendationBlockWidgetPlugin;
-use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderTagCloudBlock\FactFinderTagCloudBlockWidgetPlugin;
-use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderPushedProductsBlock\FactFinderPushedProductsBlockWidgetPlugin;
-use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCampaignBlock\FactFinderCampaignBlockWidgetPlugin;
-use SprykerEco\Yves\FactFinderWebComponents\Plugin\FactFinderCheckoutTrackingBlock\FactFinderCheckoutTrackingBlockWidgetPlugin;
 
 class FactFinderWebComponentsDependencyProvider extends AbstractBundleDependencyProvider
 {
-    const FACT_FINDER_WIDGETS = 'FACT_FINDER_WIDGETS';
-
-    const CLIENT_QUOTE = 'CLIENT_QUOTE';
-
     /**
      * @param \Spryker\Yves\Kernel\Container $container
      *
@@ -39,62 +19,6 @@ class FactFinderWebComponentsDependencyProvider extends AbstractBundleDependency
      */
     public function provideDependencies(Container $container)
     {
-        $container = $this->addPageWidgetPlugins($container);
-        $container = $this->addQuoteClient($container);
-
         return $container;
-    }
-
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
-    protected function addQuoteClient(Container $container)
-    {
-        $container[static::CLIENT_QUOTE] = function (Container $container) {
-            return $container->getLocator()->quote()->client();
-        };
-
-        return $container;
-    }
-
-
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     * 
-     * @return \Spryker\Yves\Kernel\Container
-     */
-    protected function addPageWidgetPlugins(Container $container)
-    {
-        $container[static::FACT_FINDER_WIDGETS] = function () {
-            return $this->getFactFinderWidgetsPlugins();
-        };
-
-        return $container;
-    }
-
-    /**
-     * @return array[]
-     */
-    protected function getFactFinderWidgetsPlugins(): array
-    {
-        return [
-            FactFinderBreadcrumbBlockWidgetPlugin::class,
-            FactFinderCommunicationBlockWidgetPlugin::class,
-            FactFinderSearchboxBlockWidgetPlugin::class,
-            FactFinderRecordListBlockWidgetPlugin::class,
-            FactFinderAsnBlockWidgetPlugin::class,
-            FactFinderPagingBlockWidgetPlugin::class,
-            FactFinderProductsPerPageBlockWidgetPlugin::class,
-            FactFinderSortBoxBlockWidgetPlugin::class,
-            FactFinderSimilarProductsBlockWidgetPlugin::class,
-            FactFinderRecommendationBlockWidgetPlugin::class,
-            FactFinderHeaderNavigationBlockWidgetPlugin::class,
-            FactFinderTagCloudBlockWidgetPlugin::class,
-            FactFinderPushedProductsBlockWidgetPlugin::class,
-            FactFinderCampaignBlockWidgetPlugin::class,
-            FactFinderCheckoutTrackingBlockWidgetPlugin::class,
-        ];
     }
 }

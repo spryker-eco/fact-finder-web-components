@@ -1,0 +1,28 @@
+{% extends model('component') %}
+
+{% define config = {
+    name: 'sortbox'
+} %}
+
+{% define data = {
+    properties: {
+        component: '',
+        items: []
+    }
+} %}
+
+{% block body %}
+    <ff-sortbox {{ data.properties.component|raw }}>
+
+        {% for item in data.properties.items %}
+            <ff-sortbox-item key="{{ item.key }}">
+                <span>{{ item.title | trans }}:
+                    {% verbatim %}
+                        {{description}}
+                    {% endverbatim %}
+                </span>
+            </ff-sortbox-item>
+        {% endfor %}
+
+    </ff-sortbox>
+{% endblock %}

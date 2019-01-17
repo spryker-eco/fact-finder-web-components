@@ -1,0 +1,15 @@
+{% extends model('component') %}
+
+{% define config = {
+    name: 'communication'
+} %}
+
+{% define data = {
+    properties: {
+        component: ''
+    }
+} %}
+
+{% block body %}
+    <ff-communication {{ data.properties.component|raw }}></ff-communication>
+{% endblock %}

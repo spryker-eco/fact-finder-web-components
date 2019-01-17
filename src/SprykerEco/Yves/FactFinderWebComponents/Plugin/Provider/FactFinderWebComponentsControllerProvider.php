@@ -2,7 +2,7 @@
 
 /**
  * MIT License
- * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
 namespace SprykerEco\Yves\FactFinderWebComponents\Plugin\Provider;
@@ -19,6 +19,11 @@ class FactFinderWebComponentsControllerProvider extends YvesControllerProvider
      */
     protected function defineControllers(Application $app)
     {
-        $this->createController('/fact-finder-web-components', 'fact-finder-web-components', 'fact-finder-web-components', 'index');
+        $this->createController(
+            '/fact-finder-web-components',
+            'fact-finder-web-components',
+            'fact-finder-web-components',
+            'index'
+        );
     }
 }

@@ -2,13 +2,13 @@
 
 /**
  * MIT License
- * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
 namespace SprykerEco\Yves\FactFinderWebComponents;
 
+use Spryker\Yves\Kernel\AbstractBundleConfig;
 use SprykerEco\Shared\FactFinderWebComponents\FactFinderWebComponentsConstants;
-use Spryker\Zed\Kernel\AbstractBundleConfig;
 
 class FactFinderWebComponentsConfig extends AbstractBundleConfig
 {
@@ -33,6 +33,16 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
+     * Return search box config
+     *
+     * @return array
+     */
+    public function getBreadcrumbConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::BREADCRUMB_WIDGET_CONFIG);
+    }
+
+    /**
      * Return search button config
      *
      * @return array
@@ -53,6 +63,16 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
+     * Return record list config
+     *
+     * @return array
+     */
+    public function getCheckoutTrackingConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::CHECKOUT_TRACKING_CONFIG);
+    }
+
+    /**
      * Return record config
      *
      * @return array
@@ -60,6 +80,16 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     public function getRecordConfig()
     {
         return $this->get(FactFinderWebComponentsConstants::RECORD_WIDGET_CONFIG);
+    }
+
+    /**
+     * Return record config
+     *
+     * @return array
+     */
+    public function getSuggestConfig()
+    {
+        return $this->get(FactFinderWebComponentsConstants::SUGGEST_CONFIG);
     }
 
     /**

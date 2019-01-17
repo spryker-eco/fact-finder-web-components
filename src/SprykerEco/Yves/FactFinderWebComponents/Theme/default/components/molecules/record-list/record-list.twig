@@ -1,0 +1,30 @@
+{% extends model('component') %}
+
+{% define config = {
+    name: 'record-list'
+} %}
+
+{% define data = {
+    properties: {
+        component: '',
+        record: ''
+    }
+} %}
+
+{% block body %}
+    <ff-record-list {{ data.properties.component|raw }}>
+
+        {% block record %}
+            <ff-record {{ data.properties.record|raw }}>
+                {% verbatim %}
+                    <div data-redirect="{{record.Deeplink}}"
+                         data-redirect-target="_blank">
+                        <img data-image="{{record.ImageName}}">
+                        <span>{{record.Title}}</span>
+                    </div>
+                {% endverbatim %}
+            </ff-record>
+        {% endblock %}
+
+    </ff-record-list>
+{% endblock %}
