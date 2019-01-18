@@ -8,11 +8,11 @@
   },
   "require-dev": {
     "spryker/silex": "^2.0.0",
-    "spryker/application": "^3.9.0",
+    "spryker/application": "^3.10.0",
     "spryker/testify": "*"
   },
   "suggest":  {
-    "spryker/application": "^3.9.0",
+    "spryker/application": "^3.10.0",
     "spryker/silex": "^2.0.0"
   },
   "repositories": [
