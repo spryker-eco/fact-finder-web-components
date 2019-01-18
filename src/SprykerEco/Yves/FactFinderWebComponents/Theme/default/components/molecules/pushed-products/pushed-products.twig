@@ -26,20 +26,21 @@
                         {% verbatim %}
                             <img data-image="{{record.ImageName}}">
                             <a data-anchor="https://www.alpinetrek.co.uk{{record.Deeplink}}"
-                               data-redirect="https://www.alpinetrek.co.uk{{record.Deeplink}}" data-redirect-target="_blank">
-                                {{record.Title}}
+                               data-redirect="https://www.alpinetrek.co.uk{{record.Deeplink}}"
+                               data-redirect-target="_blank">
+                                {{ record.Title }}
                             </a>
                         {% endverbatim %}
 
                         <div class="priceContainer">
                             <span class="brand">
                                 {% verbatim %}
-                                    {{record.Manufacturer}}
+                                    {{record.Manufacturer }}
                                 {% endverbatim %}
                             </span>
                             <span class="price">
                                 {% verbatim %}
-                                    {{record.Price}} €
+                                    {{ record.Price }} &euro;
                                 {% endverbatim %}
                             </span>
                         </div>

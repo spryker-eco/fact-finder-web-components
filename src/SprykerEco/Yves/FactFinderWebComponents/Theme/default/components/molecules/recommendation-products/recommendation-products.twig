@@ -18,33 +18,34 @@
 } %}
 
 {% block body %}
-    <ff-recommendation class="{{ config.jsName }}__holder" {{data.properties.component|raw }} unresolved>
+    <ff-recommendation class="{{ config.jsName }}__holder" {{ data.properties.component|raw }} unresolved>
         <div class="recommendationHeader">
             {{ 'factfinder.web-components.recommendations.title' | trans }}
         </div>
 
         {% block list %}
-            <ff-record-list {{data.properties.list|raw }} unresolved>
+            <ff-record-list {{ data.properties.list|raw }} unresolved>
 
                 {% block record %}
-                    <ff-record {{data.properties.record|raw }}>
+                    <ff-record {{ data.properties.record|raw }}>
                         {% verbatim %}
                             <img data-image="{{record.ImageName}}">
                             <a data-anchor="https://www.alpinetrek.co.uk{{record.Deeplink}}"
-                               data-redirect="https://www.alpinetrek.co.uk{{record.Deeplink}}" data-redirect-target="_blank">
-                                {{record.Title}}
+                               data-redirect="https://www.alpinetrek.co.uk{{record.Deeplink}}"
+                               data-redirect-target="_blank">
+                                {{ record.Title }}
                             </a>
                         {% endverbatim %}
 
                         <div class="priceContainer">
                             <span class="brand">
                                 {% verbatim %}
-                                    {{record.Manufacturer}}
+                                    {{ record.Manufacturer }}
                                 {% endverbatim %}
                             </span>
                             <span class="price">
                                 {% verbatim %}
-                                    {{record.Price}} €
+                                    {{ record.Price }} &euro;
                                 {% endverbatim %}
                             </span>
                         </div>

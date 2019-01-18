@@ -23,7 +23,7 @@
                         <ff-suggest-item type="{{ item.type }}">
                             <span>
                                 {% verbatim %}
-                                    {{{name}}}
+                                    {{ {name} }}
                                 {% endverbatim %}
                             </span>
                         </ff-suggest-item>
@@ -43,7 +43,7 @@
                             <div class="product-center">
                                 <div class="product-name">
                                     {% verbatim %}
-                                        {{{name}}}
+                                        {{ {name} }}
                                     {% endverbatim %}
                                 </div>
                                 <div>Shipping</div>
@@ -53,12 +53,12 @@
                             <div class="product-right">
                                 <div class="product-price">
                                     {% verbatim %}
-                                        {{attributes.Price}} €
+                                        {{ attributes.Price }} &euro;
                                     {% endverbatim %}
                                 </div>
                                 <div class="product-availabilitytext">
                                     {% verbatim %}
-                                        {{attributes.availabilitytext}}
+                                        {{ attributes.availabilitytext }}
                                     {% endverbatim %}
                                 </div>
                             </div>
