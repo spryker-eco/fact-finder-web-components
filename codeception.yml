@@ -1,5 +1,8 @@
 namespace: FactFinderWebCpomponents
 
+include:
+  - tests/SprykerEcoTest/*
+
 actor: Tester
 
 paths:
