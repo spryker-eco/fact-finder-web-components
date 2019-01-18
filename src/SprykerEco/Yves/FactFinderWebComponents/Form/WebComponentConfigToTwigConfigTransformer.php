@@ -46,25 +46,19 @@ class WebComponentConfigToTwigConfigTransformer implements DataTransformerInterf
     {
         $htmlAttributesString = '';
 
-        $iterationCount = 0;
-        $maxIterationCount = count($collection);
         foreach ($collection as $itemKey => $itemValue) {
-            if (is_bool($itemValue)) {
-                if ($itemValue === true) {
-                    $htmlAttributesString .= sprintf('%s', $itemKey);
-                }
-            } else {
-                $htmlAttributesString .= sprintf('%s="%s"', $itemKey, $itemValue);
+            if (is_bool($itemValue) == false) {
+                $htmlAttributesString .= sprintf('%s="%s" ', $itemKey, $itemValue);
+
+                continue;
             }
 
-            if ($iterationCount < $maxIterationCount) {
-                $htmlAttributesString .= ' ';
+            if ($itemValue === true) {
+                $htmlAttributesString .= sprintf('%s ', $itemKey);
             }
-
-            ++$iterationCount;
         }
 
-        return $htmlAttributesString;
+        return trim($htmlAttributesString);
     }
 
     /**
