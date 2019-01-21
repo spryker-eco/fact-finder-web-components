@@ -24,9 +24,9 @@
                 {% block record %}
                     <ff-record {{ data.properties.record|raw }}>
                         {% verbatim %}
-                            <img data-image="{{record.ImageName}}">
-                            <a data-anchor="https://www.alpinetrek.co.uk{{record.Deeplink}}"
-                               data-redirect="https://www.alpinetrek.co.uk{{record.Deeplink}}"
+                            <img data-image="{{ record.ImageName }}">
+                            <a data-anchor="https://www.alpinetrek.co.uk{{ record.Deeplink }}"
+                               data-redirect="https://www.alpinetrek.co.uk{{ record.Deeplink }}"
                                data-redirect-target="_blank">
                                 {{ record.Title }}
                             </a>
@@ -35,7 +35,7 @@
                         <div class="priceContainer">
                             <span class="brand">
                                 {% verbatim %}
-                                    {{record.Manufacturer }}
+                                    {{ record.Manufacturer }}
                                 {% endverbatim %}
                             </span>
                             <span class="price">

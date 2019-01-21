@@ -14,7 +14,7 @@ interface FactFinderWebComponentsConstants
 {
     /**
      * Specification:
-     * - Communication widget configuration options
+     * - Communication widget configuration options.
      *
      * @api
      */
@@ -22,7 +22,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - Search box widget configuration options
+     * - Search box widget configuration options.
      *
      * @api
      */
@@ -30,7 +30,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - Breadcrumb widget configuration options
+     * - Breadcrumb widget configuration options.
      *
      * @api
      */
@@ -38,7 +38,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - Search button widget configuration options
+     * - Search button widget configuration options.
      *
      * @api
      */
@@ -46,7 +46,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - Record list widget config
+     * - Record list widget config.
      *
      * @api
      */
@@ -54,7 +54,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - Checkout tracking config
+     * - Checkout tracking config.
      *
      * @api
      */
@@ -62,7 +62,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - Record widget config
+     * - Record widget config.
      *
      * @api
      */
@@ -70,7 +70,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - Suggest config
+     * - Suggest config.
      *
      * @api
      */
@@ -78,7 +78,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - ASN group widget config
+     * - ASN group widget config.
      *
      * @api
      */
@@ -86,7 +86,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - ASN group element config
+     * - ASN group element config.
      *
      * @api
      */
@@ -94,7 +94,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - ASN remove all filter config
+     * - ASN remove all filter config.
      *
      * @api
      */
@@ -102,7 +102,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - ASN slider config
+     * - ASN slider config.
      *
      * @api
      */
@@ -110,7 +110,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - ASN slider control config
+     * - ASN slider control config.
      *
      * @api
      */
@@ -118,7 +118,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - Paging widget config
+     * - Paging widget config.
      *
      * @api
      */
@@ -126,7 +126,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - Products per page widget config
+     * - Products per page widget config.
      *
      * @api
      */
@@ -134,7 +134,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - Sort box widget config
+     * - Sort box widget config.
      *
      * @api
      */
@@ -142,7 +142,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - Similar products widget config
+     * - Similar products widget config.
      *
      * @api
      */
@@ -150,7 +150,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - Similar product ID config
+     * - Similar product ID config.
      *
      * @api
      */
@@ -158,7 +158,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - Recommendation config
+     * - Recommendation config.
      *
      * @api
      */
@@ -166,7 +166,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - Recommendation record ID config
+     * - Recommendation record ID config.
      *
      * @api
      */
@@ -174,7 +174,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - Header navigation widget config
+     * - Header navigation widget config.
      *
      * @api
      */
@@ -182,7 +182,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - Tag cloud widget config
+     * - Tag cloud widget config.
      *
      * @api
      */
@@ -190,7 +190,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - Pushed products widget config
+     * - Pushed products widget config.
      *
      * @api
      */
@@ -198,7 +198,7 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - Campaign widget config
+     * - Campaign widget config.
      *
      * @api
      */

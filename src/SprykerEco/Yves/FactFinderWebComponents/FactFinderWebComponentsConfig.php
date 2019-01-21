@@ -13,241 +13,241 @@ use SprykerEco\Shared\FactFinderWebComponents\FactFinderWebComponentsConstants;
 class FactFinderWebComponentsConfig extends AbstractBundleConfig
 {
     /**
-     * Return communcation config
+     * Return communcation config.
      *
      * @return array
      */
-    public function getCommunicationConfig()
+    public function getCommunicationConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::COMMUNICATION_WIDGET_CONFIG);
     }
 
     /**
-     * Return search box config
+     * Return search box config.
      *
      * @return array
      */
-    public function getSearchBoxConfig()
+    public function getSearchBoxConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::SEARCH_BOX_WIDGET_CONFIG);
     }
 
     /**
-     * Return search box config
+     * Return search box config.
      *
      * @return array
      */
-    public function getBreadcrumbConfig()
+    public function getBreadcrumbConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::BREADCRUMB_WIDGET_CONFIG);
     }
 
     /**
-     * Return search button config
+     * Return search button config.
      *
      * @return array
      */
-    public function getSearchButtonConfig()
+    public function getSearchButtonConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::SEARCH_BUTTON_WIDGET_CONFIG);
     }
 
     /**
-     * Return record list config
+     * Return record list config.
      *
      * @return array
      */
-    public function getRecordListConfig()
+    public function getRecordListConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::RECORD_LIST_WIDGET_CONFIG);
     }
 
     /**
-     * Return record list config
+     * Return record list config.
      *
      * @return array
      */
-    public function getCheckoutTrackingConfig()
+    public function getCheckoutTrackingConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::CHECKOUT_TRACKING_CONFIG);
     }
 
     /**
-     * Return record config
+     * Return record config.
      *
      * @return array
      */
-    public function getRecordConfig()
+    public function getRecordConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::RECORD_WIDGET_CONFIG);
     }
 
     /**
-     * Return record config
+     * Return record config.
      *
      * @return array
      */
-    public function getSuggestConfig()
+    public function getSuggestConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::SUGGEST_CONFIG);
     }
 
     /**
-     * Return ASN group widget config
+     * Return ASN group widget config.
      *
      * @return array
      */
-    public function getAsnGroupWidgetConfig()
+    public function getAsnGroupWidgetConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::ASN_GROUP_WIDGET_CONFIG);
     }
 
     /**
-     * Return ASN group element config
+     * Return ASN group element config.
      *
      * @return array
      */
-    public function getAsnGroupElementConfig()
+    public function getAsnGroupElementConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::ASN_GROUP_ELEMENT_CONFIG);
     }
 
     /**
-     * Return ASN remove all filter config
+     * Return ASN remove all filter config.
      *
      * @return array
      */
-    public function getAsnRemoveAllFilterConfig()
+    public function getAsnRemoveAllFilterConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::ASN_REMOVE_ALL_FILTER_CONFIG);
     }
 
     /**
-     * Return ASN slider config
+     * Return ASN slider config.
      *
      * @return array
      */
-    public function getAsnSliderConfig()
+    public function getAsnSliderConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::ASN_SLIDER_CONFIG);
     }
 
     /**
-     * Return ASN slider control config
+     * Return ASN slider control config.
      *
      * @return array
      */
-    public function getAsnSliderControlConfig()
+    public function getAsnSliderControlConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::RECORD_WIDGET_CONFIG);
     }
 
     /**
-     * Return record config
+     * Return record config.
      *
      * @return array
      */
-    public function getPagingWidgetConfig()
+    public function getPagingWidgetConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::PAGING_WIDGET_CONFIG);
     }
 
     /**
-     * Return products per page config
+     * Return products per page config.
      *
      * @return array
      */
-    public function getProductsPerPageWidgetConfig()
+    public function getProductsPerPageWidgetConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::PRODUCTS_PER_PAGE_WIDGET_CONFIG);
     }
 
     /**
-     * Return sort box config
+     * Return sort box config.
      *
      * @return array
      */
-    public function getSortBoxWidgetConfig()
+    public function getSortBoxWidgetConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::SORT_BOX_WIDGET_CONFIG);
     }
 
     /**
-     * Return similar products config
+     * Return similar products config.
      *
      * @return array
      */
-    public function getSimilarProductsConfig()
+    public function getSimilarProductsConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::SIMILAR_PRODUCTS_WIDGET_CONFIG);
     }
 
     /**
-     * Return similar product ID config
+     * Return similar product ID config.
      *
      * @return array
      */
-    public function getSimilarProductIdConfig()
+    public function getSimilarProductIdConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::SIMILAR_PRODUCT_ID_CONFIG);
     }
 
     /**
-     * Return recommendation config
+     * Return recommendation config.
      *
      * @return array
      */
-    public function getRecommendationConfig()
+    public function getRecommendationConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::RECOMMENDATION_CONFIG);
     }
 
     /**
-     * Return recommendation record ID config
+     * Return recommendation record ID config.
      *
      * @return array
      */
-    public function getRecommendationRecordIdConfig()
+    public function getRecommendationRecordIdConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::RECOMMENDATION_RECORD_ID_CONFIG);
     }
 
     /**
-     * Return recommendation record ID config
+     * Return recommendation record ID config.
      *
      * @return array
      */
-    public function getHeaderNavigationWidgetConfig()
+    public function getHeaderNavigationWidgetConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::HEADER_NAVIGATION_WIDGET_CONFIG);
     }
 
     /**
-     * Return tag cloud config
+     * Return tag cloud config.
      *
      * @return array
      */
-    public function getTagCloudWidgetConfig()
+    public function getTagCloudWidgetConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::TAG_CLOUD_WIDGET_CONFIG);
     }
 
     /**
-     * Return pushed products config
+     * Return pushed products config.
      *
      * @return array
      */
-    public function getPushedProductsWidgetConfig()
+    public function getPushedProductsWidgetConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::PUSHED_PRODUCTS_WIDGET_CONFIG);
     }
 
     /**
-     * Return campaign config
+     * Return campaign config.
      *
      * @return array
      */
-    public function getCampaignWidgetConfig()
+    public function getCampaignWidgetConfig(): array
     {
         return $this->get(FactFinderWebComponentsConstants::CAMPAIGN_WIDGET_CONFIG);
     }

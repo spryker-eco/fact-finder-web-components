@@ -29,11 +29,11 @@
                 {% block record %}
                     <ff-record {{ data.properties.record|raw }}>
                         {% verbatim %}
-                            <img data-image="{{record.ImageName}}">
+                            <img data-image="{{ record.ImageName }}">
                         {% endverbatim %}
                         <div>
                             {% verbatim %}
-                                <a href="{{record.Deeplink}}" data-action="redirect">
+                                <a href="{{ record.Deeplink }}" data-action="redirect">
                                     {{ record.Title }}
                                 </a>
                             {% endverbatim %}

@@ -23,30 +23,30 @@ class WebComponentConfigToTwigConfigTransformer implements DataTransformerInterf
     public function transform($value)
     {
         $result = [];
-        $properties = '';
 
-        if (is_array($value)) {
-            $result = $value;
+        if (is_array($value) == false) {
+            return $result;
+        }
 
-            if (isset($value['properties'])) {
-                $result['component'] = $this->transformFromArrayToHtmlAttributes($result['properties'] ?? []);
-                unset($result['properties']);
-            }
+        $result = $value;
+        if (isset($value['properties'])) {
+            $result['component'] = $this->transformFromArrayToHtmlAttributes($value['properties']);
+            unset($result['properties']);
         }
 
         return $result;
     }
 
     /**
-     * @param array $collection
+     * @param array $componentParameters
      *
      * @return string
      */
-    protected function transformFromArrayToHtmlAttributes(array $collection): string
+    protected function transformFromArrayToHtmlAttributes(array $componentParameters): string
     {
         $htmlAttributesString = '';
 
-        foreach ($collection as $itemKey => $itemValue) {
+        foreach ($componentParameters as $itemKey => $itemValue) {
             if (is_bool($itemValue) == false) {
                 $htmlAttributesString .= sprintf('%s="%s" ', $itemKey, $itemValue);
 
@@ -72,13 +72,14 @@ class WebComponentConfigToTwigConfigTransformer implements DataTransformerInterf
     {
         $result = [];
 
-        if (is_array($value)) {
-            $result = $value;
+        if (is_array($value) == false) {
+            return $result;
+        }
 
-            if (isset($value['component'])) {
-                $result['properties'] = $this->transformFropmHtmlAttributesToArray($result['component'] ?? []);
-                unset($result['component']);
-            }
+        $result = $value;
+        if (isset($value['component']) && is_string($value['component'])) {
+            $result['properties'] = $this->transformFropmHtmlAttributesToArray($result['component']);
+            unset($result['component']);
         }
 
         return $result;
@@ -93,13 +94,12 @@ class WebComponentConfigToTwigConfigTransformer implements DataTransformerInterf
     {
         $properties = [];
 
-        if (is_string($attributes)) {
-            $attributeDataCollection = explode(' ', trim($attributes));
-            foreach ($attributeDataCollection as $attributeDataString) {
-                $varData = explode('=', $attributeDataString);
-                if ($varData) {
-                    $properties[$varData[0]] = trim($varData[1], '"\'');
-                }
+        $attributeDataCollection = explode(' ', trim($attributes));
+        foreach ($attributeDataCollection as $attributeDataString) {
+            if (preg_match('/([^=]+)=([^ ]+)/', $attributeDataString, $varData)) {
+                $properties[trim($varData[1], '"\'')] = trim($varData[2], '"\'');
+            } else if (preg_match('/([^=]+)/', $attributeDataString, $varData)) {
+                $properties[trim($varData[1], '"\'')] = true;
             }
         }
 

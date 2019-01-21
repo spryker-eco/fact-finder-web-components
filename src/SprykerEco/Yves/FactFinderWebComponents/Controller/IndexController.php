@@ -8,6 +8,7 @@
 namespace SprykerEco\Yves\FactFinderWebComponents\Controller;
 
 use Spryker\Yves\Kernel\Controller\AbstractController;
+use Spryker\Yves\Kernel\View\View;
 
 /**
  * @method \SprykerEco\Yves\FactFinderWebComponents\FactFinderWebComponentsFactory getFactory()
@@ -15,14 +16,12 @@ use Spryker\Yves\Kernel\Controller\AbstractController;
 class IndexController extends AbstractController
 {
     /**
-     * Index action
-     *
      * @return \Spryker\Yves\Kernel\View\View
      */
-    public function indexAction()
+    public function indexAction(): View
     {
         $twigConfigTransformer = $this->getFactory()->createWebComponentConfigToTwigConfigTransformer();
-        $configProvider = $this->getFactory()->createFactFinderWebComponentsConfigProvider();
+        $configProvider = $this->getFactory()->createWebComponentsConfigProvider();
 
         return $this->view(
             [

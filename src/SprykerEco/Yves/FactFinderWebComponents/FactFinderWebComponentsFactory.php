@@ -21,7 +21,7 @@ class FactFinderWebComponentsFactory extends AbstractFactory
     /**
      * @return \SprykerEco\Yves\FactFinderWebComponents\Model\WebComponentsConfigProvider\WebComponentsConfigProviderInterface
      */
-    public function createFactFinderWebComponentsConfigProvider(): WebComponentsConfigProviderInterface
+    public function createWebComponentsConfigProvider(): WebComponentsConfigProviderInterface
     {
         return new WebComponentsConfigProvider($this->getConfig());
     }
