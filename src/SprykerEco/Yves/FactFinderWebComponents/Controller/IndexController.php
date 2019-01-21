@@ -11,6 +11,10 @@ use Spryker\Yves\Kernel\Controller\AbstractController;
 use Spryker\Yves\Kernel\View\View;
 
 /**
+ * @method \SprykerEco\Yves\FactFinderWebComponents\FactFinderWebComponentsConfig getConfig()
+ */
+/**
+ * @method \SprykerEco\Yves\FactFinderWebComponents\FactFinderWebComponentsConfig getConfig()
  * @method \SprykerEco\Yves\FactFinderWebComponents\FactFinderWebComponentsFactory getFactory()
  */
 class IndexController extends AbstractController
@@ -21,57 +25,57 @@ class IndexController extends AbstractController
     public function indexAction(): View
     {
         $twigConfigTransformer = $this->getFactory()->createWebComponentConfigToTwigConfigTransformer();
-        $configProvider = $this->getFactory()->createWebComponentsConfigProvider();
+        $webComponentsConfig = $this->getFactory()->createWebComponentsConfig();
 
         return $this->view(
             [
                 'facetsAsn' => $twigConfigTransformer->transform(
-                    $configProvider->getAsnWidgetConfig()
+                    $webComponentsConfig->getAsnSliderConfig()
                 ),
                 'breadcrumb' => $twigConfigTransformer->transform(
-                    $configProvider->getBreadcrumbConfig()
+                    $webComponentsConfig->getBreadcrumbConfig()
                 ),
                 'campaign' => $twigConfigTransformer->transform(
-                    $configProvider->getCampaignWidgetConfig()
+                    $webComponentsConfig->getCampaignWidgetConfig()
                 ),
                 'communication' => $twigConfigTransformer->transform(
-                    $configProvider->getCommunicationConfig()
+                    $webComponentsConfig->getCommunicationConfig()
                 ),
                 'headerNavigation' => $twigConfigTransformer->transform(
-                    $configProvider->getHeaderNavigationWidgetConfig()
+                    $webComponentsConfig->getHeaderNavigationWidgetConfig()
                 ),
                 'paging' => $twigConfigTransformer->transform(
-                    $configProvider->getPagingWidgetConfig()
+                    $webComponentsConfig->getPagingWidgetConfig()
                 ),
                 'productsPerPage' => $twigConfigTransformer->transform(
-                    $configProvider->getProductsPerPageWidgetConfig()
+                    $webComponentsConfig->getProductsPerPageWidgetConfig()
                 ),
                 'pushedProducts' => $twigConfigTransformer->transform(
-                    $configProvider->getPushedProductsWidgetConfig()
+                    $webComponentsConfig->getPushedProductsWidgetConfig()
                 ),
                 'recommendation' => $twigConfigTransformer->transform(
-                    $configProvider->getRecommendationConfig()
+                    $webComponentsConfig->getRecommendationConfig()
                 ),
                 'recordList' => $twigConfigTransformer->transform(
-                    $configProvider->getRecordListConfig()
+                    $webComponentsConfig->getRecordListConfig()
                 ),
                 'suggest' => $twigConfigTransformer->transform(
-                    $configProvider->getSuggestConfig()
+                    $webComponentsConfig->getSuggestConfig()
                 ),
                 'checkoutTracking' => $twigConfigTransformer->transform(
-                    $configProvider->getCheckoutTrackingConfig()
+                    $webComponentsConfig->getCheckoutTrackingConfig()
                 ),
                 'searchbox' => $twigConfigTransformer->transform(
-                    $configProvider->getSearchBoxConfig()
+                    $webComponentsConfig->getSearchBoxConfig()
                 ),
                 'similarProducts' => $twigConfigTransformer->transform(
-                    $configProvider->getSimilarProductsConfig()
+                    $webComponentsConfig->getSimilarProductsConfig()
                 ),
                 'sortBox' => $twigConfigTransformer->transform(
-                    $configProvider->getSortBoxWidgetConfig()
+                    $webComponentsConfig->getSortBoxWidgetConfig()
                 ),
                 'tagCloud' => $twigConfigTransformer->transform(
-                    $configProvider->getTagCloudWidgetConfig()
+                    $webComponentsConfig->getTagCloudWidgetConfig()
                 ),
             ],
             [],

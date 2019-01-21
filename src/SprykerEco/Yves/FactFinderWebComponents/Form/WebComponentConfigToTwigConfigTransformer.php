@@ -98,7 +98,7 @@ class WebComponentConfigToTwigConfigTransformer implements DataTransformerInterf
         foreach ($attributeDataCollection as $attributeDataString) {
             if (preg_match('/([^=]+)=([^ ]+)/', $attributeDataString, $varData)) {
                 $properties[trim($varData[1], '"\'')] = trim($varData[2], '"\'');
-            } else if (preg_match('/([^=]+)/', $attributeDataString, $varData)) {
+            } elseif (preg_match('/([^=]+)/', $attributeDataString, $varData)) {
                 $properties[trim($varData[1], '"\'')] = true;
             }
         }

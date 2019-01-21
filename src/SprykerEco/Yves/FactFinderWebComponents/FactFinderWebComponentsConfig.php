@@ -10,10 +10,10 @@ namespace SprykerEco\Yves\FactFinderWebComponents;
 use Spryker\Yves\Kernel\AbstractBundleConfig;
 use SprykerEco\Shared\FactFinderWebComponents\FactFinderWebComponentsConstants;
 
-class FactFinderWebComponentsConfig extends AbstractBundleConfig
+class FactFinderWebComponentsConfig extends AbstractBundleConfig implements WebComponentsConfigInterface
 {
     /**
-     * Return communcation config.
+     * @inheritdoc
      *
      * @return array
      */
@@ -23,7 +23,7 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return search box config.
+     * @inheritdoc
      *
      * @return array
      */
@@ -33,7 +33,7 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return search box config.
+     * @inheritdoc
      *
      * @return array
      */
@@ -43,7 +43,7 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return search button config.
+     * @inheritdoc
      *
      * @return array
      */
@@ -53,7 +53,7 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return record list config.
+     * @inheritdoc
      *
      * @return array
      */
@@ -63,7 +63,7 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return record list config.
+     * @inheritdoc
      *
      * @return array
      */
@@ -73,7 +73,7 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return record config.
+     * @inheritdoc
      *
      * @return array
      */
@@ -83,7 +83,7 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return record config.
+     * @inheritdoc
      *
      * @return array
      */
@@ -93,7 +93,7 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return ASN group widget config.
+     * @inheritdoc
      *
      * @return array
      */
@@ -103,7 +103,7 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return ASN group element config.
+     * @inheritdoc
      *
      * @return array
      */
@@ -113,7 +113,7 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return ASN remove all filter config.
+     * @inheritdoc
      *
      * @return array
      */
@@ -123,7 +123,7 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return ASN slider config.
+     * @inheritdoc
      *
      * @return array
      */
@@ -133,7 +133,7 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return ASN slider control config.
+     * @inheritdoc
      *
      * @return array
      */
@@ -143,7 +143,7 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return record config.
+     * @inheritdoc
      *
      * @return array
      */
@@ -153,7 +153,7 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return products per page config.
+     * @inheritdoc
      *
      * @return array
      */
@@ -163,7 +163,7 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return sort box config.
+     * @inheritdoc
      *
      * @return array
      */
@@ -173,17 +173,20 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return similar products config.
+     * @inheritdoc
      *
      * @return array
      */
     public function getSimilarProductsConfig(): array
     {
-        return $this->get(FactFinderWebComponentsConstants::SIMILAR_PRODUCTS_WIDGET_CONFIG);
+        return array_merge(
+            $this->get(FactFinderWebComponentsConstants::SIMILAR_PRODUCT_ID_CONFIG),
+            $this->get(FactFinderWebComponentsConstants::SIMILAR_PRODUCTS_WIDGET_CONFIG)
+        );
     }
 
     /**
-     * Return similar product ID config.
+     * @inheritdoc
      *
      * @return array
      */
@@ -193,17 +196,20 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return recommendation config.
+     * @inheritdoc
      *
      * @return array
      */
     public function getRecommendationConfig(): array
     {
-        return $this->get(FactFinderWebComponentsConstants::RECOMMENDATION_CONFIG);
+        return array_merge(
+            $this->get(FactFinderWebComponentsConstants::RECOMMENDATION_CONFIG),
+            $this->get(FactFinderWebComponentsConstants::RECOMMENDATION_RECORD_ID_CONFIG)
+        );
     }
 
     /**
-     * Return recommendation record ID config.
+     * @inheritdoc
      *
      * @return array
      */
@@ -213,7 +219,7 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return recommendation record ID config.
+     * @inheritdoc
      *
      * @return array
      */
@@ -223,7 +229,7 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return tag cloud config.
+     * @inheritdoc
      *
      * @return array
      */
@@ -233,7 +239,7 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return pushed products config.
+     * @inheritdoc
      *
      * @return array
      */
@@ -243,7 +249,7 @@ class FactFinderWebComponentsConfig extends AbstractBundleConfig
     }
 
     /**
-     * Return campaign config.
+     * @inheritdoc
      *
      * @return array
      */
