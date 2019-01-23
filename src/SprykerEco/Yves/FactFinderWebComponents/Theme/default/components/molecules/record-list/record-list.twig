@@ -17,10 +17,10 @@
         {% block record %}
             <ff-record {{ data.properties.record|raw }}>
                 {% verbatim %}
-                    <div data-redirect="{{ record.Deeplink }}"
+                    <div data-redirect="{{ record.ProductURL }}"
                          data-redirect-target="_blank">
                         <img data-image="{{ record.ImageName }}">
-                        <span>{{ record.Title }}</span>
+                        <span>{{ record.Name }}</span>
                     </div>
                 {% endverbatim %}
             </ff-record>

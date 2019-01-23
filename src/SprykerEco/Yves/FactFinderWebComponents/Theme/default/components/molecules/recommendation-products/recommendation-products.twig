@@ -30,10 +30,10 @@
                     <ff-record {{ data.properties.record|raw }}>
                         {% verbatim %}
                             <img data-image="{{ record.ImageName }}">
-                            <a data-anchor="https://www.alpinetrek.co.uk{{ record.Deeplink }}"
-                               data-redirect="https://www.alpinetrek.co.uk{{ record.Deeplink }}"
+                            <a data-anchor="{{ record.ProductURL }}"
+                               data-redirect="{{ record.ProductURL }}"
                                data-redirect-target="_blank">
-                                {{ record.Title }}
+                                {{ record.Name }}
                             </a>
                         {% endverbatim %}
 
