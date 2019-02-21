@@ -1,6 +1,6 @@
 {
   "name": "spryker-eco/fact-finder-web-components",
-  "description": "Fact Finder Web Components Module",
+  "description": "FactFinderWebComponents module",
   "require": {
     "php": ">=7.1",
     "spryker/kernel": "^3.0.0",
