@@ -19,7 +19,7 @@
         </span>
 
         {% block list %}
-            <ff-record-list {{ data.properties.list|raw }} unresolved>
+            <ff-record-list {{ data.properties.list|raw }} subscribe="false" unresolved>
 
                 {% block record %}
                     <ff-record {{ data.properties.record|raw }}>
