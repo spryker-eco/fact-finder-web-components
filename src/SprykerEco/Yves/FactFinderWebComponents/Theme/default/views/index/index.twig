@@ -1,0 +1,124 @@
+{% extends template('page-layout-main') %}
+
+{% define data = {
+    communication: _view.communication,
+    breadcrumb: _view.breadcrumb,
+    headerNavigation: _view.headerNavigation,
+    productsPerPage: _view.productsPerPage,
+    sortBox: _view.sortBox,
+    searchbox: _view.searchbox,
+    similarProducts: _view.similarProducts,
+    recommendation: _view.recommendation,
+    suggest: _view.suggest,
+    facetsAsn: _view.facetsAsn,
+    pushedProducts: _view.pushedProducts,
+    campaign: _view.campaign,
+    tagCloud: _view.tagCloud,
+    recordList: _view.recordList,
+    paging: _view.paging,
+    checkoutTracking: _view.checkoutTracking
+} %}
+
+{% block content %}
+    {% include atom('communication', 'FactFinderWebComponents') with {
+        data: {
+           properties: data.communication
+        }
+    } only %}
+
+    {% include molecule('breadcrumb', 'FactFinderWebComponents') with {
+        data: {
+            properties: data.breadcrumb
+        }
+    } only %}
+
+    {% include atom('header-navigation', 'FactFinderWebComponents') with {
+        data: {
+            properties: data.headerNavigation
+        }
+    } only %}
+
+    {% include molecule('products-per-page', 'FactFinderWebComponents') with {
+        data: {
+            properties: data.productsPerPage
+        }
+    } only %}
+
+    {% include molecule('sortbox', 'FactFinderWebComponents') with {
+        data: {
+            properties: data.sortBox
+        }
+    } only %}
+
+    {% include molecule('searchbox', 'FactFinderWebComponents') with {
+        data: {
+            properties: data.searchbox
+        }
+    } only %}
+
+    {% include molecule('suggest', 'FactFinderWebComponents') with {
+        data: {
+            properties: data.suggest
+        }
+    } only %}
+
+    {% include molecule('similar-products', 'FactFinderWebComponents') with {
+        attributes: {
+            'recordId': data.similarProducts.recordId
+        },
+        data: {
+            properties: data.similarProducts
+        }
+    } only %}
+
+    {% include molecule('recommendation-products', 'FactFinderWebComponents') with {
+        attributes: {
+            'recordId': data.recommendation.recordId
+        },
+        data: {
+            properties: data.recommendation
+        }
+    } only %}
+
+    {% include molecule('facets-asn', 'FactFinderWebComponents') with {
+        data: {
+            properties: data.facetsAsn
+        }
+    } only %}
+
+    {% include molecule('pushed-products', 'FactFinderWebComponents') with {
+        data: {
+            properties: data.pushedProducts
+        }
+    } only %}
+
+    {% include atom('campaign', 'FactFinderWebComponents') with {
+        data: {
+            properties: data.campaign
+        }
+    } only %}
+
+    {% include atom('tag-cloud', 'FactFinderWebComponents') with {
+        data: {
+            properties: data.tagCloud
+        }
+    } only %}
+
+    {% include molecule('record-list', 'FactFinderWebComponents') with {
+        data: {
+            properties: data.recordList
+        }
+    } only %}
+
+    {% include molecule('paging', 'FactFinderWebComponents') with {
+        data: {
+            properties: data.paging
+        }
+    } only %}
+
+    {% include molecule('checkout-tracking', 'FactFinderWebComponents') with {
+        data: {
+            properties: data.checkoutTracking
+        }
+    } only %}
+{% endblock %}

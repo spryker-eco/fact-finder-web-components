@@ -1,0 +1,25 @@
+{% extends model('component') %}
+
+{% define config = {
+    name: 'searchbox'
+} %}
+
+{% define data = {
+    properties: {
+        component: ''
+    }
+} %}
+
+{% block body %}
+    {% block searchField %}
+        <ff-searchbox {{ data.properties.component|raw }}>
+            <input placeholder="Search..." />
+        </ff-searchbox>
+    {% endblock %}
+
+    {% block searchButton %}
+        <ff-searchbutton>
+            <button>Search</button>
+        </ff-searchbutton>
+    {% endblock %}
+{% endblock %}

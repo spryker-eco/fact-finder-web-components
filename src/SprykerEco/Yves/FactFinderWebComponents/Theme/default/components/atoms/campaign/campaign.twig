@@ -1,0 +1,19 @@
+{% extends model('component') %}
+
+{% define config = {
+    name: 'campaign'
+} %}
+
+{% define data = {
+    properties: {
+        feedbacktext: ''
+    }
+} %}
+
+{% block body %}
+    <ff-campaign-feedbacktext {{ data.properties.feedbacktext|raw }}>
+        {% verbatim %}
+            {{{ text }}}
+        {% endverbatim %}
+    </ff-campaign-feedbacktext>
+{% endblock %}

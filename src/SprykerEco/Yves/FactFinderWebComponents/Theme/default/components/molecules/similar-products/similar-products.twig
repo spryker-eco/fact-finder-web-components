@@ -1,0 +1,56 @@
+{% extends model('component') %}
+
+{% define config = {
+    name: 'similar-products',
+    tag: 'similar-products'
+} %}
+
+{% define data = {
+    properties: {
+        component: '',
+        list: '',
+        record: ''
+    }
+} %}
+
+{% define attributes = {
+    'recordId': ''
+} %}
+
+{% block body %}
+    <ff-similar-products class="{{ config.jsName }}__holder" {{ data.properties.component|raw }}>
+        <div class="similarProductsHeader">
+            {{ 'factfinder.web-components.similar.products.title' | trans }}
+        </div>
+
+        {% block list %}
+            <ff-record-list {{ data.properties.list|raw }}>
+
+                {% block record %}
+                    <ff-record {{ data.properties.record|raw }}>
+                        {% verbatim %}
+                            <img data-image="{{ record.ImageName }}">
+                        {% endverbatim %}
+                        <div>
+                            {% verbatim %}
+                                <a href="{{ record.ProductURL }}" data-action="redirect">
+                                    {{ record.Name }}
+                                </a>
+                            {% endverbatim %}
+                            <div>
+                                {{ 'factfinder.web-components.similar.products.price' | trans }}:
+                                <strong>
+                                    {% verbatim %}
+                                        {{ record.Price }}
+                                    {% endverbatim %}
+                                </strong>
+                            </div>
+                        </div>
+                    </ff-record>
+                {% endblock %}
+
+            </ff-record-list>
+        {% endblock %}
+
+    </ff-similar-products>
+{% endblock %}
