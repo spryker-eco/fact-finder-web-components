@@ -8,7 +8,6 @@
 namespace SprykerEco\Yves\FactFinderWebComponents;
 
 use Spryker\Yves\Kernel\AbstractBundleDependencyProvider;
-use Spryker\Yves\Kernel\Container;
 
 class FactFinderWebComponentsDependencyProvider extends AbstractBundleDependencyProvider
 {

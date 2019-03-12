@@ -7,8 +7,8 @@
 
 namespace SprykerEco\Yves\FactFinderWebComponents\WebComponentsConfig;
 
-use Symfony\Component\Form\DataTransformerInterface;
 use SprykerEco\Yves\FactFinderWebComponents\FactFinderWebComponentsConfig;
+use Symfony\Component\Form\DataTransformerInterface;
 
 class WebComponentsConfigBuilder implements WebComponentsConfigBuilderInterface
 {
@@ -22,6 +22,10 @@ class WebComponentsConfigBuilder implements WebComponentsConfigBuilderInterface
      */
     protected $configToTwigConfigTransformer;
 
+    /**
+     * @param \SprykerEco\Yves\FactFinderWebComponents\FactFinderWebComponentsConfig $config
+     * @param \Symfony\Component\Form\DataTransformerInterface $configToTwigConfigTransformer
+     */
     public function __construct(
         FactFinderWebComponentsConfig $config,
         DataTransformerInterface $configToTwigConfigTransformer
