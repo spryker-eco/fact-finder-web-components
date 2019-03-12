@@ -34,15 +34,13 @@ env:
     - SHOP_DIR=current
     - MODULE_NAME=fact-finder-web-components
 
-before_install:
-  - phpenv config-rm xdebug.ini
-  
 cache:
   directories:
     - $SHOP_DIR/current/vendor
     - $HOME/.composer/cache
 
 before_install:
+  - phpenv config-rm xdebug.ini
   - echo "extension = redis.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 
 script:
