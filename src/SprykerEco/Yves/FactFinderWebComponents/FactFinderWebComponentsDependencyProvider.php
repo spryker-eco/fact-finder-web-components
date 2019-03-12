@@ -12,15 +12,4 @@ use Spryker\Yves\Kernel\Container;
 
 class FactFinderWebComponentsDependencyProvider extends AbstractBundleDependencyProvider
 {
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
-    public function provideDependencies(Container $container): Container
-    {
-        $container = parent::provideDependencies($container);
-
-        return $container;
-    }
 }

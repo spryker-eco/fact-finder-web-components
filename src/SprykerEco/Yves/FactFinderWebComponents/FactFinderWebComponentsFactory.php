@@ -9,6 +9,8 @@ namespace SprykerEco\Yves\FactFinderWebComponents;
 
 use Spryker\Yves\Kernel\AbstractFactory;
 use SprykerEco\Yves\FactFinderWebComponents\Form\WebComponentConfigToTwigConfigTransformer;
+use SprykerEco\Yves\FactFinderWebComponents\WebComponentsConfig\WebComponentsConfigBuilder;
+use SprykerEco\Yves\FactFinderWebComponents\WebComponentsConfig\WebComponentsConfigBuilderInterface;
 use Symfony\Component\Form\DataTransformerInterface;
 
 /**
@@ -17,11 +19,14 @@ use Symfony\Component\Form\DataTransformerInterface;
 class FactFinderWebComponentsFactory extends AbstractFactory
 {
     /**
-     * @return \SprykerEco\Yves\FactFinderWebComponents\WebComponentsConfigInterface
+     * @return \SprykerEco\Yves\FactFinderWebComponents\WebComponentsConfig\WebComponentsConfigBuilderInterface
      */
-    public function createWebComponentsConfig(): WebComponentsConfigInterface
+    public function createWebComponentsConfigBuilder(): WebComponentsConfigBuilderInterface
     {
-        return $this->getConfig();
+        return new WebComponentsConfigBuilder(
+            $this->getConfig(),
+            $this->createWebComponentConfigToTwigConfigTransformer()
+        );
     }
 
     /**

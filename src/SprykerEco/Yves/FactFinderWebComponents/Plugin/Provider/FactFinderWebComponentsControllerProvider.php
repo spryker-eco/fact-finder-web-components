@@ -12,6 +12,8 @@ use Spryker\Yves\Application\Plugin\Provider\YvesControllerProvider;
 
 class FactFinderWebComponentsControllerProvider extends YvesControllerProvider
 {
+    public const ROUTE_FACT_FINDER_WEB_COMPONENTS = 'fact-finder-web-components';
+
     /**
      * @param \Silex\Application $app
      *
@@ -21,7 +23,7 @@ class FactFinderWebComponentsControllerProvider extends YvesControllerProvider
     {
         $this->createController(
             '/fact-finder-web-components',
-            'fact-finder-web-components',
+            static::ROUTE_FACT_FINDER_WEB_COMPONENTS,
             'fact-finder-web-components',
             'index'
         );

@@ -12,9 +12,6 @@ use Spryker\Yves\Kernel\View\View;
 
 /**
  * @method \SprykerEco\Yves\FactFinderWebComponents\FactFinderWebComponentsConfig getConfig()
- */
-/**
- * @method \SprykerEco\Yves\FactFinderWebComponents\FactFinderWebComponentsConfig getConfig()
  * @method \SprykerEco\Yves\FactFinderWebComponents\FactFinderWebComponentsFactory getFactory()
  */
 class IndexController extends AbstractController
@@ -24,60 +21,8 @@ class IndexController extends AbstractController
      */
     public function indexAction(): View
     {
-        $twigConfigTransformer = $this->getFactory()->createWebComponentConfigToTwigConfigTransformer();
-        $webComponentsConfig = $this->getFactory()->createWebComponentsConfig();
-
         return $this->view(
-            [
-                'facetsAsn' => $twigConfigTransformer->transform(
-                    $webComponentsConfig->getAsnSliderConfig()
-                ),
-                'breadcrumb' => $twigConfigTransformer->transform(
-                    $webComponentsConfig->getBreadcrumbConfig()
-                ),
-                'campaign' => $twigConfigTransformer->transform(
-                    $webComponentsConfig->getCampaignWidgetConfig()
-                ),
-                'communication' => $twigConfigTransformer->transform(
-                    $webComponentsConfig->getCommunicationConfig()
-                ),
-                'headerNavigation' => $twigConfigTransformer->transform(
-                    $webComponentsConfig->getHeaderNavigationWidgetConfig()
-                ),
-                'paging' => $twigConfigTransformer->transform(
-                    $webComponentsConfig->getPagingWidgetConfig()
-                ),
-                'productsPerPage' => $twigConfigTransformer->transform(
-                    $webComponentsConfig->getProductsPerPageWidgetConfig()
-                ),
-                'pushedProducts' => $twigConfigTransformer->transform(
-                    $webComponentsConfig->getPushedProductsWidgetConfig()
-                ),
-                'recommendation' => $twigConfigTransformer->transform(
-                    $webComponentsConfig->getRecommendationConfig()
-                ),
-                'recordList' => $twigConfigTransformer->transform(
-                    $webComponentsConfig->getRecordListConfig()
-                ),
-                'suggest' => $twigConfigTransformer->transform(
-                    $webComponentsConfig->getSuggestConfig()
-                ),
-                'checkoutTracking' => $twigConfigTransformer->transform(
-                    $webComponentsConfig->getCheckoutTrackingConfig()
-                ),
-                'searchbox' => $twigConfigTransformer->transform(
-                    $webComponentsConfig->getSearchBoxConfig()
-                ),
-                'similarProducts' => $twigConfigTransformer->transform(
-                    $webComponentsConfig->getSimilarProductsConfig()
-                ),
-                'sortBox' => $twigConfigTransformer->transform(
-                    $webComponentsConfig->getSortBoxWidgetConfig()
-                ),
-                'tagCloud' => $twigConfigTransformer->transform(
-                    $webComponentsConfig->getTagCloudWidgetConfig()
-                ),
-            ],
+            $this->getFactory()->createWebComponentsConfigBuilder()->build(),
             [],
             '@FactFinderWebComponents/views/index/index.twig'
         );

@@ -24,7 +24,7 @@ class WebComponentConfigToTwigConfigTransformer implements DataTransformerInterf
     {
         $result = [];
 
-        if (is_array($value) == false) {
+        if (is_array($value) === false) {
             return $result;
         }
 
@@ -47,7 +47,7 @@ class WebComponentConfigToTwigConfigTransformer implements DataTransformerInterf
         $htmlAttributesString = '';
 
         foreach ($componentParameters as $itemKey => $itemValue) {
-            if (is_bool($itemValue) == false) {
+            if (is_bool($itemValue) === false) {
                 $htmlAttributesString .= sprintf('%s="%s" ', $itemKey, $itemValue);
 
                 continue;
@@ -72,7 +72,7 @@ class WebComponentConfigToTwigConfigTransformer implements DataTransformerInterf
     {
         $result = [];
 
-        if (is_array($value) == false) {
+        if (is_array($value) === false) {
             return $result;
         }
 

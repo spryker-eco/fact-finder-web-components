@@ -14,43 +14,43 @@ interface FactFinderWebComponentsConstants
 {
     /**
      * Specification:
-     * - Communication widget configuration options.
+     * - Communication component configuration options.
      *
      * @api
      */
-    public const COMMUNICATION_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:COMMUNICATION_WIDGET_CONFIG';
+    public const COMMUNICATION_COMPONENT_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:COMMUNICATION_COMPONENT_CONFIG';
 
     /**
      * Specification:
-     * - Search box widget configuration options.
+     * - Search box component configuration options.
      *
      * @api
      */
-    public const SEARCH_BOX_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:SEARCH_BOX_WIDGET_CONFIG';
+    public const SEARCH_BOX_COMPONENT_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:SEARCH_BOX_COMPONENT_CONFIG';
 
     /**
      * Specification:
-     * - Breadcrumb widget configuration options.
+     * - Breadcrumb component configuration options.
      *
      * @api
      */
-    public const BREADCRUMB_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:BREADCRUMB_WIDGET_CONFIG';
+    public const BREADCRUMB_COMPONENT_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:BREADCRUMB_COMPONENT_CONFIG';
 
     /**
      * Specification:
-     * - Search button widget configuration options.
+     * - Search button component configuration options.
      *
      * @api
      */
-    public const SEARCH_BUTTON_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:SEARCH_BUTTON_WIDGET_CONFIG';
+    public const SEARCH_BUTTON_COMPONENT_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:SEARCH_BUTTON_COMPONENT_CONFIG';
 
     /**
      * Specification:
-     * - Record list widget config.
+     * - Record list component config.
      *
      * @api
      */
-    public const RECORD_LIST_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:RECORD_LIST_WIDGET_CONFIG';
+    public const RECORD_LIST_COMPONENT_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:RECORD_LIST_COMPONENT_CONFIG';
 
     /**
      * Specification:
@@ -62,11 +62,11 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - Record widget config.
+     * - Record component config.
      *
      * @api
      */
-    public const RECORD_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:RECORD_WIDGET_CONFIG';
+    public const RECORD_COMPONENT_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:RECORD_COMPONENT_CONFIG';
 
     /**
      * Specification:
@@ -78,11 +78,11 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - ASN group widget config.
+     * - ASN group component config.
      *
      * @api
      */
-    public const ASN_GROUP_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:ASN_GROUP_WIDGET_CONFIG';
+    public const ASN_GROUP_COMPONENT_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:ASN_GROUP_COMPONENT_CONFIG';
 
     /**
      * Specification:
@@ -118,35 +118,35 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - Paging widget config.
+     * - Paging component config.
      *
      * @api
      */
-    public const PAGING_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:PAGING_WIDGET_CONFIG';
+    public const PAGING_COMPONENT_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:PAGING_COMPONENT_CONFIG';
 
     /**
      * Specification:
-     * - Products per page widget config.
+     * - Products per page component config.
      *
      * @api
      */
-    public const PRODUCTS_PER_PAGE_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:PRODUCTS_PER_PAGE_WIDGET_CONFIG';
+    public const PRODUCTS_PER_PAGE_COMPONENT_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:PRODUCTS_PER_PAGE_COMPONENT_CONFIG';
 
     /**
      * Specification:
-     * - Sort box widget config.
+     * - Sort box component config.
      *
      * @api
      */
-    public const SORT_BOX_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:SORT_BOX_WIDGET_CONFIG';
+    public const SORT_BOX_COMPONENT_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:SORT_BOX_COMPONENT_CONFIG';
 
     /**
      * Specification:
-     * - Similar products widget config.
+     * - Similar products component config.
      *
      * @api
      */
-    public const SIMILAR_PRODUCTS_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:SIMILAR_PRODUCTS_WIDGET_CONFIG';
+    public const SIMILAR_PRODUCTS_COMPONENT_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:SIMILAR_PRODUCTS_COMPONENT_CONFIG';
 
     /**
      * Specification:
@@ -174,33 +174,33 @@ interface FactFinderWebComponentsConstants
 
     /**
      * Specification:
-     * - Header navigation widget config.
+     * - Header navigation component config.
      *
      * @api
      */
-    public const HEADER_NAVIGATION_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:HEADER_NAVIGATION_WIDGET_CONFIG';
+    public const HEADER_NAVIGATION_COMPONENT_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:HEADER_NAVIGATION_COMPONENT_CONFIG';
 
     /**
      * Specification:
-     * - Tag cloud widget config.
+     * - Tag cloud component config.
      *
      * @api
      */
-    public const TAG_CLOUD_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:TAG_CLOUD_WIDGET_CONFIG';
+    public const TAG_CLOUD_COMPONENT_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:TAG_CLOUD_COMPONENT_CONFIG';
 
     /**
      * Specification:
-     * - Pushed products widget config.
+     * - Pushed products component config.
      *
      * @api
      */
-    public const PUSHED_PRODUCTS_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:PUSHED_PRODUCTS_WIDGET_CONFIG';
+    public const PUSHED_PRODUCTS_COMPONENT_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:PUSHED_PRODUCTS_COMPONENT_CONFIG';
 
     /**
      * Specification:
-     * - Campaign widget config.
+     * - Campaign component config.
      *
      * @api
      */
-    public const CAMPAIGN_WIDGET_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:CAMPAIGN_WIDGET_CONFIG';
+    public const CAMPAIGN_COMPONENT_CONFIG = 'FACT_FINDER_WEB_COMPONENTS:CAMPAIGN_COMPONENT_CONFIG';
 }
