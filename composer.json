@@ -1,6 +1,6 @@
 {
   "name": "spryker-eco/fact-finder-web-components",
-  "description": "Fact Finder Web Components Module",
+  "description": "FactFinderWebComponents module",
   "license": "MIT",
   "require": {
     "php": ">=7.1",
