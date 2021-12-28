@@ -27,3 +27,6 @@
 /assets/node_modules/
 /tests/_log/*
 !/tests/_log/.gitkeep
+
+vendor/
+composer.lock
